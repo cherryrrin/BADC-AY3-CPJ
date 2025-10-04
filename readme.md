@@ -1,3 +1,3 @@
-# Creative Process Journal Template 24-25
+# Choi Yerin Creative Process Journal 25-26
 
 
