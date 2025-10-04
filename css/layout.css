@@ -150,17 +150,28 @@ main {
   }
 }
 
-/* 2.3 image with caption */
+/* 2.3 image&video with caption */
 
 figcaption p {
-  margin-top: var(--spacing-xs);
   font-size: var(--font-size-s);
-  font-style: italic;
-  width:80%;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  width:100%;
+
 }
 figcaption p b {
   font-weight: 700;
   font-size: inherit;
+}
+
+.videocaption p {
+  padding-top: var(--spacing-xs);
+  font-size: var(--font-size-s);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--color-5);
+  width:100%;
 }
 
 
@@ -204,6 +215,22 @@ figcaption p b {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.box__text-container {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.6rem;
+  
+  border: 1px solid var(--color-3);
+  border-radius: 15px;
+  padding: var(--spacing-m);
+  background-color: var(--color-1);
+}
+
+.box__text-container p {
+  font-size: var(--font-size-s);
+  font-weight: 550;
+  line-height: var( --spacing-s);
 }
 
 
@@ -262,26 +289,79 @@ footer {
   flex: 2;
 }
 
+.column__triple {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 3;
+}
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Creates three equal-width columns */
+      gap: var(--spacing-m); /* Adds space between grid items */
+    }
+
+    .grid-item {
+      text-align: left;
+      align-content: center;
+    }
+
 .type__content {
+  margin-left: var(--spacing-s);
+  margin-right: var(--spacing-s);
+  margin-bottom: var(--spacing-l);
+}
+
+.type__content__no-gap {
   margin-left: var(--spacing-m);
   margin-right: var(--spacing-m);
-  margin-bottom: var(--spacing-l);
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.column-buttom-text-container {
+  display: flex;
+  flex-direction: column;
+  height: auto relative; 
+  height: 800px;
+  
+
+}
+
+.bottom-text {
+  margin-top: auto;
+  bottom: 0;
+  left: 0;
+  align-self: flex-end;
 }
 
 /* **********************************************************
  * Main typography
  * ********************************************************** */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
+  font-size: var(--font-size-xl);
+}
+h2 {
   font-size: var(--font-size-l);
   font-weight: 500;
   margin-bottom: var(--spacing-l);
 }
+h3 {
+  font-size: var(--font-size-m);
+  font-weight:600;
+  margin-bottom: var(--spacing-m);
+}
+h4 {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  color: var(--color-3-2);
+  margin-bottom: var(--spacing-m);
+}
+h5,
+h6 
 
 a {
   text-decoration: none;
@@ -290,6 +370,8 @@ a {
 ul {
   list-style-type: none;
 }
+
+
 
 /* **********************************************************
  * Paragraph styling
@@ -426,4 +508,8 @@ li {
 
 .outline {
   border: 1px dotted black;
+}
+
+.bulletpoints {
+ list-style-type: circle;
 }

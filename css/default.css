@@ -8,6 +8,7 @@
   --font-size-xs: 0.7rem;
   --font-size-s: 0.85rem;
   --font-size-m: 1.15rem; /* default font-size used */
+  --font-size-ml: 1.3rem;
   --font-size-l: 1.5rem;
   --font-size-xl: 3.5rem;
   --font-size-xxl: 5.5rem;
@@ -28,8 +29,9 @@
   --color-1: white;
   --color-2: #222;
   --color-3: #ccc;
+  --color-3-2: #585650;
   --color-4: red;
-  --color-5: coral;
+  --color-5: #E37A41;
   --color-6: orange;
   --color-7: lime;
   --color-8: green;
@@ -342,9 +344,11 @@
   background: var(--color-4) !important;
 }
 
+/* darker grey */
 .color__bg-5 {
-  background: var(--color-5) !important;
-}
+  background: var(--color-3-2) !important;
+} 
+
 
 .color__bg-6 {
   background: var(--color-6) !important;
