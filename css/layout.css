@@ -242,6 +242,11 @@ figcaption p b {
   filter: grayscale(100%);
 }
 
+.img__border-1 {
+   border: 1.5px solid var(--color-3);
+  box-sizing: border-box;
+}
+
 /* 3. footer */
 
 footer {
@@ -371,6 +376,16 @@ ul {
   list-style-type: none;
 }
 
+.codetext {
+  padding-top: var(--spacing-xs);
+  font-size: var(--font-size-s);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--color-5);
+  width:100%;
+}
+
 
 
 /* **********************************************************
@@ -436,6 +451,7 @@ p:not(:last-child) {
   width: 20%;
   min-width: 10rem;
 }
+
 
 @media (orientation: portrait) {
   .p__size-l {
