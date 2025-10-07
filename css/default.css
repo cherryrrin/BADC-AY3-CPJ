@@ -29,21 +29,21 @@
   --color-1: white;
   --color-2: #222;
   --color-3: #ccc;
-  --color-3-2: #585650;
+  --color-3-2: #585650; /* darker grey */
   --color-4: red;
   --color-5: #E37A41;
-  --color-6: orange;
+  --color-6: #E77E45;
   --color-7: lime;
-  --color-8: green;
+  --color-8: #BEC8AD;
   --color-9: darkgreen;
-  --color-10: dodgerblue;
-  --color-11: blue;
+  --color-10: #8AA2DF;
+  --color-11: #69514F;
 
   --color-fg: #111111;
   --color-bg: #efefef;
   --color-header-bg: #efefef;
   --color-header-fg: black;
-  --color-title: orange;
+  --color-title: #E37A41;
   --color-link:var(--color-5);
   --color-link-hover: var(--color-6);
   --color-nav-link: var(--color-2);
