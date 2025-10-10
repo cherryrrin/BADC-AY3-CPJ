@@ -143,3 +143,40 @@ document.addEventListener("keydown", function(e) {
       t.classList.toggle("collapsed")
   }
 });
+
+
+
+
+// ==== scripts for sidebar indicator =====
+
+const sidebarItems = document.querySelectorAll('.sidebar-item');
+const sections = document.querySelectorAll('#contents-section [id^="section"]');
+
+function updateActiveSection() {
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 200) {
+      currentSection = section.id;
+    }
+  });
+
+  sidebarItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.dataset.target === currentSection) {
+      item.classList.add('active');
+    }
+  });
+}
+
+sidebarItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const targetId = item.dataset.target;
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+window.addEventListener('scroll', updateActiveSection);
+updateActiveSection();
