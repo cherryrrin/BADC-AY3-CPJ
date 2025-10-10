@@ -10,7 +10,7 @@
   --font-size-m: 1.1rem; /* default font-size used */
   --font-size-ml: 1.25rem;
   --font-size-l: 1.5rem;
-  --font-size-xl: 3.5rem;
+  --font-size-xl: 4rem;
   --font-size-xxl: 5.5rem;
   --font-size-title: 1rem;
 
@@ -21,12 +21,14 @@
   --spacing-s: 1rem;
   --spacing-m: 2rem;
   --spacing-l: 3rem;
-  --spacing-xl: 6rem;
+  --spacing-xl: 7rem;
   --spacing-xxl: 12rem;
 
   /* color */
   --color-0: #151515;
+  --color-0-2: #191919;
   --color-1: white;
+  --color-1-2: #efefec;
   --color-2: #8B867D;
   --color-3-2: #a6a6a6; /* medium grey for line*/
   --color-3-3: #DDDDDD; /* light grey for circle background */
@@ -34,15 +36,16 @@
   --color-4: #FD7328; /* bold orange */
   --color-5: #E37A41; /* orange */
   --color-6: #E77E45; /* lighter orange */
+  --color-6-2: #F6F1E9; /* very light orange for bg*/
   --color-7: lime;
   --color-8: #BEC8AD; /* light green */
   --color-9: darkgreen;
   --color-10: #8AA2DF; /* light blue */
   --color-11: #69514F; /* brown */
 
-  --color-fg: #111111;
+  --color-fg: #151515;
   --color-bg: #efefef;
-  --color-header-bg: #F6F5F333;
+  --color-header-bg: #f6f5f382;
   --color-header-fg: #151515;
   --color-title: #E37A41;
   --color-link:var(--color-5);
@@ -50,7 +53,7 @@
   --color-nav-link: var(--color-0);
   --color-nav-link-hover: var(--color-4);
 
-  --header__height: 3rem;
+  --header__height: 4rem;
 }
 
 /* **********************************************************
@@ -314,7 +317,7 @@
 }
 
 .width__s {
-  max-width: 54rem;
+  max-width: 48rem;
 }
 
 .width__xs {

@@ -157,7 +157,7 @@ function updateActiveSection() {
   
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    if (window.scrollY >= sectionTop - 200) {
+    if (window.scrollY >= sectionTop + 450) {
       currentSection = section.id;
     }
   });
