@@ -17,10 +17,12 @@
   --font-weight-title: 700;
 
   /* spacing */
+  --spacing-xxs: 0.2rem;
   --spacing-xs: 0.5rem;
   --spacing-s: 1rem;
   --spacing-m: 2rem;
   --spacing-l: 3rem;
+  --spacing-2l: 5rem;
   --spacing-xl: 7rem;
   --spacing-xxl: 12rem;
 
@@ -112,6 +114,10 @@
   margin-left: var(--spacing-xl);
 }
 
+.margin__left-xxl {
+  margin-left: var(--spacing-xxl);
+}
+
 .margin__right-s {
   margin-right: var(--spacing-s);
 }
@@ -184,6 +190,10 @@
   margin: var(--spacing-s);
 }
 
+.padding__top-xs {
+  padding-top: var(--spacing-xxs);
+}
+
 .padding__top-s {
   padding-top: var(--spacing-s);
 }
@@ -194,6 +204,10 @@
 
 .padding__top-l {
   padding-top: var(--spacing-l);
+}
+
+.padding__top-2l {
+  padding-top: var(--spacing-2l);
 }
 
 .padding__top-xl {

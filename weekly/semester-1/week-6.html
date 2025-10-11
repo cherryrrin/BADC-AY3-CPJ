@@ -21,8 +21,8 @@
     <header>
       <nav class="main__nav-bar">
         <ul class="main__nav-title">
-          <li><a href="/">IxD as ID</a></li>
-          <li class="mobile__hide"><a href="/about">Choi Yerin</a></li>
+          <li><a href="/">IxD-ID</a></li>
+          <li class="mobile__hide padding__top-xs"><a href="/about"><img height="12rem" src="/assets/images/CHOIYERIN_black.png" alt=""></a></li>
         </ul>
         <ul class="main__nav-list">
           <li class="main__nav-item"><a href="/">overview</a></li>
@@ -77,13 +77,17 @@
         
         </section>
 
+        <!-- ======= content start ========= -->
+
         <section id="contents-section" class="row width__l margin__auto padding__y-xl">
 
+        <!-- =================== side indicator/nav bar============= -->
+
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1">RPO Peer Review</div>
-            <div class="sidebar-item" data-target="section2">Examples</div>
-            <div class="sidebar-item" data-target="section3">Content Three</div>
-            <div class="sidebar-item" data-target="section4">Content Four</div>
+            <div class="sidebar-item active" data-target="section1">RPO-peer-review</div>
+            <div class="sidebar-item" data-target="section2">Finding-accessibility</div>
+            <div class="sidebar-item" data-target="section3">Loading-animation</div>
+            <div class="sidebar-item" data-target="section4">Consultation</div>
           </aside>
 
           <div class="content-wrapper">
@@ -104,6 +108,8 @@
               <img class="zoom" src="/assets/images/test.jpg" alt=""><figcaption><p>Peer review paper</p></figcaption>
               <p>One comment suggested case studies would be more suitable than computation for my research, which shows they misunderstood my approach. My research objectives and methods sections weren't structured clearly enough to convey that computation IS the one of the core methods, not just a peripheral tool. This feedback stung a bit, but it's exactly what I needed to hear.</p>  
             </div>
+            <!-- end of section1 -->
+
 
             <div id="section2" class="row width__s margin__auto padding__top-xl">
               <h2>Making It Accessible: <br>Examples and Physical Materials</h2>
@@ -144,9 +150,141 @@
 
               </div>
 
+              <h3 class="padding__top-l">Physical Organization: <br>Prints and Mindmaps</h3>
+              <img class="zoom" src="/assets/images/test.jpg" alt=""><figcaption><p>Photo of my desk</p></figcaption>
+              <p>To organize my thinking and research materials, I created physical prints and laid them out on my table with important readings and quotes, experiment screenshots, Apple packaging examples showing branded interactions, and heir signature on-screen interactions (slide to action, wiggling icons, etc.) </p> 
+              
+              <div class="row">
+                <div class="column__half"><img class="zoom" src="/assets/images/test.jpg" alt=""><figcaption class="padding__top-s"><p>Mindmap on branded interaction</p></figcaption></div>
+                <div class="column margin__left-s">
+                  <ul>
+                    <li><p>I also drew a mindmap addressing:</p></li>
+                    <li class="bulletpoints padding__top-m"> <p>WHAT IS branding interactions?</p></li>
+                    <li class="bulletpoints"><p>WHY do branding interactions in web/app environments matter?</p> </li>
+                    <li class="bulletpoints"> <p>HOW CAN we create branded interactions?</p></li>
+                    <li class="bulletpoints"> <p>WHERE CAN WE FIND branded interactions?</p></li>
+                  </ul>
+                </div>
+              </div>
+
+              <p>Having these physically visible helps me see connections and keep the big picture accessible while working on specific experiments.</p>
 
             </div>
-          </div>
+            <!-- end of section2 -->
+
+            <div id="section3" class="row width__s margin__auto padding__top-xl">
+              <h2>Progress on Loading Experiments</h2>
+              <h3 class="divider-top">Loading Animation <br>Experiments</h3>
+              <p>I successfully developed my p5.js sketch for loading animations with real-time parameter manipulation through keyboard controls.</p>
+
+              <iframe width="100%" height="400px" src="https://editor.p5js.org/rinayerin/full/3pJpIqrRi" loop preload="none"></iframe>
+                <figcaption>
+                  <p>Press Key <span class="keywords-circle-orange">1~4</span> to select animation type <br> and control by <span class="keywords-circle-orange">Q/W</span> <span class="keywords-circle-orange">A/S</span> <span class="keywords-circle-orange">Z/X</span>
+                </figcaption> 
+
+                <p>I created four loading patterns to test parameter effects across different visual structures, keeping design neutral (gray colors, simple shapes) to isolate the motion as the variable being tested.</p>
+
+                <div class="ul-row">
+                  <ul>
+                  <li class="bulletpoints"><p>Spinning loader - Rotating elements with motion trail</p></li>
+                  <li class="bulletpoints"><p>Bouncing dots - Multiple elements with staggered vertical motion</p></li>
+                  <li class="bulletpoints"><p>Breathing circle - Pulsing scale animation</p></li>
+                  <li class="bulletpoints"><p>Progress bar - Linear fill with easing</p></li>
+                </ul>
+                </div>
+
+                <div class="margin__left-l padding__top-l">
+                  
+                  <h3>Parameter System</h3>
+                  <p>Rather than creating fixed animations, I built a system where I can adjust parameters live and observe how they affect brand personality perception.</p>
+                  <p>I could achieve such parameters using functions like <span class="code-block-orange">frameCount</span>, <span class="code-block-orange">sin()</span>, <span class="code-block-orange">cos()</span>, <span class="code-block-orange">lerp()</span>, <span class="code-block-orange">rotate()</span>, etc.</p>
+
+                  <h4 class="underline padding__top-m">The key parameters(custom variables) I'm manipulating:</h4>
+
+                  <h4 class="padding__top-l">01 Timing</h4>
+                  <div class="bg__text-container">
+                    <p><span class="code-block-orange">animationSpeed</span> : How many frames per cycle (lower = faster) <br> <span class="code-block-orange">delayBetweenElements</span> : Stagger timing between multiple elements (creates rhythm)</p>
+                  </div>
+
+                  <h4 class="padding__top-l">02 Motion</h4>
+                  <div class="bg__text-container">
+                    <p><span class="code-block-orange">smoothness</span> : Easing amount controlling how gradually motion happens (lower = smooth), (higher = snappy) 
+                    <br> <span class="code-block-orange">bounciness</span> : Overshoot effect when reaching target (1.0 = none, 2.0+ = bounce) <br> <span class="code-block-orange">intensity</span> : Overall motion magnitude</p>
+                  </div>
+
+                  <h4 class="padding__top-l">03 Visual</h4>
+                  <div class="bg__text-container">
+                    <p><span class="code-block-orange">elementSize</span> : Base size of loading elements <br> <span class="code-block-orange">elementCount</span> : Number of elements (for dot-based animations)</p>
+                  </div>
+
+                  <h3 class="padding__top-2l">Implementation Approach</h3>
+
+                  <div>
+                  <ul>
+                  <li><p>The keyboard controls let me adjust parameters while the animation runs:</p></li> <br>
+                  <li class="bulletpoints"><p>1-4 keys switch animation types</p></li>
+                  <li class="bulletpoints"><p>Q/W adjust speed</p></li>
+                  <li class="bulletpoints"><p>A/S adjust smoothness</p></li>
+                  <li class="bulletpoints"><p>Z/X adjust bounciness</p></li>
+                  <li class="bulletpoints"><p>Spacebar logs current configuration to console</p></li>
+                  <br>
+                  <li><p>This real-time manipulation was crucial to can immediately see how changing one parameter transforms the same animation to feel completely different.</p></li>
+                </ul>
+                </div>
+
+                <h3 class="padding__top-2l">Key Learnings: <br>Parameters Can Override Visuals</h3>
+                <p>What struck me was changing one parameter <br>completely transforms the brand impression <br>even with identical visual design.</p>
+
+                <div class="black__text-container">
+                  <p>Same spinning circle, different parameters:</p>
+                  <p class="underline">(speed) + (smoothness) + (bounciness)</p>
+                  <p>(20 frames) + (0.05) + (1.0) = feels mechanical, corporate, efficient <br>(80 frames) + (0.8) + (1.3) = feels considered, premium, deliberate <br>(60 frames) + (0.4) + (2.0) = feels playful, friendly, game-like</p>
+                </div>
+
+                <p class="padding__top-l"> Above is what I could observe by manipulating parameters with the same visual (spinning circle). Although I still have to conduct a more focused user evaluations, I could clearly observe how personality can come entirely from the motion parameters, rather than the visuals.</p>
+                <p>This validates Vallgårda and Redström's concept that I explored earlier, "controlled transitions between states" are what create the experiential quality. The parameters controlling those transitions ARE the brand expression.</p>                 
+                </div>
+
+            </div>
+            <!-- end of section3 -->
+
+            <div id="section4" class="row width__s margin__auto padding__top-xl">
+              <h2>Consultations</h2>
+              <h3 class="divider-top">Discovery: <br>Penner Easing Functions</h3>
+              <p>During consultation while showing my loading animations, Andreas introduced me to Penner easing functions. I already knew general easing concepts (ease-in, ease-out, ease-in-out) from my UI/UX background and previous button experiments. But I hadn't looked into the actual mathematics and systematic methods behind these functions. <br><br> Turns out there are extensive variations of easing functions, each with specific mathematical formulas. This is something concrete I can experiment with systematically.</p>
+
+              <iframe width="100%" height="400px" src="https://editor.p5js.org/rinayerin/full/OTCTNQpSu" loop preload="none" ></iframe> <figcaption>
+                  <p> Practice sketch integrating easing functions on p5.js <br><span class="keywords-circle-orange">Click</span> to interact with </p>
+                </figcaption> 
+
+              <div class="ul-row padding__top-m">
+                <ul >
+                  <li><p>While exploring how to sketch these easing functions in p5.js, I discovered some websites: </p></li><br><br>
+                  <li class="bulletpoints"><p><a class="underline" href="">easings.net</a> - Shows the easing functions visually with their curves and comprehensive codes.</p></li>
+                  <li class="bulletpoints"><p><a class="underline" href="">cubic-bezier.com</a> - Lets you directly edit and create custom easing functions</p></li>
+                  <li><p><br>These tools are incredibly useful. I can see exactly how different easing curves affect motion, then implement them in my prototypes.</p></li>
+                </ul>
+              </div>
+
+            </div> <!-- end of section4 -->
+
+            <div id="section5" class="row width__s margin__auto padding__top-2l padding__bottom-xl">
+              <h3 class="under">Recap: Things I'm Learning</h3>
+              <div class="ul-row divider-top">
+                <ul class="margin__left-xl">
+                  <li class="bulletpoints padding__y-s"><p><b>Simplicity matters more than sophistication:</b> Complex terminology doesn't make research stronger, it makes it inaccessible. Examples, analogies, and clear language communicate better than theoretical jargon.</p></li>
+                  <li class="bulletpoints padding__bottom-s"><p><b>Parameters:</b> Through loading animation experiments, I'm seeing how specific computational parameters (rotation speed, easing curves, bounce amplitude) directly translate to brand personality impressions.</p></li>
+                  <li class="bulletpoints padding__bottom-s"><p> <b>RPO refinement:</b> Revise the research proposal with clearer language, less ambitious claims, and more precise terminology.</p></li>
+                  <li class="bulletpoints padding__bottom-s"><p><b>Existing tools are resources:</b>  Rather than discouraging me, they became valuable resources for understanding the parameter space I'm exploring.</p></li>
+                  <li class="bulletpoints padding__bottom-s"><p><b>Physical organization helps thinking:</b> Having prints and mindmaps visible on my table makes connections more apparent than keeping everything digital.</p></li>
+                </ul>
+              </div>
+
+            </div>
+
+
+
+          </div> <!-- end of content wrapper -->
 
           
 
@@ -159,15 +297,17 @@
 
     <!-- footer, page ends here.-->
     <footer>
+
+      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
       <div class="prev__next">
         <ul>
-          <li><a href="./week-3.html" id="go-prev">prev</a></li>
+          <li class="prev"><a href="./week-5.html" id="go-prev">prev</a></li>
           <li><a href="../../index.html">overview</a></li>
-          <li><a href="./week-5.html" id="go-next">next</a></li>
+          <li class="next"><a href="./week-7.html" id="go-next">next</a></li>
         </ul>
       </div>
-      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
-      <div><a href="javascript:scrollToTop();">BACK TO TOP</a></div>
+      
+      
     </footer>
 
     <div id="lightbox"></div>

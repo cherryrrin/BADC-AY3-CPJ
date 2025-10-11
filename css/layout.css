@@ -155,6 +155,9 @@ main {
 
 /* 2.3 image&video with caption */
 
+iframe {
+  border: none;
+}
 
 figcaption p {
   font-size: var(--font-size-s);
@@ -162,7 +165,6 @@ figcaption p {
   color: var(--color-5);
   font-style: normal;
   width:100%;
-
 }
 
 figcaption p b {
@@ -275,6 +277,12 @@ figcaption p b {
   color: var(--color-0);
 }
 
+.keywords-circle:hover {
+  background-color: var(--color-0);
+  color: var(--color-1);
+  cursor:default;
+}
+
 .keywords-circle-b {
   display: inline-flex;
   align-items: center; /* Center text vertically */
@@ -287,6 +295,63 @@ figcaption p b {
   font-weight: 550;
 }
 
+.keywords-circle-b:hover {
+  background-color: var(--color-1);
+  color: var(--color-0);
+  cursor:default;
+}
+
+.keywords-circle-orange {
+  display: inline-flex;
+  align-items: center; /* Center text vertically */
+  border: 1px solid var(--color-4);
+  padding: 3px var(--spacing-s);
+  margin-top: var(--spacing-xs);
+  border-radius: 30px;
+  color: var(--color-4);
+  background-color: var(--color-6-2);
+  font-family: 'DM Mono', 'Kanit', monospace;
+  font-size: var(--font-size-s);
+  font-weight: 550;
+}
+
+.keywords-circle-orange:first-child {
+  margin-top: 0;
+}
+
+.keywords-circle-orange:hover {
+  background-color: var(--color-4);
+  color: var(--color-1);
+  cursor:default;
+}
+
+.code-block-orange {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-4);
+  padding: 5px var(--spacing-s);
+  margin: var(--spacing-xs) var(--spacing-xxs);
+  border-radius: 6px;
+  color: var(--color-4);
+  background-color: var(--color-6-2);
+  font-family: 'DM Mono', 'Kanit', monospace;
+  font-size: var(--font-size-s);
+  font-weight: 550;
+}
+
+.code-block-orange:hover {
+  background-color: var(--color-4);
+  color: var(--color-1);
+  cursor:default;
+}
+
+.code-block-orange:first-child {
+  margin-top: 0;
+}
+
+.code-block-orange:last-child {
+  margin-bottom: 0;
+}
 
 .black__text-container {
   font-family: 'DM Mono', 'Kanit', monospace;
@@ -325,6 +390,7 @@ figcaption p b {
   color: var(--color-11);
 } 
 
+
 .white__text-container {
   font-family: 'DM Mono', 'Kanit', monospace;
   
@@ -346,6 +412,18 @@ figcaption p b {
   text-decoration: underline;
 }
 
+.bg__text-container {
+  border: 1px dashed var(--color-3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: var(--spacing-s);
+  background-color: var(--color-bg);
+}
+
+.bg__text-container p {
+  font-size: 0.9rem;
+  line-height: 150%;
+}
 
 .box__text-container {
   font-family: 'DM Mono', 'Kanit', monospace;
@@ -412,6 +490,15 @@ footer {
   text-align: center;
   padding-top: var(--spacing-m);
 }
+
+.scroll__top {
+  font-family: 'DM Mono', 'Kanit', monospace;
+}
+
+.prev__next ul {
+  font-family: 'DM Mono', 'Kanit', monospace;
+}
+
 
 /* 4. main layout */
 
@@ -511,8 +598,6 @@ footer {
   flex-direction: column;
   height: auto relative; 
   height: 800px;
-
-
 }
 
 .bottom-text {
@@ -548,7 +633,7 @@ h3 {
   font-size: var(--font-size-ml);
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
-  margin: var(--spacing-m) 0;
+  padding: var(--spacing-m) 0;
 }
 
 h4 {
@@ -579,6 +664,13 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.ul-row ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
 }
 
 .codetext {
@@ -661,6 +753,25 @@ p:not(:last-child) {
 
 b {
   font-weight: bold;
+}
+
+.bulletpoints {
+  position: relative;
+ list-style-type: none;
+ padding-left: var(--spacing-s);
+}
+
+.bulletpoints::before {
+  content: "•"; /* Custom bullet point here*/
+  position: absolute;
+  left: 0;
+  color: var(--color-3);
+  padding-top: 3px;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media (orientation: portrait) {
@@ -762,7 +873,4 @@ li {
   border: 1px dotted black;
 }
 
-.bulletpoints {
- list-style-type: disc;
- padding-left: var(--spacing-s);
-}
+
