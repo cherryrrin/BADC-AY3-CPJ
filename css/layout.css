@@ -426,6 +426,22 @@ figcaption p b {
   line-height: 150%;
 }
 
+.bg__text-container-mono {
+  font-family: 'DM Mono', 'Kanit', monospace;
+  
+  border: 1px dashed var(--color-8);
+  border-radius: 15px;
+  padding: var(--spacing-m);
+}
+
+.bg__text-container-mono p {
+  font-size: var(--font-size-s);
+  font-weight: 550;
+  line-height: 150%;
+  color: var(--color-11);
+}
+
+
 .box__text-container {
   font-family: 'DM Mono', 'Kanit', monospace;
   font-size: var(--font-size-s);
@@ -608,6 +624,43 @@ footer {
   align-self: flex-end;
 }
 
+.chat__container {
+  width: 100%;
+  margin: 0;
+}
+
+.chat__container p b{
+  line-height: 50%;
+}
+
+.chat__name {
+  line-height: 0;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+.chat__left {
+  width: 70%;
+ 
+}
+
+.chat__left p{
+  text-align: left;
+  align-self: flex-start;
+  justify-content: left;
+}
+
+.chat__right {
+  right: 0;
+  justify-items: right;
+  margin-left: var(--spacing-xxl);
+}
+
+.chat__right p{
+  text-align: left;
+  justify-content: right;
+}
+
 /* **********************************************************
  * Main typography
  * ********************************************************** */
@@ -667,11 +720,21 @@ ul {
   list-style-type: none;
 }
 
+.ul-row {
+  width: 100%;
+}
+
 .ul-row ul{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   gap: var(--spacing-xs);
+}
+
+.ul-row ul li {
+  flex: 1 1 45%;
+  min-width:100%;
 }
 
 .codetext {
@@ -682,6 +745,15 @@ ul {
   font-style: normal;
   color: var(--color-5);
   width:100%;
+}
+
+.text-icon {
+  text-align: center;
+  justify-content: left;
+  line-height: 100%;
+  color: var(--color-5);
+  font-weight: 600;
+  font-family: 'DM Mono', 'Kanit', monospace;
 }
 
 
@@ -758,8 +830,8 @@ b {
 
 .bulletpoints {
   position: relative;
- list-style-type: none;
- padding-left: var(--spacing-s);
+  list-style-type: none;
+  padding-left: var(--spacing-s);
 }
 
 .bulletpoints::before {
