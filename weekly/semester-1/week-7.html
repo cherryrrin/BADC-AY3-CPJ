@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creative Process Journal, 24-25.</title>
+
+    <!-- Meta information, for machines to read, SEO -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="Author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <!-- Load StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- header and footer section, the menu. -->
+    <header>
+      <nav class="main__nav-bar">
+        <ul class="main__nav-title">
+          <li><a href="/">IxD-ID</a></li>
+          <li class="mobile__hide padding__top-xs"><a href="/about"><img height="12rem" src="/assets/images/CHOIYERIN_black.png" alt=""></a></li>
+        </ul>
+        <ul class="main__nav-list">
+          <li class="main__nav-item"><a href="/">overview</a></li>
+          <li class="main__nav-item"><a href="/repository">repository</a></li>
+          <li class="main__nav-item"><a href="/about">about</a></li>
+          <li class="main__nav-about">
+            <p>
+              A design communication graduation project.
+            </p>
+          </li>
+        </ul>
+        <div class="main__nav-ham">
+          <span class="main__nav-ham-bar"></span>
+          <span class="main__nav-ham-bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main section, all your content goes here. -->
+    <main>
+      
+      <article>
+
+        <!-- ======= title section start ========= -->
+
+        <section id="title-section">
+          <div class="row width__l margin__auto padding__top-xl">
+
+            <div class="column__half type__content padding__top-m ">
+              <h1>07 Formative Feedback</h1>
+              <p class="padding__top-l">This week, we had a Formative feedback. Andreas was concerned about my progress, and honestly, he had good reasons to be. I've been making things and gathering research, but I wasn't presenting it clearly or connecting it compellingly. This week forced me to confront what I've been avoiding and procrastinating. It clarified what I need to focus on going forward. </p>
+            </div>
+            
+            <div class="column__no-content"></div>
+
+            <div class="column no-content-above padding__y-m">
+              <div class="box__keywords-container">
+                <ul class="box__keywords-list">
+                  <li class="box__keywords-item"><h5>Week-seven</h5> 29.Sep~ 05.Oct, 2025 </li>
+                  <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
+                  <li class="box__keywords-item"><h5>Keywords</h5>
+                    <ul class="keywords-grid">
+                      <li class="keywords-circle">Formative-feedback</li>
+                      <li class="keywords-circle">Prioritization</li>
+                      <li class="keywords-circle-b">Tangibility</li>
+                      <li class="keywords-circle-b">Easing-visualizer</li>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+        </section>
+
+        <!-- ========= end of title section ========-->
+
+
+        <!-- ======= content section start ========= -->
+
+        <section id="contents-section" class="row width__l margin__auto padding__y-xl">
+
+        <!-- ============== side indicator/nav bar start ============= -->
+
+          <aside class="sidebar">
+            <div class="sidebar-item active" data-target="section1">Easing-visualizer</div>
+            <div class="sidebar-item" data-target="section2">SiT-Pitch</div>
+            <div class="sidebar-item" data-target="section3">Formative-feedback</div>
+            <div class="sidebar-item" data-target="section4">Course-correction</div>
+          </aside>
+
+        <!-- =========== side indicater/nav bar end =============== -->
+
+          <div class="content-wrapper">
+
+            <div id="section1" class="row width__s margin__auto">
+              <h2>Experiments Progress</h2>
+              <h3 class="divider-top">Easing Function Visualizer</h3>
+              <p>Continued exploring easing functions by building a visualizer in p5.js that compares six different easing types side by side. </p>
+              <iframe width="100%" height="600px" preload="none" playsinline src="https://editor.p5js.org/rinayerin/full/oofNgUnSz"></iframe> <figcaption><p><span class="keywords-circle-orange">Click</span> to Start/Stop animation <br>and adjust frames with <span class="keywords-circle-orange">Q/W</span></p></figcaption>
+
+              <div class="black__text-container"> 
+                <h6>Easing functions tested:</h6>
+               <p> <span class="oblique">Linear</span> - No easing, constant speed (feels mechanical)
+                    <br><span class="oblique">EaseInOut</span>- Smooth start and end (balanced, common in UI) 
+                    <br><span class="oblique">EaseOut</span> - Fast start, slow end (most common for UI feedback)
+                    <br><span class="oblique">EaseOutBack</span> - Slight overshoot creating bounce (playful)
+                    <br><span class="oblique">EaseOutExpo</span> - Dramatic deceleration (luxury feel)
+                    <br><span class="oblique">EaseOutBounce</span> - Full bouncing effect (very playful, game-like) </p> 
+                
+              </div>
+              <p>The visualizer shows circles moving across the screen simultaneously, each following a different easing curve. I added duration control (Q/W keys to adjust frames) so I can test how timing affects the perception of each easing type.</p>
+
+              <div class="margin__left-l">
+                <h3>Implementation approach:</h3>
+                <p>I used mathematical functions from <a target="_blank" href="https://easings.net/">easings.net</a>, implementing the actual formulas rather than approximating. This ensures accurate representation of each easing curve. The duration parameter (adjustable from 20-180 frames) lets me test how speed interacts with easing type to create different brand impressions.</p>
+
+                <h3>What I learned:</h3>
+                <p>I watched tutorials on drawing easing curves and understanding the math behind them. Also explored desmos.com to graph the mathematical functions and understand their behavior more systematically. Understanding <span class="code-block-orange">deltaTime</span> helped me see how to make animations consistent across different frame rates.</p>
+
+                <div class="row">
+                  <div class="column"><iframe width="100%" height="200hv" src="https://www.youtube-nocookie.com/embed/a-EjhLgWsyY?si=3pyE1YqiBDW-tOzS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <figcaption class="padding__top-s"><p>reference video 01</p></figcaption> <div class="padding__top-m"><iframe src="https://www.desmos.com/calculator/pi7bbtjqhc?embed" width="100%" height="250hv" style="border: 1px solid #ccc" frameborder=0></iframe> <figcaption class="padding__top-s"><p><a href="https://www.desmos.com/calculator/xtr5xiyscy">Sketch of easing functions <br><span class="underline">desmos.com</span></a></p></figcaption></div></div>
+                  <div class="column"><iframe width="100%" height="200hv" src="https://www.youtube-nocookie.com/embed/pydKWTSGMEM?si=NUxVG12wxqPq_PwR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption class="padding__top-s"><p>reference video 02</p></figcaption></div>
+                </div>
+              </div> 
+              <!-- end of 2nd part in 1st section -->
+
+
+
+            </div> <!-- end of section1 -->
+
+
+            <div id="section2" class="row width__s margin__auto padding__top-xl">
+              <h2>Inspiring Pitch: <br>Design Factory @ SIT</h2>
+              <p class="divider-top">We had an inspiring talk from Jeffrey Koh and Aditi Neti from SIT's Design Factory, innovation center. They work across Service Design, Industrial Design, UI/UX, and Creative Technology. <br><br>
+              Projects that stood out to me was their work-in-progress mural for Digital Punggol District, not just a static mural but an interactive digital experience. They worked with artists with disabilities, creating participatory art where people could create their own characters with generated visuals and textures. This reminded me of the potential for <a target="_blank" class="underline" href="https://choiyerin.com/ssa-1">my AR mural app project last year (Singapore Street Archive)</a>. <br><br>
+              Their gamification approach was also really interesting: take the most boring topic and make it an engaging game experience. This validates that thoughtful interaction design can transform how people engage with content.</p>
+
+
+              <div class="margin__left-l">
+                <h3>Useful framework: <br>MoSCoW Prioritization</h3>
+                <p>They showed a prioritization tool: Must have, Should have, Could have, Won't have. This framework immediately felt useful because I've been doing too many things concurrently without clear priorities. I decided to apply this to my project.</p>
+                </div>
+            </div>
+            <!-- end of section2 -->
+
+            <div id="section3" class="row width__s margin__auto padding__top-xl">
+              <h2>Formative Feedback</h2>
+              <img class="divider-top" width="100%" src="/assets/images/test.jpg" alt=""> <figcaption><p>Photo of my desk: formative showcase</p></figcaption>
+
+              <div class=" row padding__y-m margin__left-xxl">
+                <div class="column"><img width="100%" src="/assets/images/week6-Brochure01-print-format-front.jpg" alt=""><figcaption class="padding__top-s"><p>brochure-front</p></figcaption></div>
+                <div class="column"><img width="100%" src="/assets/images/week6-Brochure01-print-format-back.jpg" alt=""><figcaption class="padding__top-s"><p>brochure-back</p></figcaption></div>
+              </div>
+              
+              <p>I prepared a brochure gathering my experiments with a little intro and glossary on the back for terminology. During the feedback Andreas was concerned about my progress. Not because I haven't done work (I have), but because I was not presenting it clearly or compellingly.</p>
+
+              <h4>Two main problems identified</h4>
+              <div class="orange__text-container"><p><span class="underline">01 Clear presentation</span> - My work exists but isn't communicated tangibly <br><span class="underline">02 Compelling ideas</span> - Not making the research accessible or engaging enough</p></div>
+
+                <div class="margin__left-l padding__top-l">
+                  
+                  <h3>The Core Issues</h3>
+                  <h4 class="padding__y-s">Lack of concrete examples: </h4>
+                  <p>Beyond my Apple analogy, I couldn't provide clear examples of atmospheric branding or branded interactions during the presentation. I've gathered case studies in FigJam, but videos are hard to present physically. I thought "FigJam will do it" because it's all videos that can't be printed. But I was wrong. As a designer, I need to make my research more compelling, clearer, and tangible through design and good communication. Even good work has to be delivered in a clear, tangible way. and that's also part of user experience, which is what I'm researching. I was clearly lacking this. I could have at least printed QR codes for videos and mapped them out physically.</p>
+                  <h4 class="padding__y-s">Getting lost in process: </h4>
+                  <p>To be honest, I've been getting lost. I didn't know what I actually wanted to create. I was just making stuff, finding stuff, and moving on. Which was clearly missing the crucial step of iteration, reflection, and observation.</p>
+                  <h4 class="padding__y-s">Procrastinating user evaluations:</h4>
+                  <p>I kept pushing user evaluations to the future, thinking "I'll do it later once I make more things and become clearer." Then I realized: “I'm in the thinking trap again. Just procrastinating.”</p>
+                  <h4 class="padding__y-s">Driven by technicalities:</h4>
+                  <p>I started being driven more by technical exploration — trying out functions, sketching animations — rather than critically thinking about them and integrating them into my research in a clear, tangible way.</p>
+                  <h3>What I Need to Change</h3>
+                  <p>Following Andreas's suggestion to work on storyboards or moodboards, I started organizing my case studies and ideas more clearly in tangible form. <br><br>Andreas reminded me that animations work by frames. Just like how I sketched all my animations with frameCounts, I need to break down my research and presentation frame by frame, making each step clear and visible.</p>             
+                </div>
+
+            </div>
+            <!-- end of section3 -->
+
+            <div id="section4" class="row width__s margin__auto padding__top-xl">
+
+              <h2>Course Correction: <br>New Approaches</h2>
+              <img width="100%" class="divider-top" src="/assets/images/test.jpg" alt=""> <figcaption><p>Photo of my file: <br>Collection of physical materials</p></figcaption>
+
+              <div>
+                <h3 class="padding__top-l">MoSCoW prioritization</h3>
+
+                <p>First, I drew out what I want and have to do using MoSCoW prioritization, and this helped clarify things significantly. MoSCoW (Must Have, Should Have, Could Have, Won’t Have)</p>
+
+                <img class="zoom" src="/assets/images/test.jpg" alt=""><figcaption class="padding__top-s"> <p> MoSCoW prioritization</p> </figcaption> 
+
+              </div>
+
+              <h3>Brand Identity Prism</h3>
+              <p>After talking with Vikas on <a class="underline" href="/weekly/semester-1/week-5.html">week 5</a>, I realized I haven't been using proper frameworks to distinguish brand identity components. I was confusing personality with identity. <br><br>I already knew about Kapferer's Brand Identity Prism from reading his book, but I wasn't applying it critically to my case studies. This was a significant oversight.</p>
+
+              <div class="row padding__bottom-m">
+                <div class="column__half"><img class="zoom" src="/assets/images/test.jpg" alt=""><figcaption class="padding__top-s"><p>Kapferer's Brand Identity Prism</p></figcaption></div>
+                <div class="column"><img class="zoom" width="70%" src="/assets/images/test.jpg" alt=""><figcaption class="padding__top-s"><p>Scope correction</p></figcaption></div>
+              </div>
+
+              <div class="margin__left-xl">
+                <ul>
+                  <li><p>The Brand Identity Prism breaks identity into six facets:</p></li><br>
+                  <li class="bulletpoints"><p><b>Physique</b> - Physical qualities and iconography</p></li>
+                  <li class="bulletpoints"><p><b>Personality</b>  - Character and attitude</p></li>
+                  <li class="bulletpoints"><p><b>Culture</b>   - Value system and principles</p></li>
+                  <li class="bulletpoints"><p><b>Relationship</b>  - How brand relates to customers</p></li>
+                  <li class="bulletpoints"><p><b>Reflection</b>   - Target user image</p></li>
+                  <li class="bulletpoints"><p><b>Self-image</b>  - How users see themselves through the brand</p></li>
+                  <li><br><br> <p>Personality is one factor of the broader term "identity." Using this framework helps me analyze how interactions relate to different dimensions of brand identity, not just vague "brand feeling."</p></li>
+                </ul>
+
+              </div>
+
+
+              <h3>Physical Material Exploration</h3>
+              <p>
+                Rather than making QR codes for each video (tedious for audiences), I started collecting and printing interaction frames.</p>
+
+                <div class="ul-row"> 
+                  <p><b>Process:</b></p>
+                  <ul>
+                    <li class="bulletpoints"><p>Screenshot interactions every 10 frames (at 60fps)</p></li>
+                   <li class="bulletpoints"><p>Print on tracing paper to show motion traces</p></li>
+                   <li class="bulletpoints"><p>Print on thicker paper to create physical animation flip books</p></li>
+                 </ul>
+
+                </div>
+
+              
+
+              <p>Printing Gemini and ChatGPT interactions frame by frame let me physically understand animation principles and interactions in tangible ways. I could flip through the frames and feel the timing. Also I printed simple nav bars and button actions by states (normal, hover, clicked) to compare them at a glance in printed format.</p>
+
+              <div class="row padding__y-s">
+                <div class="column"><img class="zoom" width="100%" src="/assets/images/test.jpg" alt=""><figcaption class="padding__top-s"><p>Frame-by-frame prints</p></figcaption></div>
+                <div class="column"><img class="zoom" width="100%" src="/assets/images/test.jpg" alt=""><figcaption class="padding__top-s"><p>prints of buttons</p></figcaption></div>
+
+                <p>This process of collecting and printing materials, sitting down and physically dissecting them helped more than just coding, finding functions, and trying them out. I realized that the physical act of organizing makes patterns visible.</p>
+
+                <h3>Realizations</h3>
+
+                <div class="margin__left-l">
+                  <h4 class="padding__bottom-m">01 Things I already knew</h4>
+                  <p>Looking back at my <a class="underline" href="/weekly/semester-1/week-3.html">Week 3</a> button case study, I already realized buttons weren't just squares but much broader interaction patterns. But I stayed still instead of exploring further. I identified the insight but didn't act on it. This pattern of recognizing things but not pushing deeper needs to stop.</p>
+                  <h4 class="padding__y-m">02 Tools Need Good Design Too</h4>
+                  <p>To be compelling to designers, even the tools I create need good visual design. I care deeply about design, but I wasn't actually working on designing the appearance of my tools. While focusing on research questions, trying to match methodology, narrowing scope, and keeping neutral colors to exclude visual variables, I forgot something important: making my tools and prototypes visually compelling. Just because I'm testing interaction parameters doesn't mean the interface has to look unfinished.</p>
+                  <h4 class="padding__y-m">03 Showing Disconnection</h4>
+                  <p>Another realization is that showing opposite examples could be powerful. Demonstrating how disconnected visuals and interactions create weird, disjointed feelings. When they harmonize, they provide the atmospheric experiences I've been talking about. Contrast makes the concept clearer than only showing good examples.</p>
+                </div>
+
+
+                <div class="margin__left-xxl">
+                  <div class="ul-row padding__top-m">
+                <ul >
+                  <li><h3>What's Next</h3></li><br><br>
+                  <li class="bulletpoints divider-top"><p>Design the tool interface: Make the prototypes I've developed visually compelling, not just functional</p></li>
+                  <li class="bulletpoints"><p>Case study mapping: Print and physically map more interactions, dissect them systematically using Brand Identity Prism</p></li>
+                  <li class="bulletpoints"><p>User evaluation: Actually start testing. Make simple evaluation sheets.</p></li>
+                  <li class="bulletpoints"><p>Read more foundational texts: Strengthen theoretical grounding while doing practical work</p></li>
+                </ul>
+              </div>
+                </div>
+
+
+
+            </div> <!-- end of section4 -->
+
+
+
+          </div> <!-- end of content wrapper -->
+
+          
+
+
+
+        </section>
+        
+      </article>
+    </main>
+
+    <!-- footer, page ends here.-->
+    <footer>
+
+      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
+      <div class="prev__next">
+        <ul>
+          <li class="prev"><a href="./week-6.html" id="go-prev">prev</a></li>
+          <li><a href="../../index.html">overview</a></li>
+          <li class="next"><a href="./week-8.html" id="go-next">next</a></li>
+        </ul>
+      </div>
+      
+      
+    </footer>
+
+    <div id="lightbox"></div>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
