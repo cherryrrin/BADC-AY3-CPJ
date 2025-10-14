@@ -88,10 +88,10 @@
         <!-- ============== side indicator/nav bar start ============= -->
 
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1">approaches</div>
-            <div class="sidebar-item" data-target="section2">Finding-accessibility</div>
+            <div class="sidebar-item active" data-target="section1">Research-approach</div>
+            <div class="sidebar-item" data-target="section2">Research-progress</div>
             <div class="sidebar-item" data-target="section3">Loading-animation</div>
-            <div class="sidebar-item" data-target="section4">Easing-function</div>
+            <div class="sidebar-item" data-target="section4">What's-next</div>
           </aside>
 
         <!-- =========== side indicater/nav bar end =============== -->
@@ -156,12 +156,14 @@
               <p class="divider-top">I've been working on making my research question clearer using the HMW formula:</p>
 
               <div class="white__text-container">
-                <p> Option 01: <br><span class="oblique">"How might we develop systematic methods for interaction designers and practitioners to create branded interactions so that digital interfaces can express brand personality through user behavior patterns rather than just visual elements?"</span> <br><br> Option 02: <br><span class="oblique">"How might we use computation as a design research method for interaction designers and practitioners to investigate how interface behaviors can embody brand identity so that brands can be expressed through interactions rather than just visual elements?"</span>  </p>
+                <p> Option 01: <br><span class="oblique">"How might we develop systematic methods for interaction designers and practitioners to create branded interactions so that digital interfaces can express brand personality through user behavior patterns rather than just visual elements?"</span> <br><br> Option 02: <br><span class="oblique">"How might we use computation as a design research method for interaction designers and practitioners to investigate how interface behaviors can embody brand identity so that brands can be expressed through interactions rather than just visual elements?"</span> </p>
               </div>
+
+              <p>During consultation for RPO, I realized I'm using too many ambitious words like "provide new perspective," "provide both theoretical and practical insights." How do I know there isn't already research on this? I need to be more cautious and less presumptuous about contributions. <br><br>Also realized I'm inconsistent with terminology. Am I talking about brand "personality" or brand "identity"? Are they the same? Different? I've been using words interchangeably, assuming readers will understand, but I need to be more precise.</p>
 
               
 
-              <h3 class="padding__top-l">PUpdates on reading: <br>Computational Composites</h3>
+              <h3 class="padding__top-l">Updates on reading: <br>Computational Composites</h3>
 
               <p>I’ve been reading more about computational approaches, particularly Vallgårda and Redström's work on computational composites and I found some concepts that directly support my experiments.</p>
 
@@ -178,118 +180,111 @@
               
               <p>The computer handles complex calculations internally, but users only see the result: "this button responds in an playful way" or "this feels like Duolingo." This theoretical framework validates using code as a research tool for systematically manipulating interaction parameters.</p>
 
+              <h3>Experiments: <br>Physical Sensory Exploration</h3>
+              <p>Following Andreas's "look beyond screen" challenge from last week, I actually did some tactile experiments. Touched different materials with different pressure levels and documented what I felt.</p>
+              <h4>Key Observations:</h4>
+
+              <div class="row">
+                
+                <div class="column black__text-container">
+                  <p> <span class="underline"><b>Surface sensitivity</b></span>: Smoother surfaces amplify tactile awareness—like how you can hear your heartbeat in a silent room. With no texture to distract, you feel subtle details more intensely.</p>
+                  <p> <span class="underline"><b>Digital translation</b></span>: Minimal visual noise makes subtle interaction feedback more noticeable. Clean interfaces where small movements have strong effects. Higher sensitivity to cursor/touch movements on visually "smoother" surfaces.</p>
+                </div>
+
+                <div class="column black__text-container">
+                  <p>
+                    <span class="underline"><b>Depth/Resistance relationship</b></span>: The softer the material, the deeper and slower you can press. Soft materials allow gradual pressure buildup.</p>
+                  <p><br><br> <span class="underline"><b>Digital translation</b></span>: Longer press duration could trigger deeper interaction states. Luxury brands might use slow-building, deep interaction patterns. Instead of binary on/off, map press duration to scale and depth. <br><br></p>
+                </div>
+
+              </div>
+
+              <div class="black__text-container">
+                <p><span class="underline"><b>Friction</b></span>: Different materials resist movement differently. Some surfaces let your finger glide, others create drag.</p>
+                
+
+                <p> <span class="underline"><b>Digital translation</b></span>: Varying "drag" coefficients for different interface elements. Premium interactions might have more resistance (deliberate, considered). Playful ones might have less (fluid, easy). Different easing curves and momentum for scrolling, swiping, dragging.</p>
+              </div>
+
+              <p>This physical exploration gave me concrete parameters to explore computationally. It's not just abstract "make it feel premium"—it's specific qualities like resistance, depth, friction that can be translated into code parameters.</p>
+
+
             </div>
             <!-- end of section2 -->
 
             <div id="section3" class="row width__s margin__auto padding__top-xl">
-              <h2>Progress on Loading Experiments</h2>
-              <h3 class="divider-top">Loading Animation <br>Experiments</h3>
-              <p>I successfully developed my p5.js sketch for loading animations with real-time parameter manipulation through keyboard controls.</p>
+              <h2>New Experiment Direction</h2>
+              <h3 class="divider-top">Loading Animations</h3>
 
-              <iframe width="100%" height="400px" src="https://editor.p5js.org/rinayerin/full/3pJpIqrRi" playsinline preload="none"></iframe>
-                <figcaption>
-                  <p>Press Key <span class="keywords-circle-orange">1~4</span> to select animation type <br> and control by <span class="keywords-circle-orange">Q/W</span> <span class="keywords-circle-orange">A/S</span> <span class="keywords-circle-orange">Z/X</span>
-                </figcaption> 
+              <iframe preload="none" playsinline width="100%" height="350hv" src="https://editor.p5js.org/rinayerin/full/_hWO1P0UO"></iframe> <figcaption><p><span class="keywords-circle-orange">Q/W</span> to change Speed <br> <span class="keywords-circle-orange">A/S</span> to change Size</p> </figcaption>
 
-                <p>I created four loading patterns to test parameter effects across different visual structures, keeping design neutral (gray colors, simple shapes) to isolate the motion as the variable being tested.</p>
+              <p><br>I started exploring loading animations in p5.js. Loadings are interesting because they add another layer of brand experience in waiting states between page or action transitions.</p>
+              <div class="row">
+                <div class="column">
+                  <video autoplay muted    playsinline loop preload="none" src="/assets/videos/60fps/Airbnb-loading-switchingsplash.mp4"></video> <figcaption class="padding__top-s"><p>Airbnb</p></figcaption>
+                </div>
+                <div class="column">
+                  <video autoplay muted    playsinline loop preload="none" src="/assets/videos/60fps/Breakthwrk-loading.mp4"></video> <figcaption class="padding__top-s"><p>Breakthwrk</p></figcaption>
+                </div>
+                <div class="column">
+                  <video autoplay muted    playsinline loop preload="none" src="/assets/videos/60fps/CRED-loading-animation.mp4"></video> <figcaption class="padding__top-s"><p>CRED</p></figcaption>
+                </div>
+              </div>
 
-                <div class="ul-row">
-                  <ul>
-                    <li class="bulletpoints">Spinning loader - Rotating elements with motion trail</li>
-                    <li class="bulletpoints">Bouncing dots - Multiple elements with staggered vertical motion</li>
-                    <li class="bulletpoints">Breathing circle - Pulsing scale animation</li>
-                    <li class="bulletpoints">Progress bar - Linear fill with easing</li>
+              <p>There are countless variations of loading animations. Some brands use illustrated animations (Airbnb, Duolingo with characters), but I'm focusing on shape-based ones such as circles, bars, spinners, for better analysis within structured frameworks I can manage.</p>
+
+              <div class="chat__container">
+                <div class="chat__left">
+                  <p class="text-icon"><b>(**)?</b></p>
+                  <div class="orange__text-container">
+                    <p>Why loadings matter?</p>
+                  </div>
+                </div>
+                <div class="chat__right">
+                  <p class="text-icon"><b>\\**//</b></p>
+                  <p class="chat__name"><b>Me</b></p>
+                  <div class="bg__text-container-mono">
+                    <p>They bridge the gap between user action and system response. They acknowledge something is happening while keeping users engaged. Good loading animations make delays feel shorter and less frustrating.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="padding__top-s">The motion should feel purposeful and reassuring, transforming idle time into a dynamic moment that communicates progress. It's not just "please wait," it's an expression of brand personality during a vulnerable moment when users might get impatient. <br><br> Next week I'll develop more refined loading prototypes with systematic parameter manipulations</p>
+
+
+              <h3>Finding Existing Tools: <br>editable.gif</h3>
+              <p>While searching for loading animation examples, I discovered editable.gif—a website where you can edit loading animations and export them as code, videos, or gifs. It has a library of editable loading animations you can customize and download.</p>
+
+              <img width="80%" class="zoom" src="/assets/images/editable.gif-screehshot.jpg" alt=""> <figcaption><p>Screenshot of editable.gif <a target="_blank" href="https://editablegifs.com/make/loading-gif-2">Here</a></p></figcaption>
+
+              <p>My first reaction was honestly discouraging. Someone already built a tool for creating and exporting loading animations. Isn't that part of what I'm trying to develop? But then I remembered Andreas's advice: “when you research more, you'll find similar work. Don't be discouraged—use it as a resource.” So why not? editable.gif solves a different problem than what I'm investigating.</p>
+
+              <div>
+                <figcaption><p>Exported gif</p></figcaption>
+                <br>
+                <img autoplay muted playsinline loop preload="none" src="/assets/videos/loading-editable-gif.gif">
+                </img>
+              </div>
+              
+
+              <p>I can also analyze their library to see what parameter ranges they offer. The tool's existence actually validates that there's demand for systematic ways to create and customize interaction animations. My research contributes by understanding why certain parameter choices create specific brand perceptions, not just providing another customization tool.</p>
+
+            </div> <!-- end of section3 -->
+
+            <div id="section4" class="row width__s margin__auto padding__top-2l padding__bottom-m">
+              <div class="margin__left-xl">
+                <h3 class="under">What I Need to Address</h3>
+                <div class="ul-row divider-top">
+                  <ul class="margin__left-xl">
+                    <li class="bulletpoints padding__y-s"><p><b>Selection criteria for case studies:</b>  Need to develop clearer criteria for what makes an interaction "distinctively branded".</p></li>
+                    <li class="bulletpoints padding__bottom-s"><p><b>Terminology consistency:</b>  Clarify whether I'm discussing brand personality, brand identity, or both and define the distinction.</p></li>
+                    <li class="bulletpoints padding__bottom-s"><p> <b>RPO refinement:</b> Revise the research proposal with clearer language, less ambitious claims, and more precise terminology.</p></li>
+                    
                   </ul>
                 </div>
-
-                <div class="margin__left-l padding__top-l">
-                  
-                  <h3>Parameter System</h3>
-                  <p>Rather than creating fixed animations, I built a system where I can adjust parameters live and observe how they affect brand personality perception.</p>
-                  <p>I could achieve such parameters using functions like <span class="code-block-orange">frameCount</span>, <span class="code-block-orange">sin()</span>, <span class="code-block-orange">cos()</span>, <span class="code-block-orange">lerp()</span>, <span class="code-block-orange">rotate()</span>, etc.</p>
-
-                  <h4 class="underline padding__top-m">The key parameters(custom variables) I'm manipulating:</h4>
-
-                  <h4 class="padding__top-l">01 Timing</h4>
-                  <div class="bg__text-container">
-                    <p><span class="code-block-orange">animationSpeed</span> : How many frames per cycle (lower = faster) <br> <span class="code-block-orange">delayBetweenElements</span> : Stagger timing between multiple elements (creates rhythm)</p>
-                  </div>
-
-                  <h4 class="padding__top-l">02 Motion</h4>
-                  <div class="bg__text-container">
-                    <p><span class="code-block-orange">smoothness</span> : Easing amount controlling how gradually motion happens (lower = smooth), (higher = snappy) 
-                    <br> <span class="code-block-orange">bounciness</span> : Overshoot effect when reaching target (1.0 = none, 2.0+ = bounce) <br> <span class="code-block-orange">intensity</span> : Overall motion magnitude</p>
-                  </div>
-
-                  <h4 class="padding__top-l">03 Visual</h4>
-                  <div class="bg__text-container">
-                    <p><span class="code-block-orange">elementSize</span> : Base size of loading elements <br> <span class="code-block-orange">elementCount</span> : Number of elements (for dot-based animations)</p>
-                  </div>
-
-                  <h3 class="padding__top-2l">Implementation Approach</h3>
-
-                  <div>
-                  <ul>
-                  <li><p>The keyboard controls let me adjust parameters while the animation runs:</p></li> <br>
-                  <li class="bulletpoints"><p>1-4 keys switch animation types</p></li>
-                  <li class="bulletpoints"><p>Q/W adjust speed</p></li>
-                  <li class="bulletpoints"><p>A/S adjust smoothness</p></li>
-                  <li class="bulletpoints"><p>Z/X adjust bounciness</p></li>
-                  <li class="bulletpoints"><p>Spacebar logs current configuration to console</p></li>
-                  <br>
-                  <li><p>This real-time manipulation was crucial to can immediately see how changing one parameter transforms the same animation to feel completely different.</p></li>
-                </ul>
-                </div>
-
-                <h3 class="padding__top-2l">Key Learnings: <br>Parameters Can Override Visuals</h3>
-                <p>What struck me was changing one parameter <br>completely transforms the brand impression <br>even with identical visual design.</p>
-
-                <div class="black__text-container">
-                  <p>Same spinning circle, different parameters:</p>
-                  <p class="underline">(speed) + (smoothness) + (bounciness)</p>
-                  <p>(20 frames) + (0.05) + (1.0) = feels mechanical, corporate, efficient <br>(80 frames) + (0.8) + (1.3) = feels considered, premium, deliberate <br>(60 frames) + (0.4) + (2.0) = feels playful, friendly, game-like</p>
-                </div>
-
-                <p class="padding__top-l"> Above is what I could observe by manipulating parameters with the same visual (spinning circle). Although I still have to conduct a more focused user evaluations, I could clearly observe how personality can come entirely from the motion parameters, rather than the visuals.</p>
-                <p>This validates Vallgårda and Redström's concept that I explored earlier, "controlled transitions between states" are what create the experiential quality. The parameters controlling those transitions ARE the brand expression.</p>                 
-                </div>
+              </div>  
 
             </div>
-            <!-- end of section3 -->
-
-            <div id="section4" class="row width__s margin__auto padding__top-xl">
-              <h2>Consultations</h2>
-              <h3 class="divider-top">Discovery: <br>Penner Easing Functions</h3>
-              <p>During consultation while showing my loading animations, Andreas introduced me to Penner easing functions. I already knew general easing concepts (ease-in, ease-out, ease-in-out) from my UI/UX background and previous button experiments. But I hadn't looked into the actual mathematics and systematic methods behind these functions. <br><br> Turns out there are extensive variations of easing functions, each with specific mathematical formulas. This is something concrete I can experiment with systematically.</p>
-
-              <iframe width="100%" height="400px" src="https://editor.p5js.org/rinayerin/full/OTCTNQpSu" playsinline preload="none" ></iframe> <figcaption>
-                  <p> Practice sketch integrating easing functions on p5.js (followed <a class="underline" target="_blank" href="https://youtu.be/a-EjhLgWsyY?si=1EBX2vQbs41Bdvt4">tutorial</a>) <br> To interact with, <span class="keywords-circle-orange">Click</span> anywhere in the sketch</p>
-                </figcaption> 
-
-              <div class="ul-row padding__top-m">
-                <ul >
-                  <li><p>While exploring how to sketch these easing functions in p5.js, I discovered some websites: </p></li><br><br>
-                  <li class="bulletpoints"><p><a target="_blank" class="underline" href="">easings.net</a> - Shows the easing functions visually with their curves and comprehensive codes.</p></li>
-                  <li class="bulletpoints"><p><a target="_blank" class="underline" href="">cubic-bezier.com</a> - Lets you directly edit and create custom easing functions</p></li>
-                  <li><p><br>These tools are incredibly useful. I can see exactly how different easing curves affect motion, then implement them in my prototypes.</p></li>
-                </ul>
-              </div>
-
-            </div> <!-- end of section4 -->
-
-            <div id="section5" class="row width__s margin__auto padding__top-2l padding__bottom-m">
-              <h3 class="under">Recap: Things I'm Learning</h3>
-              <div class="ul-row divider-top">
-                <ul class="margin__left-xl">
-                  <li class="bulletpoints padding__y-s"><p><b>Simplicity matters more than sophistication:</b> Complex terminology doesn't make research stronger, it makes it inaccessible. Examples, analogies, and clear language communicate better than theoretical jargon.</p></li>
-                  <li class="bulletpoints padding__bottom-s"><p><b>Parameters:</b> Through loading animation experiments, I'm seeing how specific computational parameters (rotation speed, easing curves, bounce amplitude) directly translate to brand personality impressions.</p></li>
-                  <li class="bulletpoints padding__bottom-s"><p> <b>RPO refinement:</b> Revise the research proposal with clearer language, less ambitious claims, and more precise terminology.</p></li>
-                  <li class="bulletpoints padding__bottom-s"><p><b>Existing tools are resources:</b>  Rather than discouraging me, they became valuable resources for understanding the parameter space I'm exploring.</p></li>
-                  <li class="bulletpoints padding__bottom-s"><p><b>Physical organization helps thinking:</b> Having prints and mindmaps visible on my table makes connections more apparent than keeping everything digital.</p></li>
-                </ul>
-              </div>
-
-            </div>
+            <!-- end of section 04 -->
 
 
 
@@ -310,9 +305,9 @@
       <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
       <div class="prev__next">
         <ul>
-          <li class="prev"><a href="./week-5.html" id="go-prev">prev</a></li>
+          <li class="prev"><a href="./week-4.html" id="go-prev">prev</a></li>
           <li><a href="../../index.html">overview</a></li>
-          <li class="next"><a href="./week-7.html" id="go-next">next</a></li>
+          <li class="next"><a href="./week-6.html" id="go-next">next</a></li>
         </ul>
       </div>
       
