@@ -496,7 +496,7 @@ figcaption p b {
 }
 
 .img__border-1 {
-   border: 1.5px solid var(--color-3);
+  border: 3px solid var(--color-bg);
   box-sizing: border-box;
 }
 
@@ -688,6 +688,7 @@ h3 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   padding: var(--spacing-m) 0;
+  width: 100%;
 }
 
 h4 {
