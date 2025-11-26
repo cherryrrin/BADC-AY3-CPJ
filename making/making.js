@@ -31,5 +31,29 @@ makingNavItems.forEach(item => {
   });
 });
 
-window.addEventListener('scroll', updateActiveMakingSection);
+// ==== scroll to top button =====
+
+const scrollTopBtn = document.querySelector('.scroll-top-making');
+const dividingSection = document.getElementById('dividing-section');
+
+function toggleScrollTopButton() {
+  const dividingSectionBottom = dividingSection.offsetTop + dividingSection.offsetHeight;
+
+  // Show button after passing both home and dividing sections
+  if (window.scrollY > dividingSectionBottom) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+}
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+  toggleScrollTopButton();
+  updateActiveMakingSection();
+});
+
 updateActiveMakingSection();

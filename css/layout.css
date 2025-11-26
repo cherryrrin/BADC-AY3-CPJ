@@ -495,9 +495,14 @@ figcaption p b {
   filter: grayscale(100%);
 }
 
+.img__vintage {
+  filter: sepia(20%);
+  background-repeat: lightgray 50%;
+}
+
 .img__border-1 {
   border: 3px solid var(--color-bg);
-  box-sizing: border-box;
+
 }
 
 /* 3. footer */
@@ -932,6 +937,12 @@ b {
 
 .zoom {
   cursor: pointer;
+}
+
+.orange-border {
+  border-radius: 16px;
+  border: 1px solid #FF2E00;
+
 }
 
 /* ********************************************************** */

@@ -129,6 +129,7 @@ header {
 
 /* ============ 02 basic font styling ==================*/
 
+
 .catalogue-title {
     color: #FFF;
     font-family: "Bruno Ace";
@@ -198,13 +199,16 @@ header {
 }
 
 figcaption {
-    color: #121212;
+    color: var(--color-3);
     font-family: "DM Mono";
     font-size: var(--font-size-xs);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     margin-top: 1rem;
+}
+figcaption a {
+ font-size: var(--font-size-xs) !important;
 }
 
 .divider-text {
@@ -225,8 +229,38 @@ h2 {
 
 
 .making-section .texts-contents {
-    max-width: 600px; /* Or any desired pixel value */
-    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right to auto */
-    text-align: center; /* Centers the text inside the block */
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    flex-shrink: 0;
+}
 
+/* ============ 04 scroll-to-top button ============== */
+
+.scroll-top-making {
+    position: fixed;
+    bottom: var(--spacing-m);
+    right: var(--spacing-m);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(21, 21, 21, 0.8);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1000;
+    font-family: 'DM Sans', sans-serif;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.scroll-top-making.show {
+    display: flex;
+}
+
+.scroll-top-making:hover {
+    background-color: rgba(21, 21, 21, 1);
+    transform: translateY(-3px);
 }

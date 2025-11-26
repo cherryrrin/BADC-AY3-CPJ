@@ -52,7 +52,7 @@
   --color-header-bg: #f6f5f382;
   --color-header-fg: #151515;
   --color-title: #E37A41;
-  --color-link:var(--color-5);
+  --color-link:#FF2E00;
   --color-link-hover: var(--color-4);
   --color-nav-link: var(--color-0);
   --color-nav-link-hover: var(--color-4);
@@ -498,6 +498,14 @@
 .align-right {
   justify-content: right;
   text-align: right;
+}
+
+.align-center {
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  align-self: center;
+  justify-self: center;
 }
 
 /* call font family */
