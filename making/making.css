@@ -1,0 +1,147 @@
+/* css file for catalouge of making */
+
+/* ============ 01 background color & nav bars ==================*/
+
+#catalogue-home {
+ background-color: #151515;
+}
+
+
+header {
+   background-color: #F2F2F1 !important;
+   height: 1rem !important;
+}
+
+/* ============ sidebar navigation ==================*/
+
+#making-contents {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) 0;
+}
+
+.sidebar-making {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+    position: sticky;
+    top: var(--spacing-xl);
+    align-self: flex-start;
+    width: 200px;
+    height: fit-content;
+    max-height: 100vh;
+    padding: 20px;
+    margin-right: var(--spacing-xl);
+    flex-shrink: 0;
+}
+
+.sidebar-making-item {
+    padding: 8px 12px;
+    font-size: var(--font-size-s);
+    color: #999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    border-left: 2px solid transparent;
+    padding-left: 16px;
+}
+
+.sidebar-making-item:hover {
+    color: #FFF;
+}
+
+.sidebar-making-item.active {
+    color: #FFF;
+    font-weight: 400;
+    border-left: 2px solid #FFF;
+}
+
+.content-wrapper-making {
+    flex: 1;
+    max-width: 800px;
+}
+
+.making-section {
+    min-height: 60vh;
+    padding: var(--spacing-l) 0;
+    color: #FFF;
+}
+
+.making-section h2 {
+    color: #FFF;
+    margin-bottom: var(--spacing-m);
+}
+
+.making-section p {
+    color: #D9D9D9;
+    line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    #making-contents {
+        flex-direction: column;
+    }
+
+    .sidebar-making {
+        display: none;
+    }
+
+    .content-wrapper-making {
+        max-width: 100%;
+    }
+}
+
+/* ============ 02 font styling ==================*/
+
+.catalogue-title {
+    color: #FFF;
+    font-family: "Bruno Ace";
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+.font-nova {
+    font-family: "Bona Nova";
+    font-weight: 400;
+}
+
+.font-alex {
+    font-family: "Alex Brush";
+    font-weight: 400;
+    font-size: var(--font-size-xxl);
+}
+
+.font-bounce {
+    font-family: "Birthstone Bounce";
+    font-weight: 400;
+    font-size: var(--font-size-xxl);
+}
+
+.font-snell {
+    font-family: "Snell Roundhand Script";
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #D9D9D9;
+    font-family: "Visitor TT1 BRK";
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    line-height: 0px;
+}
+
+.small-texts {
+    color: #D9D9D9;
+    font-family: "DM Sans";
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}

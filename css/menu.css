@@ -7,6 +7,12 @@
   z-index: 1000;
 }
 
+.main__nav-title a {
+  font-weight: 1000 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem !important;
+}
+
 header {
   background-color: var(--color-header-bg);
   height: var(--header__height);
@@ -16,7 +22,7 @@ header {
 .main__nav-bar {
   width: 100%;
   z-index: 100;
-  padding: 1.5rem var(--spacing-l);
+  padding: 1.2rem var(--spacing-l);
   display: flex;
   justify-content: space-between;
 }
@@ -29,8 +35,10 @@ header {
 .main__nav-bar ul li {
   font-family: 'DM Mono', 'Kanit', 'Lato', monospace;
   font-weight: 500;
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
 }
+
+
 
 .main__nav-bar ul li a {
   color: var(--color-nav-link);

@@ -20,6 +20,32 @@
 /* DM Sans import */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+/* Bruno Ace, BirthstoneBounce, Alex Brush, Bona Nova  Import */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Birthstone+Bounce:wght@400;500&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Bruno+Ace&display=swap');
+
+/* pixelify sans import */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/* ====== custom fonts from assets ===== */
+@font-face {
+    font-family: "Snell Roundhand Script"; 
+    src: url(/assets/fonts/Snell-Roundhand-Font/Snell-BT-Regular.otf);
+}
+
+@font-face {
+    font-family: "Visitor TT1 BRK";
+    src: url(/assets/fonts/visitor-brk/visitor1.ttf);
+}
+
+@font-face {
+    font-family: "Visitor TT2 BRK";
+    src: url(/assets/fonts/visitor-brk/visitor2.ttf);
+}
+
+@font-face {
+    font-family: "Snoot Pixel";
+    src: url(/assets/fonts/snoot-org-pixel10/);
+}
 
 
 
