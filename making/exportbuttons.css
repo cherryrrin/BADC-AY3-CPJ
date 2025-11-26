@@ -1,0 +1,25 @@
+/* paste exported buttons' css here */
+
+
+.orange-gradient-button {
+    display: flex;
+    flex-shrink: 0;
+    width: 238px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 16px;
+    border: 3px solid #FD7328;
+    background: linear-gradient(90deg, #F9DEDC 0%, #FBA897 100%);
+    box-shadow: 1px 3px 0 3px #FD7328;
+
+    color: #FFF;
+    font-family: "Pixelify Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

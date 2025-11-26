@@ -495,7 +495,10 @@
 }
 
 
-
+.align-right {
+  justify-content: right;
+  text-align: right;
+}
 
 /* call font family */
 .pixel-text {
