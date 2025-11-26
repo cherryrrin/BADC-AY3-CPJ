@@ -1,6 +1,6 @@
-// ==== scripts for making sidebar navigation =====
+// ==== scripts for making navigation =====
 
-const sidebarMakingItems = document.querySelectorAll('.sidebar-making-item');
+const makingNavItems = document.querySelectorAll('.making-nav-item');
 const makingSections = document.querySelectorAll('.making-section');
 
 function updateActiveMakingSection() {
@@ -13,7 +13,7 @@ function updateActiveMakingSection() {
     }
   });
 
-  sidebarMakingItems.forEach(item => {
+  makingNavItems.forEach(item => {
     item.classList.remove('active');
     if (item.dataset.target === currentSection) {
       item.classList.add('active');
@@ -21,7 +21,7 @@ function updateActiveMakingSection() {
   });
 }
 
-sidebarMakingItems.forEach(item => {
+makingNavItems.forEach(item => {
   item.addEventListener('click', () => {
     const targetId = item.dataset.target;
     const targetSection = document.getElementById(targetId);
