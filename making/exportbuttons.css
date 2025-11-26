@@ -1,5 +1,9 @@
 /* paste exported buttons' css here */
 
+button {
+    background: none;
+    border-style: none;
+}
 
 .orange-gradient-button {
     display: flex;

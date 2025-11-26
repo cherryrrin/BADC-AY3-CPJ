@@ -2,6 +2,9 @@
 
 /* ============ 01 section layouts & nav bars ==================*/
 
+body {
+    overflow-x: hidden;
+}
 
 #catalogue-home {
      background-color: #151515;
@@ -227,7 +230,6 @@ h2 {
     width: 100%;
 }
 
-
 .making-section .texts-contents {
     max-width: 600px;
     margin: 0 auto;
@@ -263,4 +265,13 @@ h2 {
 .scroll-top-making:hover {
     background-color: rgba(21, 21, 21, 1);
     transform: translateY(-3px);
+}
+
+
+/* =============== 05 img styles ===============  */
+
+.file-img-style {
+    width: 704.759px;
+    height: 439.951px;
+    transform: rotate(14.626deg);
 }
