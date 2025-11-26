@@ -1,13 +1,18 @@
 /* css file for catalouge of making */
 
-/* ============ 01 background color & nav bars ==================*/
+/* ============ 01 section layouts & nav bars ==================*/
+
 
 #catalogue-home {
      background-color: #151515;
      height: 95vh;
-     display: flex;
-     flex-direction: column;
-     
+}
+
+.catalogue-home-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 95vh;
 }
 
 :root {
@@ -20,6 +25,34 @@ header {
    position: relative !important;
 }
 
+#dividing-section {
+    height: 3rem;
+}
+
+#experiment1 {
+    background-color: #d9d9d9;
+}
+
+.background-texts {
+    z-index: -1;
+    position: sticky;
+    top: 0;
+    color: rgba(239, 239, 239, 0.40);
+    font-family: "BBH Sans Bartle";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100px;
+    pointer-events: none;
+}
+
+.background-texts::first-letter {
+    font-family: "Snell Roundhand Script";
+    font-size: 200px;
+    font-weight: 900;
+}
+
+
 
 
 /* ============ making navigation ==================*/
@@ -31,14 +64,14 @@ header {
     align-items: center;
     gap: var(--spacing-l);
     flex-wrap: wrap;
-    margin-top: auto;
     padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-l);
 }
 
 .making-nav-item {
-    padding: 1rem 0 0;
+    padding: 0;
     font-size: var(--font-size-xs);
-    color: #999;
+    color: #d9d9d9;
     cursor: pointer;
     transition: all 0.3s ease-out;
     position: relative;
@@ -47,12 +80,12 @@ header {
 }
 
 .making-nav-item:hover {
-    color: #FFF;
+    color: var(--color-5);
 }
 
 .making-nav-item.active {
     color: #FFF;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 #making-contents {
@@ -65,16 +98,25 @@ header {
     min-height: 60vh;
     padding: var(--spacing-l) 0;
     color: #FFF;
+    position: relative;
+    z-index: 0;
 }
 
 .making-section h2 {
-    color: #FFF;
-    margin-bottom: var(--spacing-m);
+    color: #151515;
+    font-family: "Visitor TT1 BRK";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.making-section h2 span {
+    font-weight: 700;
 }
 
 .making-section p {
-    color: #D9D9D9;
-    line-height: 1.6;
+    font-family: "DM Sans";
+    color: #151515;
+    font-size: var(--font-size-ms);
 }
 
 /* Mobile responsiveness */
@@ -84,7 +126,7 @@ header {
     }
 }
 
-/* ============ 02 font styling ==================*/
+/* ============ 02 basic font styling ==================*/
 
 .catalogue-title {
     color: #FFF;
@@ -133,4 +175,43 @@ header {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+}
+
+
+#dividing-section p{
+    color: black;
+    font-size: var(--font-size-s);
+    text-align: center;
+
+}
+
+#dividing-section .pixel-text {
+    font-size: var(--font-size-m);
+    line-height: 1px;
+}
+
+figcaption {
+    color: #121212;
+    font-family: "DM Mono";
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1rem;
+}
+
+.divider-text {
+
+    display: flex;
+    text-align: center;
+    justify-items: center;
+
+    
+}
+
+
+/* ============ 03 layouts ============== */
+
+h2 {
+    width: 100%;
 }

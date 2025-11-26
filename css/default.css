@@ -7,6 +7,7 @@
   /* font-size */
   --font-size-xs: 0.7rem;
   --font-size-s: 0.85rem;
+  --font-size-ms: 1rem;
   --font-size-m: 1.1rem; /* default font-size used */
   --font-size-ml: 1.25rem;
   --font-size-l: 1.5rem;
@@ -491,4 +492,12 @@
 
 .font__weight-900 {
   font-weight: 900;
+}
+
+
+
+
+/* call font family */
+.pixel-text {
+  font-family: "snoot.org pixel10";
 }

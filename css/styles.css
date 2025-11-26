@@ -26,6 +26,11 @@
 /* pixelify sans import */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
+/* BBH Sans */
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+
+
 /* ====== custom fonts from assets ===== */
 @font-face {
     font-family: "Snell Roundhand Script"; 
