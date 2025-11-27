@@ -67,9 +67,9 @@
         <section id="contents-section" class="row width__l margin__auto padding__y-xl">
 
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1">Button-Parameter-Lab-Prototype-V2</div>
-            <div class="sidebar-item" data-target="section2">CiD-Lab</div>
-            <div class="sidebar-item" data-target="section3">Tools & Skills</div>
+            <div class="sidebar-item active" data-target="section1">Key functions & Process Diagram</div>
+            <div class="sidebar-item" data-target="section2">Computational Recreations</div>
+            <div class="sidebar-item" data-target="section3">Key Learnings</div>
             <div class="sidebar-item" data-target="section4">Next-Steps</div>
           </aside>
 
@@ -259,6 +259,21 @@
                 </div>
               </div>
 
+
+              <h3 class="margin__top-xl">03 Apple's Wiggling icons</h3> 
+
+              <iframe class="lazy" preload="none" playsinline width="100%" height="500vh" src="https://editor.p5js.org/rinayerin/full/DzxuWsIxzD"></iframe>
+              <figcaption class=""><p> > Recreation Outcome of Apple's wiggling icons <br><span class="keywords-circle-orange">Click</span> the sketch and press <span class="keywords-circle-orange">+</span> or <span class="keywords-circle-orange">-</span> to increase/decrease the number of icons</p> </figcaption>
+
+              <div class="orange__text-container">
+                <p>Recreating the iconic iOS Wiggling Icons (in edit mode) forced a critical design decision about subtlety: </p>
+                <ul class="ul-row">
+                  <li class="bulletpoints"><p><b>Parameter Restraint:</b> I found that a small amplitude of 0.05 radians was necessary to match the iOS feel. Making it larger felt exaggerated and "panicked".</p></li><br>
+                  <li class="bulletpoints"><p><b>Brand Alignment:</b> This extreme restraint communicates Apple’s brand values of confidence, adhering to their principle that motion should support, not overshadow.</p></li><br>
+                  <li class="bulletpoints"><p><b>Easing Applications:</b>The easing function had to be applied to the amplitude envelope (the degree of wobble) rather than the oscillation speed to maintain a natural rhythm, preserving the sense that the icons are "alive" but "responsive".</p></li>
+                </ul>
+              </div>
+
               
                 
 
@@ -267,50 +282,32 @@
 
 
             <div id="section3" class="row width__s margin__auto padding__top-xl">
-              <h2>Systematic Analysis</h2>
+              <h2>Key Learnings: <br> Systematic Patterns</h2>
             
-              <h3 class="divider-top">Brand Identity Prism
-              </h3>
+      
+              <p class="divider-top">
 
-              <p>Alongside the technical work, I dedicated some time to formalizing my case study methodology, so that I could have a better analysis in computational recreation process later as well. Following the framework I established in my RPO and planned in <a class="underline" href="/weekly/semester-1/week-7.html"> week 7</a>, I mapped out the <b>Brand Identity Prism (Kapferer)</b> for key brands: <b>Apple, Duolingo, LinkedIn, and Instagram</b>.</p>
-
-            
-
-
-              <div class="padding__top-m black__text-container row">
-
-                <img class="zoom orange-border" src="/assets/images/BrandIdentityPrism-Apple.jpg" alt=""> 
-
-                <img class="zoom orange-border" src="/assets/images/BrandIdentityPrism-Duolingo.jpg" alt=""> 
-
-                <img class="zoom orange-border" src="/assets/images/BrandIdentityPrism-Instagram.jpg" alt=""> 
-
-                <img class="zoom orange-border" src="/assets/images/BrandIdentityPrism-LinkedIn.jpg" alt=""> 
+                This intense week of reverse-engineering confirmed that what appears as subjective "feel" in branded interaction follows systematic and predictable patterns.
+               
 
                 
 
-                
-              </div>
-
-              <div class="padding__top-m margin__left-xl ">
-                <p>This detailed analysis helps me move beyond subjective intuition, providing a systematic structure to understand:</p>
-                <ul class="ul-row">
-                  <li class="bulletpoints"><p>
-                    How each brand's <b>Physique</b> (visuals) aligns with its <b>Personality</b> (character).
-                  </p></li>
-                  <li class="bulletpoints"> <p>How the unique interaction patterns I observed (e.g., Duolingo's bounce, Apple's slide-to-action) reflect their <b>Culture</b> and <b>Relationship</b> facet.</p></li>
-                </ul>
-                <p>By mapping these facets, I ensured that my experimental parameter choices are grounded in verifiable brand strategies, reinforcing the research's critical depth.</p>
-              </div>
+                <li class="bulletpoints "><p><b>Compositional Easing:</b> The observed easeOut/easeIn harmony is a compositional technique that ensures the flow from user action to system feedback is fluid and intentional.</p></li>
+                  
+                  <li class="bulletpoints"><p><b>Parameters as Brand Choices:</b> Every variable (from the 4-pixel shadow shift in Duolingo to the 0.05 radian amplitude in Apple) is a deliberate design decision that impacts the brand's perceived personality.</p></li>
+              
+              </p>
 
             </div>
+
+            
 
             <div id="section4" class="row width__s margin__auto padding__top-xl ">
               <div class="column__no-content"></div>
               <div class="column">
                 <h2>Next Steps</h2>
               <p class="divider-top margin__top-s">
-                 With the second prototype for button parameter and Brand Prism mapping complete, the next logical step is computational recreation. I need to reverse-engineer the observed branded interactions in p5.js to gain precise control over their underlying parameters. This will directly feed into the tool's presets and validation phase.
+                 The next logical step is to synthesize these technical findings with my theoretical mappings of brand identity (Kapferer's Prism). This will lead to the final phase of tool architecture development, ensuring the tool can generate these systematically verified parameters.
               </div>
 
               </p>
@@ -325,9 +322,9 @@
       <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
       <div class="prev__next">
         <ul>
-          <li class="prev"><a href="./week-9.html" id="go-prev">prev</a></li>
+          <li class="prev"><a href="./week-10.html" id="go-prev">prev</a></li>
           <li><a href="../../index.html">overview</a></li>
-          <li class="next"><a href="./week-11.html" id="go-next">next</a></li>
+          <li class="next"><a href="./week-12.html" id="go-next">next</a></li>
         </ul>
       </div>
     </footer>
