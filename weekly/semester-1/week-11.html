@@ -37,8 +37,8 @@
         <section id="title-section">
           <div class="row width__l margin__auto padding__top-xl">
             <div class="column__half type__content padding__top-m ">
-              <h1>10 Time to<br> Move On</h1>
-              <p class="padding__top-l">This week shifted focus from development to communication. I completed the second prototype of the Button Parameter Lab, integrating the Neumorphism design and new functions as well as fixing key export bugs. The major challenge was the need to create an effective "invitation" to the research. This led to a creating interactive, code-based sketches that accurately demonstrate the systematic parameter control at the core of my research. </p>
+              <h1>11 Reverse -<br> Engineering</h1>
+              <p class="padding__top-l">This week was a deep dive into the practical application of my research methodology of computational recreation combining computational experiements and case study. I reverse-engineered branded interactions from Duolingo, Apple, and Instagram in p5.js, treating the code environment as a controlled laboratory. This process moved the project from theory to rigorous making and revealed how precise parameter combinations systematically translate to specific brand feelings.</p>
             </div>
             
             <div class="column__no-content"></div>
@@ -46,14 +46,17 @@
             <div class="column no-content-above padding__y-m">
               <div class="box__keywords-container">
                 <ul class="box__keywords-list">
-                  <li class="box__keywords-item"><h5>Week-ten</h5> 20 ~ 26, Oct, 2025 </li>
+                  <li class="box__keywords-item"><h5>Week-eleven</h5> 20.Oct ~ 02.Nov, 2025 </li>
                   <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
                   <li class="box__keywords-item"><h5>Keywords</h5>
                     <ul class="keywords-grid">
-                      <li class="keywords-circle-b">Brand-Identity-Prism</li>
-                      <li class="keywords-circle">Invitation</li>
-                      <li class="keywords-circle-b">New-Methodology</li>
-                      <li class="keywords-circle">Programming-Interaction</li>
+                      <li class="keywords-circle-b">Recreation</li>
+                      <li class="keywords-circle">Case-study
+                      </li>
+                      <li class="keywords-circle">Analytical-Lab</li> 
+                      
+                      <li class="keywords-circle-b">Parameter-Control</li>
+                      <li class="keywords-circle">Easing-functions</li>
                     </div>
                   </li>
                 </ul>
@@ -73,78 +76,190 @@
           <div class="content-wrapper">
 
             <div id="section1" class="row width__s margin__auto">
-              <h2>Tool Development</h2>
+              <h2>Process Diragram 
+                <br>& P5.js Environment</h2>
 
-              <h3 class="divider-top">Button Parameter Lab  Prototype 2</h3>
+              <p class="divider-top">Before documenting the iterative process of my recreations and outcomes I would like to note on several core techniques that I relied on in p5.js environment. These functions helped me 
+               isolate interaction parameters effectively, treating them as my instruments for <b>computational control:</b></p>
+
+              <div class="orange__text-container"><p>
+                <b><span class="code-block-orange">constrain()</span> and <span class="code-block-orange">map()</span>:</b> Essential for limiting numerical variables and translating a variable's range (like time) into an angle range or progress ratio.</p>
+
+              </div>
+
+              <div class="orange__text-container">
+                <p><b>Easings by Position:</b> For animations in p5.js, applying easing functions to the positional value<span class="code-block-orange">startX/Y</span> to <span class="code-block-orange">targetX/Y</span>proved far more effective than trying to manage easing over absolute duration, especially for complex micro-interactions.</p>
+              </div>
+
+              <div class="orange__text-container">
+                <p><b>Motion Blur Technique:</b> Using background transparency in the draw loop created a visible motion trail, which was invaluable for seeing the subtle effects of easing curves and oscillation patterns in real-time. This function was like an analytical aid, akin to onion skinning in After Effects, but more comprehensive.</p>
+              </div>
+
+
+               <h3>Process Diagram</h3>
+
+              <img class="zoom orange-border" src="/assets/images/Diagram_ Recreation process-2.jpg" alt="Recreation Process Diagram">
+              <figcaption><p>> Iterative Recreation Process Diagram</p></figcaption>
+
+              <p>The core of my analysis for this week followed an established, iterative process. This loop, designed to systematically reverse-engineer complex interactions, ensured that subjective "feel" was quantified into measurable parameters.</p>
+
+              <div class="ul-row margin__left-xl"> <ul class="keywords-grid"> <li class="bulletpoints"><p>The process began by selecting existing interactions from case studies and analyzing their patterns frame-by-frame.</p></li> <li class="bulletpoints"><p>I then implemented the basic interactivity using p5.js state management.</p></li> <li class="bulletpoints"><p>Next, visual feedbacks (like shadow or color shifts, but with a neutral palette) were added.</p></li> <li class="bulletpoints"><p>Crucially, I then added easing functions and controlled the duration of each animation to find the closest feeling to the original.</p></li> <li class="bulletpoints"><p>The most rigorous step involved adjusting one variable at a time to isolate and observe how different values affected perception.</p></li> <li class="bulletpoints"><p>The final step was detailed documentation of the process, results, and subjective thoughts.</p></li> </ul> </div>
               
-              <video class="orange-border lazy img__cover-50"
-                    autoplay muted playsinline loop
-                    preload="none"
-                    src="/assets/videos/Button-parameter-lab-prototype2.mp4">
-                </video>
-                <figcaption><p> > Screen Record of Prototype 2 Demo</p></figcaption>
-                
-
-
-              <p >
-                I continued integrating the visual design from Week 8 into the tool's backend, resulting in a cleaner, more functional <b>2nd Prototype</b>. Even though the fundamental functionality was similar to the first prototype, the tool now <b>looked more interesting</b> due to the added aesthetic. Crucially, I fixed several bugs related to the code export feature and added some visual customization functions. <br><br>This fix was important vital, because the tool's core objective is to provide <b>practical methods</b> and tools for <b>practitioners</b>. If the resulting code is buggy, the entire premise of offering a <b class="oblique">systematic</b> and <b class="oblique">production-ready</b> solution is compromised.
-              </p>
-
-
             </div>
 
             
 
             <div id="section2" class="row width__s margin__auto padding__top-xl">
-              <h2>Consultations</h2>
-
-              <h3 class="divider-top">Invite Audience</h3>
-
-              <img class="zoom orange-border img__bw" src="/assets/images/MidiMix-cidlab.jpg" alt="Neumorphism tool design UI">
-              
+              <h2>Case Study Recreation</h2>
+              <p class="divider-top">Recreating interactions exposed the precise <b>design decisions</b> <br> that I could not notice by simple visual obsservation.</p>
 
               
-              <p>The core pressure this week came from Andreas's feedback on audience engagement: <b class="oblique">"People don't read but they rather see."</b> 
-              </p>
 
-              <div class="black__text-container">
-                <p>I realized that designing a functional tool is only half the task. If the sophisticated methodology of how precise parameters create a specific atmosphere is not quickly translated into a compelling, <b>visceral experience</b> (Norman), the research will struggle to gain traction.</p>
+
+              <h3>01 Duolingo Button Interactions</h3>
+
+
+               <div class="row">
+                  
+                  
+                  <div class="column">
+                    <video height="" class="lazy img__cover-50"
+                    autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/EaseInExpo.mp4"></video>
+                    <figcaption class="padding__top-s"><p>  > p5.js Recreation outcome</p></figcaption>
+                  </div>
+
+                  <div class="column">
+                    <video height="" class="lazy img__cover-50"
+                    autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/60fps/Duolingo-Set-new-streakgoal-interaction.mp4"></video> <figcaption class="padding__top-s"><p>> Duolingo-Set-new-streakgoal-interaction</p></figcaption>
+                  </div>
+
               </div>
 
-              <p>This forced a crucial examination of my communication strategy of how I could invite designers to explore this research project.
-              And my initial attempt to create promotional videos using After Effects (AE)
-              </p>
+                 <p class="margin__top-m">The Duolingo Streak button recreation revealed <br> a sophisticated tactile 3D-to-2D illusion.</p>
 
-             
-              <video class="orange-border lazy img__cover-50"
-                    autoplay muted playsinline loop
-                    preload="none" src="/assets/videos/text-animation-1.mp4"></video><figcaption><p>> Initial Video Creation with After Effects</p></figcaption>
+              
+              
+              
 
-              <p>Actually it was fun to use after effects, but as I was not familier to the tool, I had to watch tutorials and learn while creating. Also, I had to create a lot of things, because I still did not create much tools to support the goal of my video. This was actually a <b>significant time sink</b>, pulling energy away from the core computational experiments. 
-              </p>
-                
-                
-              <h3>Time to Move On</h3>
-              <p>
-                I spoke with Andreas about this struggle, and he showed me a project 
-                <a class="underline" target="_blank" href="https://timrodenbroeker.de/programming-posters/"> <b class="oblique">"Programming Posters" (Tim)</b> </a>. This project used code to create dynamic, controllable visual communication, and the concept of controlling parameters to design the poster was the major turning point.
-              </p>
+              <div class="orange__text-container margin__top-l">
+
+                <p>
+                  <b>Physical Simulation:</b><br><br> The pressed state removes the button's shadow while simultaneously shifting its Y position by 4 pixels. This mimics the physical feeling of a pop-up gaming console button being "pressed in," filling the gap left by the disappearing shadow.
+                </p>
+              </div>
 
               <div class="row">
                 <div class="column">
-                  <img class="orange-border" src="/assets/images/programming-posters-2.jpg" alt="programming-posters-tim">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Duolingo-step1.mp4"></video>
+                    <figcaption class="padding__top-s"><p>> Step 01</p></figcaption>
                 </div>
                 <div class="column">
-                  <img width="93%" class="orange-border" src="/assets/images/programming-posters-1.jpg" alt="">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Duolingo-step2.mp4"></video>
+                     <figcaption class="padding__top-s"><p>> Step 02</p></figcaption>
+                </div>
+                <div class="column">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Duolingo-step3.mp4"></video>
+                     <figcaption class="padding__top-s"><p>> Step 03</p></figcaption>
                 </div>
               </div>
-              <p>
-                 Even though I did spend some time on this, I think sometimes it is important to realize and move on quickly. Being inspired by the programming posters project, which used code to create controllable visual communication, this confirmed me the necessity of shifting back to p5.js, but with a refined purpose:
+
+              <div class="orange__text-container margin__top-xl">
+                <p><b>Easing Choice:</b><br><br>I selected easeOutElastic over smoother alternatives like >easeOutExpo because the elastic quality imparted the necessary "snappy" and "playful" feel, reinforcing Duolingo’s encouraging personality.</p>
+              </div>
+
+              <div class="row">
+                <div class="column">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Duolingo-step4.mp4"></video>
+                    <figcaption class="padding__top-s"><p>> Step 04</p></figcaption>
+                </div>
+                <div class="column">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Duolingo-step5.mp4"></video>
+                     <figcaption class="padding__top-s"><p>> Step 05</p></figcaption>
+                </div>
+                
+              </div>
+
+              
+
+              <div class="orange__text-container margin__top-xl">
+                <p>
+                  <b>Input-Output Harmony:</b><br>
+                      <br> I observed a key compositional technique: the motion of the input (button press/release) uses an easeOut function, which is then immediately followed by the output (progress bar slide) using an easeIn function. This complementary sequencing creates a dynamic, connected transition that feels professional and intentional, similar to sequencing transition layers in After Effects.
+                </p>
+              </div>
+
+
+
+              <div class="row"> 
+                <div class="column">
+                  <iframe preload="none" playsinline width="400px" height="600px" src="https://editor.p5js.org/rinayerin/full/jmtkRLoTc"></iframe>
+                  <figcaption class="padding__top-s"><p> > 6th Step of Duolingo Button Sketch <br><span class="keywords-circle-orange">Click</span> a button to interact</p> </figcaption>
+                </div>
+                <div class=" column">
+                  <iframe width="320px" height="600px" src="https://editor.p5js.org/rinayerin/full/7PdYxuLEN"></iframe>
+
+                  <figcaption class="padding__top-s"><p> > 1th Step of Duolingo Button Sketch <br><span class="keywords-circle-orange">Hover</span> over a button to interact</p> </figcaption>
+                </div>
+
+              </div>
+
+             
+                
+              <h3 class="margin__top-xl">02 Instagram Fast-action Button Interactions</h3>
+              
+
+              <div class="row">
+                  
+                  
+                  <div class="column">
+                    <video height="" class="lazy img__cover-50"
+                    autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/recreation-instagram-reels.mp4"></video>
+                    <figcaption class="padding__top-s"><p>  > p5.js Recreation outcome</p></figcaption>
+                  </div>
+
+                  <div class="column">
+                    <video height="" class="lazy img__cover-50"
+                    autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/60fps/Instagram-Reels-logpress-quickactions.mp4"></video> <figcaption class="padding__top-s"><p>> Duolingo-Set-new-streakgoal-interaction</p></figcaption>
+                  </div>
+
+              </div>
+
+              <p class="margin__top-m">
+                Recreating the Hold-to-Action pattern (for Reels/Stories) <br>highlighted the strategic use of input duration.
               </p>
 
               <div class="orange__text-container">
-                <p>My p5.js sketches must function as <b>analytical tools</b>. The goal is not only to recreate interactions, but also to use the code environment to isolate and manipulate specific variables—timing, easing, scale—to systematically observe their effect on brand perception</p>
+                <p>I found that ~15 frames created the quick, smooth ramp-up needed to match the original application's feel. This pattern is a clear example of Branding Input, creating a deliberate engagement pattern that aligns with Instagram's immersive brand values.</p>
               </div>
+
+              <div class="row">
+                <div class="column">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/instagram-step1.mp4"></video>
+                    <figcaption class="padding__top-s"><p>> Step 01</p></figcaption>
+                </div>
+                <div class="column">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Instagram-step2.mp4"></video>
+                     <figcaption class="padding__top-s"><p>> Step 02</p></figcaption>
+                </div>
+                <div class="column">
+                  <video class="orange-border lazy" autoplay muted playsinline loop
+                    preload="none" src="/assets/videos/recreations/Instagram-step3.mp4"></video>
+                     <figcaption class="padding__top-s"><p>> Step 03</p></figcaption>
+                </div>
+              </div>
+
+              
                 
 
             </div>
