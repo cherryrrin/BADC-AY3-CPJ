@@ -831,7 +831,9 @@ p:not(:last-child) {
 }
 
 b {
-  font-weight: bold;
+  font-weight: 600;
+  color: #f36748;
+
 }
 
 .bulletpoints {
