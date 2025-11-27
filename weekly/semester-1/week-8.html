@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creative Process Journal, 24-25.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main__nav-bar">
+        <ul class="main__nav-title">
+          <li><a href="/">IxD-ID</a></li>
+          <li class="mobile__hide padding__top-xs"><a href="/about"><img height="12rem" src="/assets/images/CHOIYERIN_black.png" alt=""></a></li>
+        </ul>
+        <ul class="main__nav-list">
+          <li class="main__nav-item"><a href="/">overview</a></li>
+          <li class="main__nav-item"><a href="/repository">repository</a></li>
+          <li class="main__nav-item"><a href="/about">about</a></li>
+          <li class="main__nav-about">
+            <p>A design communication graduation project.</p>
+          </li>
+        </ul>
+        <div class="main__nav-ham">
+          <span class="main__nav-ham-bar"></span>
+          <span class="main__nav-ham-bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section id="title-section">
+          <div class="row width__l margin__auto padding__top-xl">
+            <div class="column__half type__content padding__top-m ">
+              <h1>08 Project Week:<br>Refining things</h1>
+              <p class="padding__top-l">This week was a necessary break from the intense coding and writing. As we do not have class during the project week, I finally dedicated time to giving my work a visual identity, starting with a redesign of this journal for better readability. The major discovery came from designing the Button Parameter Lab interface, where I solved the challenge of making digital controls feel tactile by implementing Neumorphism after drawing inspiration from physical mixers. This process reinforced the value of occupying the hybrid design-and-code space.</p>
+            </div>
+            
+            <div class="column__no-content"></div>
+
+            <div class="column no-content-above padding__y-m">
+              <div class="box__keywords-container">
+                <ul class="box__keywords-list">
+                  <li class="box__keywords-item"><h5>Week-eight</h5> 06 ~ 12, Oct, 2025 </li>
+                  <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
+                  <li class="box__keywords-item"><h5>Keywords</h5>
+                    <ul class="keywords-grid">
+                      <li class="keywords-circle-b">Redesign</li>
+                      <li class="keywords-circle">Neumorphism</li>
+                      <li class="keywords-circle-b">Tactility</li>
+                      <li class="keywords-circle-b">Atmospheric-competence</li>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </section>
+
+        <section id="contents-section" class="row width__l margin__auto padding__y-xl">
+
+          <aside class="sidebar">
+            <div class="sidebar-item active" data-target="section1">CPJ-Redesign</div>
+            <div class="sidebar-item" data-target="section2">Tool-Design</div>
+            <div class="sidebar-item" data-target="section3">Theory-Integration</div>
+            <div class="sidebar-item" data-target="section4">Tech-Learning</div>
+          </aside>
+
+          <div class="content-wrapper">
+
+            <div id="section1" class="row width__s margin__auto">
+              <h2>Process Journal Re-design</h2>
+              <p class="divider-top">
+                I began the week by fixing the experience of documenting my process. My prevvious journal layout was a bit difficult to read and even harder to code without breaking the flow.
+                <br><br>
+                I realized that as a designer, and especially as I'm researching user experience, my own documentation process needs good UX. After redesigning my CPJ, I could achieve clearer communication and a less cluttered presentation, ensuring that my methodology narrative is accessible for final submission.
+              </p>
+            </div>
+
+            <div id="section2" class="row width__s margin__auto padding__top-xl">
+              <h2>Tool Re-design: Neumorphism</h2>
+
+              <img class="divider-top zoom" src="/assets/images/experiments/Button-Parameter-Lab_Design-1.jpg" alt="Neumorphism tool design UI">
+              <figcaption><p>Parameter Lab UI Design in Figma using Neumorphism</p></figcaption>
+
+              <h3>Finding Tactility</h3>
+              <p>After weeks spent exclusively in theory, coding, and troubleshooting, I finally allowed myself to step back and focus on the tool’s visual design. The dilemma was central to my research: how do I design a tool that is visually neutral (so it doesn't overwhelm the design and testing process) but still feels interesting and satisfying to use?</p>
+
+              <div class="black__text-container">
+                <p>I needed controls that didn't feel like flat digital inputs, but something that feels like physical controller, like remote controller or the physical MIDI mixers.</p>
+              </div>
+
+              <p class="padding__top-m">
+                After looking through some references and my previous works, I realized that <b>Neumorphism </b>(Soft UI) would offer a perfect methodological answer to this physical-digital gap.
+              </p>
+
+              <div class="row">
+                <div class="column"><img src="/assets/images/experiments/visual-reference-parameterlab.jpg" alt="visual-reference-parameterlab">
+                <figcaption class="padding__top-s"><p>A physical tool design by Worklouder</p></figcaption></div>
+
+                <div class="column"><img src="/assets/images/experiments/visual-reference-parameterlab-2.jpg" alt="visual-reference-parameterlab-2"><figcaption class="padding__top-s"><p>Novation Launch Control XL 3</p></figcaption></div>
+              </div>
+
+              <p>
+                <br><br> While I know it has some accessibility debates in general UI, for a parameter-control interface, it’s perfect is used minimally. It uses light and shadow to create 'extruded' and 'pressed' states, mimicking the physics of real buttons and sliders.
+              </p>
+
+                
+              <img class="zoom" src="/assets/images/neumorphism.io.jpg" alt="screenshot of neumorphism.io"><figcaption><p>A screenshot of neumorphism.io</p></figcaption>
+
+              
+
+              <p>
+                I used tools like <a target="_blank" class="underline" href="https://neumorphism.io">neumorphism.io</a> to generate CSS shadows. After weeks of getting stuck in technicalities and raw coding, spending time in Figma designing the aesthetics was genuinely fun. It reminded me why I enjoy this hybrid space. Coding the logic is satisfying, but designing the interface makes the experience feel "real."
+              </p>
+            </div>
+
+            <div id="section3" class="row width__s margin__auto padding__top-xl">
+              <h2>Research Progress: <br>Staging Felt Space</h2>
+              <p class="divider-top">
+                Sometimes, it was hard for me to get back to reading after I start making things. The tangible satisfaction of writing code often overshadows the intellectual discipline required for theoretical reading. So, as I got more independent time this week, I also spent some time to read more on Atmospheric Aesthetics (Atmospheric Architecture), which was a compelling part of my research. I wanted to gain a clearer methodological imperative for producing the non-visual experiences I'm studying.
+              </p>
+
+              <h3 class="padding__top-m">The Staging and Character of Atmosphere</h3>
+              <p>
+                Before, I could not understand the concept of atmosphere in a more straightforward way so I focused on defining the mechanisms Böhme describes for creating felt spaces. The realization is that the aesthetic effect is achieved through intentional <b>staging</b>, which is the arrangement of materials designed to generate a specific atmosphere.
+              </p>
+
+
+              <div class="orange__text-container">
+
+                <p><b>The power of Unconsciousness:</b></p>
+
+                <p>Atmosphere works because it is often perceived <b>unconsciously</b>. It affects our moods and evokes emotions without requiring focused attention from the user. This explains the difficulty users have in articulating why one interface feels fundamentally "better" than another.</p>
+              </div>
+
+
+              <div class="orange__text-container">
+
+                <p><b>Characters of Atmosphere:</b></p>
+
+                <p></p>
+
+                <div class="ul-row">
+                    <ul>
+                      <li class="bulletpoints">
+                        <p><b>Moods:</b> Such as serene or serious.</p>
+                      </li>
+                      <li class="bulletpoints">
+                        <p><b>Movement Suggestions:</b> Uplifting or oppressive.</p>
+                      </li>
+                      <li class="bulletpoints">
+                         <p><b>Synaesthesia:</b> Experience like cold or rouch sensations.</p>
+                      </li>
+                      <li class="bulletpoints">
+                        <p><b>Communicative Character:</b> Tense or engaging.</p>
+                     </li>
+                    </ul>
+                 </div>
+              </div>
+
+              <h3 class="padding__top-m">The Role of Material Arrangement</h3>
+              <p>
+                The staging process depends on the arrangement of material elements. Böhme emphasizes that digital material elements, such as those related to light and shadow, play a foundational role in producing atmosphere. This confirms that visual feedback elements like digital shadows, transparency, and color shifts are critical instruments for creating a felt experience, rather than secondary visual effects.
+              </p>
+
+              <h3 class="padding__top-m">Why Producing Atmosphere Matters?</h3>
+
+              <p>
+                Understanding how to produce atmosphere is, I realize, the central educational objective of my research. This capability develops a <b>two-sided competence</b>  in designers: the ability to <b>"perceive"</b> atmosphere and the ability to <b>"produce (make)"</b> it.
+              </p>
+
+              <div class="black__text-container"> <p>This competence moves the design process past mere intuition, enabling critical awareness and preventing the descent into <b>"meaningless beautification,"</b> where function is overwhelmed by aesthetics.</p> </div>
+
+              <p>
+                My primary methodology for developing this production ability involves rigorously analyzing existing practices (case studies). Taking inspiration from how others stage atmospheres is deemed "inestimably valuable for theory". This practical analysis provides the empirical knowledge needed to systematically manipulate the specific parameters of digital material arrangement.
+              </p>
+
+
+            </div>
+
+            <div id="section4" class="row width__s margin__auto padding__top-xl">
+              <h2>Next Steps</h2>
+              <p class="divider-top">
+                 The next step is definitely to build the tool based on my design from Figma. I have been learning Javascript and HTML/CSS better as I developed some websites, basic tools, and through youtube tutorials, now it would be much easier for me to code out the prototype.
+              </p>
+            </div>
+
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
+      <div class="prev__next">
+        <ul>
+          <li class="prev"><a href="./week-7.html" id="go-prev">prev</a></li>
+          <li><a href="../../index.html">overview</a></li>
+          <li class="next"><a href="./week-9.html" id="go-next">next</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <div id="lightbox"></div>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
