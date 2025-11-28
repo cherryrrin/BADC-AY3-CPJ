@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creative Process Journal, 24-25.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main__nav-bar">
+        <ul class="main__nav-title">
+          <li><a href="/">IxD-ID</a></li>
+          <li class="mobile__hide padding__top-xs"><a href="/about"><img height="12rem" src="/assets/images/CHOIYERIN_black.png" alt=""></a></li>
+        </ul>
+        <ul class="main__nav-list">
+          <li class="main__nav-item"><a href="/">process-journal</a></li>
+           <li class="main__nav-item"><a href="/making/index.html">catalogue-of-making</a></li>
+          <li class="main__nav-item"><a href="/repository">repository</a></li>
+          <li class="main__nav-about">
+            <p>
+              A design communication graduation project.
+            </p>
+          </li>
+        </ul>
+        <div class="main__nav-ham">
+          <span class="main__nav-ham-bar"></span>
+          <span class="main__nav-ham-bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section id="title-section">
+          <div class="row width__l margin__auto padding__top-xl">
+            <div class="column__half type__content padding__top-m ">
+              <h1>14 Visualizing <br>Process</h1>
+              <p class="padding__top-l">This week was a mix of academic articulation and technical implementation. Writing dissertation draft provided a refreshing opportunity to "clean up" my mental model, translating abstract research into written arguments. On the technical front, I finalized the tool's core features by simplifying state management and implementing the code export function and Game Console Preset derived from my earlier studies.</p>
+            </div>
+            
+            <div class="column__no-content"></div>
+
+            <div class="column no-content-above padding__y-m">
+              <div class="box__keywords-container">
+                <ul class="box__keywords-list">
+                  <li class="box__keywords-item"><h5>Week-fourteen</h5> 17 ~ 23. Nov, 2025 </li>
+                  <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
+                  <li class="box__keywords-item"><h5>Keywords</h5>
+                    <ul class="keywords-grid">
+                      <li class="keywords-circle">Dissertation-Draft</li>
+                      <li class="keywords-circle-b">Process-Diagram
+                      </li>
+                      <li class="keywords-circle">Simplification</li> 
+                      
+                      <li class="keywords-circle-b">Game-Console-Preset</li>
+                      <li class="keywords-circle-b">Code-Export</li>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </section>
+
+        <section id="contents-section" class="row width__l margin__auto padding__y-xl">
+
+          <aside class="sidebar">
+            <div class="sidebar-item active" data-target="section1">Dissertation</div>
+            <div class="sidebar-item" data-target="section2">Consultation & Process Diagram</div>
+            <div class="sidebar-item" data-target="section3">Tool Building</div>
+            <div class="sidebar-item" data-target="section4">Next-Steps</div>
+          </aside>
+
+          <div class="content-wrapper">
+
+            <div id="section1" class="row width__s margin__auto">
+              <h2> Dissertation:
+                <br>Writing as Thinking</h2>
+
+              <p class="divider-top">The submission of the <b>dissertation draft</b> was coming to the end, so I spent more time on writing and reading during the week days.
+              This was actually a mechanism for <b>clarity</b>. Taking time to sit down and document the research outcomes provided a necessary distance from the code.</p>
+              
+              <div class="black__text-container"> <p>Writing helped me "clean up" the research outcomes in my head. It forced me to articulate <em>why</em> I am building this tool, moving beyond the technical <em>"how"</em>  to the theoretical <em>"what for."</em> </p> </div>
+
+              <p>I realized how important it is to document the process and work in a more regular basis, so that I can think through my work and plan for the future tasks.</p>
+              
+            </div>
+
+            
+
+            <div id="section2" class="row width__s margin__auto padding__top-xl">
+              <h2>Consultation: <br>Process Diagram</h2>
+
+              <h3 class="divider-top">A "Struggling" Developer</h3>
+
+              <p>My consultation with Andreas touched on the emotional reality of this project. I expressed that I felt "almost like a developer", caught in <b>the cycle of fixing one bug breaking another feature :(</b>  <br><br>Andreas was supportive, acknowledging the frustration inherent in building complex logic.
+                
+                <br><br>To address this, Andreas suggested making this invisible labor graspable by creating a <b>Process Diagram</b>. I designed a visualization of my iterative building process to show that the tool isn't just a final product, but the result of thoughtful decisions and my hard working process.</p>
+
+              <img class="orange-border zoom" src="/assets/images/Diagram_ Tool Building process-2.jpg" alt="Diagram_ Tool Building process">
+              <figcaption><p>Diagram: The cycle of architectural refinement & tool building</p>
+              </figcaption>
+
+            </div>
+
+
+
+            <div id="section3" class="row width__s margin__auto padding__top-xl">
+              <h2>Updates on Tool Building</h2>
+              <p class="divider-top">Despite the focus on writing, I continued refining the tool. A critical realization hit me regarding the <b>Button State Management</b> I established last week because it was robust, but overwhelming for the user.</p>
+
+              <h3>01 State Management to Transition Editor</h3>
+              <p>I decided to revise the architecture again. Instead of exposing every possible logic gate to the user, I simplified the interface while keeping the complexity in the background code.</p>
+
+              <img class="zoom orange-border" src="/assets/images/buttonstates-screenshotof-figma-workfile.jpg" alt="">
+              <figcaption><p>figma working file for ideating state options for button</p></figcaption>
+              
+              <div class="ul-row orange__text-container">
+                  <li class="bulletpoints">
+                    <p><b>Refinement</b> <br>I moved away from managing exhaustive lists of compound states in the UI.</p>
+                  </li><br><br>
+                  <li class="bulletpoints">
+                    <p><b>Implementation</b> <br>I focused on Core Functions like adding functionality for transitions for feedback and ensuring the Code Preview and Export functions were robust enough for the final delivery.</p>
+                  </li>
+              </div>
+
+
+              <img class="zoom orange-border" src="/assets/images/sketch-prototype1-transition-editor.jpg" alt=""> <figcaption><p>Initial screenshot of New function Demo: First prototype of Transitions Editor</p></figcaption>
+
+              <p>The first thing that I focused on building this week was the user flow and the functionality for the <b>transition editor</b>. As I already realized that <b> eases and timing (duration & delay) have to work together</b>  from the previous experiments, I organized them in <b>From > On > [Easing Curve > Duration > Delay]</b>. For 'On', I provided users the options for adding transitions to each feedback they added or to general feedback. </p>
+              <p>However, after trying to implement functions for Easing curves, refering to <a target="_blank" class="underline" href="www.easings.net">easings.net</a> I realized that complex curves should work with <b>keyframes</b> in post css for different parameters like position, scale, color, etc, rather than using simpler cubic-bezier curves. So I implemented a bit different flow for transition editor like the image below</p>
+
+              <img class="zoom orange-border" src="/assets/images/transition-editor-screenshot-2nd.jpg" alt="">
+              <figcaption><p>Screenshot of Revised Transitions Editor Prototype</p></figcaption>
+
+              <h3 class="padding__top-l">02 Bridging Research to Tool</h3>
+              <p>For the <b>Catalogue of Making</b>, I wanted to demonstrate that my tool can actually reproduce the branded interactions I analyzed. I implemented the <b>Game Console Preset</b>, which is the direct translation of my Duolingo computational recreation into the tool's logic.</p>
+
+              <div class="margin__auto"> <div class="column__full"> <div style="background-color: #f5f5f5; padding: 20px; border-left: 4px solid #ff9800; font-family: monospace; font-size: 0.85rem; color: #333; overflow-x: auto;"> <strong>// From SketchElementPage.jsx: Implementing the Duolingo 'Feel'</strong> <br><br>
+
+                <span style="color: #0077aa">const</span> <span style="color: #dd4a68">applyGameConsolePreset</span> = (buttonId) => { <br><br>
+
+
+                  &nbsp;&nbsp;<span style="color: #999">// 1. Physical Simulation: Remove shadow & shift Y on Press</span><br>
+
+
+                  &nbsp;&nbsp;newElement.stateFeedback[<span style="color: #669900">'Pressed'</span>] = [<br>
+
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color: #9a050f">type</span>: <span style="color: #669900">'Position Shift'</span>, <span style="color: #9a050f">properties</span>: { <span style="color: #9a050f">shiftY</span>: 6 } },<br>
+
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color: #9a050f">type</span>: <span style="color: #669900">'Effects'</span>, <span style="color: #9a050f">properties</span>: { <span style="color: #9a050f">effects</span>: [] } } <span style="color: #708090">// Clear shadow</span>
+
+
+                  &nbsp;&nbsp;];<br><br>
+
+
+
+                  &nbsp;&nbsp;<span style="color: #999">// 2. Branded Motion: Elastic Easing</span><br>
+
+
+                  &nbsp;&nbsp;newElement.stateTransitions[<span style="color: #669900">'Pressed'</span>] = [{
+
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9a050f">curve</span>: <span style="color: #669900">'Elastic'</span>,
+
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #9a050f">duration</span>: 100
+
+
+                  &nbsp;&nbsp;}];
+
+
+                }; </div> <figcaption class="padding__top-s"><p>Code Snippet: The <code>applyGameConsolePreset</code> function embedding the Duolingo tactile illusion logic directly into the tool.</p></figcaption> </div> </div>
+
+                <p>This preset proves the tool's capability: with one click, a user can apply the complex "Tactile Illusion" (shadow removal + Y-shift) and "Snappy Easing" that defines the Duolingo brand, validating the tool as a vessel for <b>Embedded Knowledge</b>.</p>
+
+                <img class="zoom orange-border" src="/assets/images/gameconsole-preset-test.jpg" alt="gameconsole-preset-test"> <figcaption><p>First Gameconsole preset Prototype. Test</p></figcaption>
+
+                <p>A critical thing after this phase was that for the tool to be truly useful to practitioners, the "felt" quality must be <b>portable</b>. It's not enough to preview an interaction; the tool must generate the code to <b>implement</b> it. But as I planned for this function while building, and also from my previous prototype for button parameter lab, I was more familiar with building this feature. But this time, as this feature had to be bit more comprehensive and easier to implement, I took the approach of <b>inline javascript and stylesheet</b>, and provided some options to only view HTML and CSS as well.</p>
+
+
+                <img class="orange-border" src="/assets/images/test-code-copy-to-clipboard.jpg" alt=""><figcaption><p>> 01 Testing copy code function</p></figcaption>
+                <img class="orange-border" src="/assets/images/test-preset-export-1.jpg" alt=""><figcaption><p>>  02 Testing implmentation of exported code in a new HTML file</p></figcaption>
+
+            </div>
+
+            
+            
+            
+
+            <div id="section4" class="row width__s margin__auto padding__top-xl ">
+              <div class="column__no-content"></div>
+              <div class="column">
+                <h2>Next Steps</h2>
+
+                <ul class="divider-top margin__top-s">
+                    <li class="bulletpoints padding__bottom-s"><p><b>Debugging Preview Play:</b> During the test, I was struggling to get the transition editing feature working, and as I moved on to the code export, actually exported code was well implementing the transitions, which means that there must be some issues in the preview play. So I will have to fix this</p></li>
+                    <li class="bulletpoints padding__bottom-s"><p><b>Design Code Preview:</b> Now that I built working export feature, I want to give a better readibility and identity to my code preview area</p></li>
+
+                    <li class="bulletpoints padding__bottom-s"><p><b>Catalogue of Making: </b>Next week, I'll have to work on building catalogue of making, implementing the outcomes from my tool and research</p></li>
+                  </ul>
+
+
+              </div>
+
+
+              
+            </div>
+
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
+      <div class="prev__next">
+        <ul>
+          <li class="prev"><a href="./week-13.html" id="go-prev">prev</a></li>
+          <li><a href="../../index.html">overview</a></li>
+          <li class="next"><a href="./week-15.html" id="go-next">next</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <div id="lightbox"></div>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
