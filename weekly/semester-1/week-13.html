@@ -37,8 +37,8 @@
         <section id="title-section">
           <div class="row width__l margin__auto padding__top-xl">
             <div class="column__half type__content padding__top-m ">
-              <h1>12 Learning <br> from Industry</h1>
-              <p class="padding__top-l">This week was a deep methodological investigation into the existing ecosystem of design tools, serving as the foundation for the next tool's architecture. The goal was to identify the critical gaps left by platforms like Figma and HANA, but rather, I got to learn a lot of lessons from the embedded knowledge in the tools.</p>
+              <h1>13 Get Back <br> to Building</h1>
+              <p class="padding__top-l">This week, I finally got back to VS code environment, architecturing the tool's internal logic and implementating them. The goal was to translate subjective motion into a manageable system by defining a <b>Hybrid State Structure</b>. Critically, during the iterative building process, I made a major technical decision from Vanilla Javascript to <b>React</b> to ensure that tool has the robust state mangaement required for its complex architecture.</p>
             </div>
             
             <div class="column__no-content"></div>
@@ -46,17 +46,17 @@
             <div class="column no-content-above padding__y-m">
               <div class="box__keywords-container">
                 <ul class="box__keywords-list">
-                  <li class="box__keywords-item"><h5>Week-twelve</h5> 03 ~ 09. Nov, 2025 </li>
+                  <li class="box__keywords-item"><h5>Week-twelve</h5> 10 ~ 16. Nov, 2025 </li>
                   <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
                   <li class="box__keywords-item"><h5>Keywords</h5>
                     <ul class="keywords-grid">
-                      <li class="keywords-circle-b">Tool-Case-Study</li>
-                      <li class="keywords-circle">Ecosystem-Analysis
+                      <li class="keywords-circle-b">Tool-Architecture</li>
+                      <li class="keywords-circle">React
                       </li>
-                      <li class="keywords-circle">Gap</li> 
+                      <li class="keywords-circle">State-Management</li> 
                       
-                      <li class="keywords-circle-b">Prototyping</li>
-                      <li class="keywords-circle">Emotional-Design</li>
+                      <li class="keywords-circle-b">Per-Property-Control</li>
+                      <li class="keywords-circle">Iterative-Build</li>
                     </div>
                   </li>
                 </ul>
@@ -67,40 +67,67 @@
         <section id="contents-section" class="row width__l margin__auto padding__y-xl">
 
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1">Atlier & Readings</div>
-            <div class="sidebar-item" data-target="section2">Tool Analysis</div>
-            <div class="sidebar-item" data-target="section3">Prototyping</div>
+            <div class="sidebar-item active" data-target="section1">Transition to React</div>
+            <div class="sidebar-item" data-target="section2">State Model</div>
+            <div class="sidebar-item" data-target="section3">Code Architecture</div>
             <div class="sidebar-item" data-target="section4">Next-Steps</div>
           </aside>
 
           <div class="content-wrapper">
 
             <div id="section1" class="row width__s margin__auto">
-              <h2> Atlier 
-                <br>& Reading Progress </h2>
+              <h2> The Implementation Reality:
+                <br>Translation to React</h2>
 
-              <p class="divider-top">During this week's Atlier, we were informed to make <b>Catalogue of Making</b> (publication or website) to visually communicate the research outcomes from experiments. Andreas provided some good references for this from previous students with us. From physical publication by Aditi to Websites by Rachel, Soda, and so on, their Catalogue of Making were inspiring and well documented the outcomes and process, in a visually appealing way. I was motivated and excited to create my own, but at the same time, worried about the timeline I got for submission, as I was still working on my experiments, case studies, and dissertation draft. </p>
+              <p class="divider-top">The technical ambition of the comprehensive tool quickly exposed the limitations of my earlier approach, forcing a fundamental mid-project pivot.</p>
+              
+              <div class="black__text-container"> <p>I initially started implementing the new architecture with <b>Vanilla JavaScript</b> (similar to what was used in the simpler prototyp), but the process was too slow and led to significant stability issues. It was taking much longer to write than the earlier <b>Button Parameter Lab</b> and the code was becoming buggy.</p> </div>
 
-              <div class="row">
+              <p>So, I made the necessary decision to pivot to <b>React</b>. Although this imposed a steeper learning curve, it was a better way to achieve the robust state management and component architecture required for a professional tool. I relied on my ongoing self-learning <b class="oblique">(Sololearn app, YouTube tutorials)</b> to execute this transition.</p>
+
+              <h3>Code Translation: From Script to Component</h3>
+
+              <p>The shift to React was essential because the Vanilla JS model relies on manual DOM manipulation and global variables to track state, which quickly becomes messy. React’s <b>component-based</b> model fundamentally solved this, as evidenced in <span class="code-block-orange">SketchElementPage.jsx</span></p>
+
+              <div class="row margin__auto padding__y-m">
                 <div class="column">
-                  <img class="orange-border zoom" src="/assets/images/reference-catalogueofmaking.jpg" alt="reference-catalogueofmaking"> <figcaption class="padding__top-s"><p>Catalogue by Rachel</p></figcaption>
-                </div>
-                <div class="column">
-                  <img class="orange-border zoom" src="/assets/images/reference-catalogueofmaking-2.jpg" alt="reference-catalogueofmaking"> <figcaption class="padding__top-s"><p>Catalogue by Soda</p></figcaption>
-                </div>
-                <div class="column">
-                  <img class="orange-border zoom" src="/assets/images/reference-catalogueofmaking-3.jpg" alt="reference-catalogueofmaking"> <figcaption class="padding__top-s"><p>Prototypes by Soda</p></figcaption>
+                    <h3>Code Translation: JS vs. React Architecture</h3>
+                  <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+                      <thead>
+                        <tr style="border-bottom: 2px solid var(--color-link); text-align: left;">
+                        <th style="padding: 12px;"><b>Concept</b></th>
+                        <th style="padding: 12px; font-weight: 800;"><b>Vanilla JS</b>  <br></th>
+                        <th style="padding: 12px; font-weight: 800;"><b>React</b> <br></th>
+                        <th style="padding: 12px; font-weight: 800;"><b>Architectural Justification</b></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="border-bottom: 1px solid var(--color-5);">
+                            <td style="padding: 12px; vertical-align: top;"><strong>Data/
+                            <br>Element List</strong></td>
+                            <td style="padding: 12px; vertical-align: top;"><span class="code-block-orange">Global array</span> <span class="code-block-orange">elementsData</span></td>
+                            <td style="padding: 12px; vertical-align: top;">Managed by useState hook:<br>
+                              <span class="code-block-orange">const [elementsData, setElementsData] = useState([])</span></td>
+                            <td style="padding: 12px; vertical-align: top;"><strong>Reactivity:</strong> Changes to the data automatically update the UI (JSX) without manual DOM rendering, drastically reducing bugs.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--color-5);">
+                            <td style="padding: 12px; vertical-align: top;"><strong>Selection State</strong></td>
+                            <td style="padding: 12px; vertical-align: top;"> <span class="code-block-orange">Global selectedItems = new Set() with manual checks</span></td>
+                            <td style="padding: 12px; vertical-align: top;">Managed by <spanZ>useState</span>:<br> <span class="code-block-orange">const [selectedItems, setSelectedItems] = useState(new Set())</span></td>
+                            <td style="padding: 12px; vertical-align: top;"><strong>Stability:</strong> Selection logic is tied cleanly to the component lifecycle.</td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 12px; vertical-align: top;"><strong>UI Updates</strong></td>
+                            <td style="padding: 12px;">Manual <br> <span class=" margin__top-m code-block-orange">renderElements()</span> and <br><span class="code-block-orange">innerHTML</span> updates</td>
+                            <td style="padding: 12px; vertical-align: top;"><strong>Automatic</strong> via JSX rendering triggered by <br><span class="code-block-orange">setElementsData</span></td>
+                            <td style="padding: 12px; vertical-align: top;"><strong>Efficiency:</strong> Enables a clean, declarative model, moving focus from <em>how</em> to draw the DOM to <em>what</em> the state should be.</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-
-              
-
-               <h3>Norman on Emotional Design</h3>
-
-              <img class="zoom orange-border" src="/assets/images/3levelsof-emotional-design-medium.webp" alt="Emotional Design Diagram">
-              <figcaption><p>> 3 Levels of Emotional Design | Source: Justin Baker, Medium</p></figcaption>
-
-              <p>This week, I dedicated some reading time to <b class="oblique">Don Norman's Emotional Design</b>. This reading was critical for positioning the strategic value of branded interaction. While usability operates at the <b>Behavioral level</b>, branded interaction aims for the <b>Reflective Level</b>, where memory, meaning, and loyalty are built through cohesive, felt experiences. The final tool must generate experiences memorable enough to reach this level of emotional connection.</p>
 
               
             </div>
@@ -108,94 +135,111 @@
             
 
             <div id="section2" class="row width__s margin__auto padding__top-xl">
-              <h2>Tools Analysis <br>Industry Flow</h2>
-              <p class="divider-top">My primary focus was a systematic case study of current prototyping or interaction design (IxD) tools to define the <b>architecture</b> of my next prototype and perform a critical <b>gap analysis</b> that justifies my project's existence. Below is some compliance of my analysis that I mapped out on table</p>
+              <h2>Information Architecture: <br> Approaches to State Model</h2>
+              <p class="divider-top">The true challenge of the prototyping was securing the <b>State Machine Architecture</b> within the new React framework. My extensive planning for button types (Action, Selection, Toggle) quickly revealed that I needed to handle complex, conditional states.</p>
 
-              <img class="zoom orange-border" src="/assets/images/Table_Tool-casestudy.jpg" alt="Table_Tool-casestudy">
-              <figcaption><p>My table of Tools Case Study - Figma, GSAP, HANA (Spline), Material Design (Google)</p></figcaption>
+              <h3>The Struggle with Compound States</h3>
 
-              <p>I tried using these tools quite some times, especially Figma, but, there were a lot of things to learn from these tools after I started to analyze them. This was a similar realization after recreations as well, just like how Norman describes that <b class="oblique">behavioral level happens in subconscious level</b>, as we are not conscious about what we are doing, or why we like things, but being noticed by professionals who analyze them. One of the interesting findings was how different tools take <b>different appraoches</b> in designing interaction to make the process more intuitive and <b>user-friendly</b>.</p>
+              <p>I initially planned to hardcode all compound states (e.g., <span class="code-block-orange">Selected</span> / <span class="code-block-orange">On + Hover</span>, <span class="code-block-orange">Off → On</span>). This level of granularity, while accurate to real-world interaction, was visually overwhelming for the designer and extremely difficult to manage in code, confirming the gap identified in the <b>Figma/HANA analysis</b>.</p>
 
-              <div class="orange__text-container">
-                <p><b>Figma: The Screen-to-Screen Flow</b></p>
-                <ul class="ul-row">
-                  <li class="bulletpoints"><p><b>Flow: Trigger >  Action</b> > Target (Destination) <b>> Select Animation Type</b> > Add Easing Curves and Duration > rightarrow > State Management.</p></li>
-                  <li class="bulletpoints">
-                    <p><b>Gap:</b> Figma’s predefined animation types and lack of custom events or actions restrict the designer's ability to create the nuanced, bespoke motion necessary for dynamic branded interactions. There are limitations in code export features in Figma, especially <b>not being able to export interactions and animations to code</b>.</p>
-                  </li>
-                </ul>
+              <div class="row">
+                <div class="column"><img class="orange-border" src="/assets/images/figma-interface.jpg" alt=""><figcaption class="margin__top-s"><p>Trigger options (Figma)</p></figcaption></div>
+                <div class="column"><img class="orange-border" src="/assets/images/hana-interface-2.jpg" alt=""><figcaption class="margin__top-s"><p>Event options (HANA/Spline)</p></figcaption></div>
+                
               </div>
 
-             
-                  <img class="orange-border zoom" src="/assets/images/figma-interface-2.jpg" alt="">
-                  <figcaption><p>Screenshot of Figma Interface in prototype more</p></figcaption>
-               
+              <h3>The Hybrid Solution</h3>
+              <p>I finalized with the <b>Hybrid State Model</b> by moving complexity away <br>from the state name and into the component's conditional logic:</p>
 
-              <div class="orange__text-container margin__top-l">
-                <p><b>HANA (Spline): The State-Driven Flow</b></p>
-                <p>HANA/Spline uses a more programming-based, event-driven approach:</p>
-                <ul class="ul-row">
-                  <li class="bulletpoints"><p><b>Flow: </b> State > Event > Action > Sequence.</p></li>
-                  <li class="bulletpoints">
-                    <p><b>Process:</b> Add states > Add events > Select trigger object > Add actions (transitions / video / open link) > Choose target object and mode > Edit sequence (delay/ loop).</p>
-                  </li>
-                </ul><br><b></b>
-                <p>While <b>good for complex state management</b>, this flow is often overly complex and uses abstract naming, lacking the accessibility needed for visual designers, especially in <b>rapid UI micro-interaction design</b>.</p>
+              <video class="lazy orange-border" autoplay loop muted playsinline preload="none" src="/assets/videos/sketch-button-process1-hybrid.mp4"></video>
+              <figcaption><p>Prototype Process Demo for the dynamic state & Button Types names</p>
+              </figcaption>
+
+              <div class="bg__text-container">
+                  <li class="bulletpoints"><p><b>Conditional Parameters:</b> <br>I added helper functions and state properties that govern behavior, such as stayInReleasedState (for toggle/selection buttons) and logic to override Hover during Pressed or Released states. This simplifies the visible state list while preserving the necessary parametric depth.</p></li>
               </div>
 
-              <img class="orange-border zoom" src="/assets/images/basic-trial-hana.jpg" alt="">
-              <figcaption><p>Screenshot of Hana Interface in prototype more</p></figcaption>
+              <div class="bg__text-container">
+                <li class="bulletpoints">
+                    <p><b>Taxonomy Logic:</b> <br>The function <span class="code-block-orange">handleElementTypeChange</span> ensures that when the user switches a button type, the tool automatically toggles state visibility based on support (e.g., hiding Loading states for a Select button), ensuring embedded knowledge is baked into the tool's core. </p>
+                  </li>
+              </div>
 
-              
+              <div class="bg__text-container">
+                <li class="bulletpoints">
+                  <p><b>Semantic Mapping:</b> <br>Functions like <span class="code-block-orange">getStatePseudoClass</span>  map user-friendly names such as <b>Selected / On</b> to the necessary CSS data attributes like <span class="code-block-orange">data-selected="true"</span> needed for styling the final output.</p>
+                </li>
+              </div>
 
             </div>
 
 
 
             <div id="section3" class="row width__s margin__auto padding__top-xl">
-              <h2>New Prototype: <br>Sketch Interaction</h2>
-            
-      
-              <h3 class="divider-top">Design Evolution</h3>
+              <h2>Tool Logic & State Management</h2>
+              <p class="divider-top">Moving beyond basic architecture, I defined the tool's core <b>operational logic</b>  (how it handles elements, effects, and feedback) to fully realize the Hybrid State Model. This required architecting specific data structures to handle the complexity of branded interaction.</p>
 
-                 <p class="">This week, while conducting the tool case study, I have also been working on <b class="oblique">designing the tool's user flow and basic interfaces</b>  for the new prototype. This time, I wanted to build a more comprehensive tool, better then staying with exploratory levels like parameter labs. <br><br> I actually haven't decided what to call this tool yet but I'm just calling it <b class="oblique">Sketch Interaction or Sketch Button</b> based on my readings for treating computation as a sketchbook for interaction design.
-                <br><br>
-                Also, <b>I decided to focus more on buttons first</b>, as I have been establishing better foundations for buttons and feedback during this semester. So, I decided to rather stay in button and develop a better tool, <b class="oblique">while deeping knowledges and skills in other animations or bigger behavioral patterns</b>.</p>
+              <h3>1. Element Logic & Taxonomy</h3>
+              <p>The core of the tool relies on a smart taxonomy system. Instead of treating all buttons the same, the code distinguishes behaviors via <span class="code-block-orange">elementType</span>.</p>
+              
+              <div class="ul-row orange__text-container">
+                <ul>
+                  <li class="bulletpoints">
+                    <p><b>Logic:</b> <br>The function <span class="code-block-orange">handleElementTypeChange</span> actively manages state availability.</p>
+                  </li><br><br>
+                  <li class="bulletpoints">
+                    <p><b>Embedded Knowledge:</b><br> For example, if a user switches a button from "Action" to "Select," the system automatically hides irrelevant states (like <code>Loading</code>) and enables specific ones (like <code>Selected</code>). This ensures the tool's interface adapts to the user's intent, embedding design knowledge directly into the logic.</p>
+                  </li>
+                </ul>
+              </div>
 
-                 <img class="orange-border" src="/assets/images/tooldesign-1.jpg" alt="">
-                 <figcaption><p>First draft design prototype from Figma</p></figcaption>
+              <h3 class="padding__top-l">2. Feedback as Modular Properties</h3>
+              <p>To achieve high-fidelity "branded" feel, visual changes couldn't be simple CSS class toggles. I architected <span class="code-block-orange">stateFeedback</span> as a modular array system:</p>
 
-                 <p>I maintained the tactile <b>Neumorphism</b> base established in Week 08, but <b class="oblique">I decided to add more color and visual icons</b> this time. This shifts the design from a neutral research instrument to a visually compelling product that invites interaction, while still prioritizing functionality. The final look and layout followed the tested framework of Button Parameter Lab (Prototype 2), ensuring cohesive design within the tool's ecosystem and usability.
+              <div class="bg__text-container">
+                <b>Stacking Logic</b><br><br>
+                <p>Each state (e.g., <code>Hover</code>) contains an array of independent feedback objects (<code>Shape</code>, <code>Fill</code>, <code>Stroke</code>, <code>Effects</code>).</p><br>
 
-                </p>
+                <b>Effect Management</b><br><br>
+                
+                <p>Complex properties like <b>Neumorphic shadows</b> or <b>Glows</b> are managed as specific objects within the feedback array (<span class="code-block-orange">addEffect</span>, <span class="code-block-orange">updateStateFeedback</span>). This allows users to stack multiple shadows or blend modes, which is essential for creating the "tactile" depth observed in my case studies.</p>
+              </div>
 
-                <div class="row">
-                  <div class="column">
-                    <img class="orange-border" src="/assets/images/tooldesign-1-figmapage.jpg" alt=""> <figcaption class="padding__top-s"><p>Figma File for initial design</p></figcaption>
-                  </div>
-                  <div class="column">
-                    <img class="orange-border" src="/assets/images/tooldesign-1-design-system.jpg" alt=""> <figcaption class="padding__top-s"><p>Components for initial design <br>(I designed the icons myself as well for better consistency within the tool)</p></figcaption>
-                  </div>
-                </div>
-
-                <p >Before starting to develop the tool I created some prototypes to see a better userflow using Figma, and some of the basic initial design systems and components that I will address more after I build the functionality of the tool.
-                  
-                </p>
-
+              <h3 class="padding__top-l">3. The Hybrid State Machine</h3>
+              <p>The most significant logical hurdle was handling compound states without overwhelming the user. I implemented a <b>Hybrid State Model</b>:</p>
+              
+              <div class="ul-row">
+                <ul>
+                  <li class="bulletpoints">
+                    <p><b>Explicit States:</b> Visual states like <code>Rest</code>, <code>Hover</code>, and <code>Pressed</code> are explicitly defined.</p>
+                  </li>
+                  <li class="bulletpoints">
+                    <p><b>Implicit Logic:</b> Conditional behaviors—such as whether a button stays pressed after release—are handled by boolean flags in the component logic (<span class="code-block-orange">stayInReleasedState</span>) rather than creating new, confusing state names. This keeps the UI clean while allowing the code to handle the complex state permutations required for Toggle and Selection buttons.</p>
+                  </li>
+                </ul>
+              </div>
 
             </div>
-
+            
             
 
             <div id="section4" class="row width__s margin__auto padding__top-xl ">
               <div class="column__no-content"></div>
               <div class="column">
                 <h2>Next Steps</h2>
-              <p class="divider-top margin__top-s">
-                 The tool analysis and figma prototyping provided the final requirements for the Phase 2 build. The immediate focus is to actually develop the tool first, while fixing some construction of the comprehensive tool logic and state management for the final prototype, ensuring it can generate the systematically verified parameters identified in Week 11.
+                
+                <p class="divider-top margin__top-s padding__bottom-s">The next phase is stabilizing the new React implementation and adding functionality for <b>Transitions</b>, <b>Action</b>, <b>Code Preview & Export</b>, and <b>Presets</b>based on my previous research findings</p>
+
+                <ul>
+                    <li class="bulletpoints padding__bottom-s"><p><b>Debugging:</b> Debug the UI integration for the React in certain functions like cut off effects.</p></li>
+                    <li class="bulletpoints padding__bottom-s"><p><b>More functions:</b> As now I built the basic tool's architecture and layout, I'll revisit my prototype from Figma to add more functionality to the tool such as code export and preview functions for implementation of the tool.</p></li>
+                  </ul>
+
+
               </div>
 
-              </p>
+
+              
             </div>
 
           </div>
@@ -207,9 +251,9 @@
       <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
       <div class="prev__next">
         <ul>
-          <li class="prev"><a href="./week-10.html" id="go-prev">prev</a></li>
+          <li class="prev"><a href="./week-12.html" id="go-prev">prev</a></li>
           <li><a href="../../index.html">overview</a></li>
-          <li class="next"><a href="./week-12.html" id="go-next">next</a></li>
+          <li class="next"><a href="./week-14.html" id="go-next">next</a></li>
         </ul>
       </div>
     </footer>
