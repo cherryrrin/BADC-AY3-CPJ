@@ -8,7 +8,19 @@ body {
 
 #catalogue-home {
      background-color: #151515;
-     height: 95vh;
+     height: 90vh;
+     position: relative;
+     overflow: hidden;
+}
+
+.background-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .catalogue-home-texts {
@@ -16,6 +28,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 95vh;
+    position: relative;
+    z-index: 10;
 }
 
 :root {
@@ -29,16 +43,20 @@ header {
 }
 
 #dividing-section {
-    height: 3rem;
+    background: linear-gradient(180deg, #FF2E00 0%, rgba(255, 255, 255, 0.00) 20%);
+
+    padding-top: var(--spacing-l);
+    
 }
 
 #experiment1,
 #experiment3 {
+    
     background-color: #d9d9d9;
 }
 
 .background-texts {
-    z-index: -10;
+    display: block;
     position: sticky;
     top: 0;
     color: rgba(239, 239, 239, 0.30);
@@ -46,7 +64,24 @@ header {
     font-size: 96px;
     font-style: normal;
     font-weight: 500;
-    line-height: 100px;
+    line-height: 120px;
+    pointer-events: none;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 0;
+    padding: 0;
+    z-index: -10;
+}
+
+.background-texts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FF2E00 0%, rgba(255, 255, 255, 0.00) 25%);
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -62,33 +97,38 @@ header {
 /* ============ making navigation ==================*/
 
 .making-nav {
-    border-top: 1px solid #D9D9D9;
+    border-top: 1px solid #000000;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-l);
     flex-wrap: wrap;
     padding-top: var(--spacing-m);
-    padding-bottom: var(--spacing-l);
+    width: fit-content;
+    margin: 0 auto;
+
+
 }
 
 .making-nav-item {
     padding: 0;
-    font-size: var(--font-size-xs);
-    color: #d9d9d9;
+    font-size: var(--font-size-s);
+    color: #000000;
     cursor: pointer;
     transition: all 0.3s ease-out;
     position: relative;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'snoot.org pixel10', "DM Mono";
     font-weight: 300;
 }
 
 .making-nav-item:hover {
-    color: var(--color-5);
+    color: #FF2E00;
 }
 
 .making-nav-item.active {
-    color: #FFF;
+    color: #FF2E00;
+    text-decoration: underline;
     font-weight: 500;
 }
 
@@ -100,7 +140,7 @@ header {
 
 .making-section {
     min-height: 60vh;
-    padding: var(--spacing-l) 0;
+    padding: 0;
     color: #FFF;
     position: relative;
     z-index: 0;
@@ -135,7 +175,7 @@ header {
 
 .catalogue-title {
     color: #FFF;
-    font-family: "Bruno Ace";
+    font-family: "DM Sans";
     font-size: var(--font-size-xl);
     font-style: normal;
     font-weight: 400;
@@ -163,12 +203,14 @@ header {
 .font-snell {
     font-family: "Snell Roundhand Script";
     font-weight: 700;
+    font-size: var(--font-size-xl);
 }
 
 .subtitle {
+    padding-top: var(--spacing-m);
     color: #D9D9D9;
-    font-family: "Visitor TT1 BRK";
-    font-size: var(--font-size-l);
+    font-family: "DM Sans";
+    font-size: var(--font-size-m);
     font-weight: 400;
     line-height: 0px;
 }
