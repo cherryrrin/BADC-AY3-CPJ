@@ -1,5 +1,7 @@
 /* paste exported buttons' css here */
 
+
+
 button {
     background: none;
     border-style: none;
@@ -8,9 +10,7 @@ button {
 .orange-gradient-button {
     display: flex;
     flex-shrink: 0;
-    width: 238px;
-    height: 65px;
-    padding: 14px 45px;
+    padding: var(--spacing-xs) var(--spacing-m);
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -22,7 +22,7 @@ button {
 
     color: #FFF;
     font-family: "Pixelify Sans";
-    font-size: 30px;
+    font-size: var(--font-size-ml);
     font-style: normal;
     font-weight: 400;
     line-height: normal;

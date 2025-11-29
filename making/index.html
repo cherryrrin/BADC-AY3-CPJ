@@ -51,12 +51,12 @@
         <section id="catalogue-home">
             <div class="background-buttons">
                 <button id="shape-blue" class="margin__top-l"><img src="/assets/images/shape-blue.svg" alt=""></button>
-                 <button class=""><img src="/assets/images/flower.svg" alt=""></button>
+                 <button id="shape-flower"><img src="/assets/images/flower.svg" alt=""></button>
                 <button id="shape-pink"><img src="/assets/images/shape-pink.svg" alt=""></button>
-                <button id="shape"><img src="/assets/images/shape-dynamic.svg" alt=""></button>
-                <button><img src="/assets/images/shape-green.svg" alt=""></button>
-                <button><img src="/assets/images/shape-ellipse.svg" alt=""></button>
-                <button><img src="/assets/images/shape-button.svg" alt=""></button>
+                <button id="shape-dynamic"><img src="/assets/images/shape-dynamic.svg" alt=""></button>
+                <button id="shape-green"><img src="/assets/images/shape-green.svg" alt=""></button>
+                <button id="shape-ellipse"><img src="/assets/images/shape-ellipse.svg" alt=""></button>
+                <button id="shape-button"><img src="/assets/images/shape-button.svg" alt=""></button>
                
             </div>
             <div class="width__all padding__x-m">
@@ -83,11 +83,11 @@
             <div class="width__all margin__auto margin__top-m">
                 <!-- navigation for different sections -->
                         <nav class="making-nav ">
-                            <div class="making-nav-item active" data-target="intro">01 Intro</div>
-                            <div class="making-nav-item" data-target="experiment1">02 Experimental Making</div>
-                            <div class="making-nav-item" data-target="experiment2">03 Reverse-engineering</div>
-                            <div class="making-nav-item" data-target="experiment3">04 Prototyping</div>
-                            <div class="making-nav-item" data-target="experiment4">05 Visualization & Documentation</div>
+                            <div class="making-nav-item active" data-target="intro">00 Intro</div>
+                            <div class="making-nav-item" data-target="experiment1">01 Experimental Making</div>
+                            <div class="making-nav-item" data-target="experiment2">02 Reverse-engineering</div>
+                            <div class="making-nav-item" data-target="experiment3">03 Prototyping</div>
+                            <div class="making-nav-item" data-target="experiment4">04 Visualization & Documentation</div>
                         </nav>
             </div>
         </section>
@@ -96,56 +96,175 @@
 
             <section id="experiment1" class="making-section">
 
-                <div class="background-texts"><span>Recreating</span> <span>Interactions</span></div>
+                <div class="background-texts"><span>Parameter</span> <span>Laboratory</span></div>
                 
-                <div class=" width__all margin__auto padding__x-l padding__y-m row">
+                <div class=" width__all margin__auto padding__x-l padding__y-m  align-center">
+
+                    <button class="making-section-header"><p>01 Experimental Making</p></button>
+
+                    <div class="width__xs margin__y-l">
+                        <p>As the first phase of my making, experimental making includes initial inquiries into the materiality of interaction. Integrating p5.js and web development framework (javascript, HTML, CSS)as a sketching medium to understand and explore specific variables (e.g. speed, scale, and easing curves) to observe their immediate emotional impact.
+                            <br><br> This phase informed my later tool building process, providing foundational insights on parameters and coding skills for interactive prototypes.
+
+                        </p>
+
+                    </div>
+
+                    <div class="row width__s margin__top-xl">
+                        <div class="column"><img class="orange-border" src="/assets/images/experiments/Step 1.jpg" alt=""></div>
+                        <div class="column"><img class="orange-border" src="/assets/images/experiments/Step 2.jpg" alt=""></div>
+                        <div class="column "><img class="orange-border" src="/assets/images/experiments/Step 3.jpg" alt=""></div>
+                        <div class="column"><img class="orange-border" src="/assets/images/experiments/Clicked Clover.jpg" alt=""></div>
+                    </div>
+
+                    <div class="width__xs">
+                        <h4>Experiment 01 Interactive Website</h4>
+                        <p>
+                            <b>Wishing garden</b>  is my first making experiment worked with my peers. We created an interactive web-app using figma 'Make'. It was an opportunity for me to explore the AI prototyping tool in building interactive products, and it taught me how human touch matters in careful interaction design.</p>
+
+                        <p><a class="keywords-circle-orange" href="">Click Here</a> to visit original website</p>
+                    </div>
+
+                    <div class="margin__top-xl">
+                        <button class="orange-gradient-button">01
+                        Button
+                        </button>
+
+                    </div>
+
+                    <div class="margin__top-l width__xs">
+                        <h4>Experiment 02 Button Parameter Lab</h4>
+                        <p>
+                            Button Parameter Lab is a exploratory prototyping tool for building buttons manipulating different parameters of button. The following video recorded the demo of parameter lab prototype version 01. 
+                        </p>
+                        <p><a target="_blank" class="keywords-circle-orange" href="">Click Here</a> to visit original web prototype</p>
+                    </div>
+
+                    <div class="margin__auto padding__top-l row width__l">
+                        <div class="column">
+                            <img class="orange-border" src="/assets/images/experiments/button-lab-wireframe.jpg" alt="">
+                            <figcaption class="">button-lab-wireframe</figcaption>
+                        </div>
+
+                        <div class="column__double">
+                            <video class="orange-border lazy" autoplay playsinline preload="none" loop muted src="/assets/videos/ScreenRecord-button-experiment2.mp4"></video>
+
+                            <figcaption class="">button-lab-prototype-v1</figcaption>
+                        </div>
+                    </div>
+
                     
-                    <h2>01 Reverse - <br> <span class="margin__left-l">Engineering</span></h2>
+                    
 
-                    <p>Computational Recreation for systematic parameter <br>understanding and analysis</p>
+                    <div class="margin__top-xl orange-gradient-button">
+                            02 Easing Functions
+                    </div>
 
+                    <div class="margin__top-l row width__l">
+                            <div class="column">
+                                <video class="lazy orange-border" autoplay loop playsinline preload="none" src="/assets/videos/easingvisualizer-p5.mov"></video>
+                            </div>
+                            <div class=" column align-left align-end">
+                                <h4>Experiment 03 Sketch with easing functions</h4>
+                                <p>Experiment 3 implemented mathematical easing functions within p5.js environment, visualizing how different easing curves affect personality perception. The motion blur effect through p5.js background opacity in draw, supported preview of the traces proving how eases and timing work together.</p>
+                            </div>
 
-                    <div class="works_gallery row">
-
-                        <div class="gallery_element column">
-                            <video class="lazy img__cover-50" 
-                                autoplay muted playsinline loop 
-                                preload="none" 
-                                src="/assets/videos/recreations/EaseInExpo.mp4"></video>
-                            <figcaption>Duolingo Button Interaction</figcaption>
                         </div>
 
-                        <div class="gallery_element column ">
-                             <video class="lazy img__cover-50" 
-                                autoplay muted playsinline loop 
-                                preload="none" 
-                                src="/assets/videos/recreations/recreation-instagram-reels.mp4"></video>
-                            <figcaption>Instagram Fast-Action Button Interaction</figcaption>
+  
+
+                        <div class="row margin__top-l  width__l">
+                            <div class="column">
+                                <video class="lazy orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easeelastic-test-p5.mp4"></video>
+                                <figcaption>ease-out-elastic-test</figcaption>
+                            </div>
+                            <div class="column underbg">
+                                <video class="underbg lazy orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easeout-test.mp4"></video>
+                                <figcaption>ease-out-test</figcaption>
+                            </div>
+                            <div class="column underbg">
+                                <video class="lazy orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easin-test-p5.mp4"></video>
+                                <figcaption>ease-in-test</figcaption>
+                            </div>
+                            
+
+                        </div>
+                        <p class="padding__top-l width__xs">Above sketches are my experiments in integrating easing functions in interactive environment using mouse event. The sketch integrated <span class="code-block-orange">deltaTime</span> in order to maintain the consistent duration within the animation in various devices.</p>
+
+
+                        <div class="margin__top-xl">
+                            <div class="orange-gradient-button">03 Loading Animations</div>
+
                         </div>
 
-                        <div class="gallery_element column">
-                            <video class="lazy"
-                                autoplay muted playsinline loop 
-                                preload="none" 
-                                src="/assets/videos/recreations/recreation-apple-wigglingicon.mp4.mp4"></video>
-                            <figcaption>Apple Wiggling Icon Animation</figcaption>
-                        </div>
-                   
-                     </div>
+                        <div class="margin__top-l width__xs">
+                            <h4>Experiment 04 Loading-animations </h4>
+                                        <p>Experiment 4 explores the loading animation, which is one of the most fundamental animations in digital interfaces that can turn frustrating moments into a room for expression and communication</p>
+                                
+                            </div>
 
-                     <div class=" row padding__top-m texts-contents">
-                        <p >Lorem ipsum dolor sit amet consectetur. Elit massa massa a id eu nibh ultrices. Eu aliquam risus posuere vitae. Cursus a aliquet faucibus gravida id at faucibus sagittis. Tempus et mattis sapien dignissim.</p>
+                        <div class="margin__top-l">
+                                <div class="row">
+                                    <div class="column"><video class="lazy orange-border" playsinline autoplay loop muted preload="none" src="/assets/videos/loading-type-1.mp4"></video><figcaption> animation type 01</figcaption></div>
+                                    <div class="column"><video class="lazy orange-border" playsinline autoplay loop muted preload="none" src="/assets/videos/loading-type-2.mp4"></video><figcaption>animation type 02</figcaption></div>
+                                    <div class="column align-end align-left">
 
-                        <div>
-                        <img class="zoom" src="/assets/images/Diagram_ Recreation process.jpg" alt="">
-                        <figcaption class="align-right">Diagram_Recreation Process</figcaption>
-                     </div>
-                     </div>
+                                        <h4>Loading-Animation Parameter-Lab-prototype-v1</h4>
+                                <p>The animation types are made to be triggered with key <span class="keywords-circle-orange">1</span>, <span class="keywords-circle-orange">2</span>, <span class="keywords-circle-orange">3</span>, <span class="keywords-circle-orange">4</span>. 
+                                    <br><br>The customization of the animation can be done in real-time with key <span class="keywords-circle-orange">Q/W</span> for speed, <span class="keywords-circle-orange">A/S</span> for smoothness, <span class="keywords-circle-orange">Z/X</span> for bounciness controls.</p>
 
-                     
-                     
+                                        <p></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
 
-                </div>
+                            <div class="margin__top-l">
+                                <div class="row">
+                                    <div class="column align-end align-left">
+                                        <h4>Penner's Easing Function 
+                                            -> Spring Model </h4>
+                                        <p>In order to include curves into loop animation within p5 environment, integrating easing function made the animation feel cut off. <br><br>I could achieve similar function, taking spring models approach, by adding variables for smoothness, bounciness, and intensity, mainly integrating lerp function. </p><p></p>
+
+                                    </div>
+
+
+                                    <div class="column"><video class="lazy orange-border" playsinline autoplay loop muted preload="none" src="/assets/videos/loading-type-3.mp4"></video><figcaption> animation type 03</figcaption></div>
+                                    <div class="column"><video class="lazy orange-border" playsinline autoplay loop muted preload="none" src="/assets/videos/loading-type-4.mp4"></video><figcaption> animation type 04</figcaption></div>
+                                    
+                                    
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="margin__top-l width__l">
+                                <video class="lazy orange-border" playsinline loop autoplay muted src="/assets/videos/loading-animation-parameter-v2.mp4"></video>
+                            </div>
+
+
+                            <div class="margin__top-l width__s">
+                                <h4>Loading-Animation Parameter-Lab-prototype-v1</h4>
+                                <p>The above animation types are made to be triggered with key <span class="keywords-circle-orange">1</span>, <span class="keywords-circle-orange">2</span>, <span class="keywords-circle-orange">3</span>, <span class="keywords-circle-orange">4</span>. 
+                                    <br>The customization of the animation can be done in real-time with key <span class="keywords-circle-orange">Q/W</span> for speed, <br><span class="keywords-circle-orange">A/S</span> for smoothness, <span class="keywords-circle-orange">Z/X</span> for bounciness controls.</p>
+
+                            </div>
+
+                        
+
+
+                    
+
+                    
+                    
+
+                    
+
+                    
+
+                    
+                    
+                    
 
                 
 
@@ -154,76 +273,86 @@
             </section>
 
             <section id="experiment2" class="making-section">
-                <div class="background-texts"><span>Button & </span> <span>Feedback</span></div>
+                <div class="background-texts"><span>Coded </span> <span>Interaction</span></div>
                 <div class="width__all margin__auto padding__x-m ">
-                    <div class="align-right row">
-                        <div class="padding__top-m"> <h2 class="align-right"> 02 Parameter <br>Laboratory</h2> </div>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 215 255" fill="none">
-                                <g filter="url(#filter0_d_338_1315)">
-                                    <path d="M136.562 164.423C154.687 168.137 166.369 185.842 162.655 203.966C158.94 222.091 141.236 233.773 123.111 230.059L42.7807 213.596C24.6559 209.882 12.974 192.177 16.6884 174.053C20.4029 155.928 38.1071 144.246 56.2319 147.96C38.1071 144.246 26.4252 126.542 30.1396 108.417C33.8541 90.2918 51.5583 78.6099 69.6831 82.3243C51.5583 78.6099 39.8764 60.9057 43.5908 42.7808C47.3053 24.656 65.0095 12.974 83.1343 16.6885L163.465 33.1512C181.59 36.8656 193.272 54.5699 189.557 72.6947C185.843 90.8195 168.138 102.501 150.014 98.787C168.138 102.501 179.82 120.206 176.106 138.331C172.391 156.455 154.687 168.137 136.562 164.423Z" fill="#327142"/>
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_338_1315" x="0" y="0" width="214.246" height="254.747" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                        <feOffset dx="4" dy="4"/>
-                                        <feGaussianBlur stdDeviation="10"/>
-                                        <feComposite in2="hardAlpha" operator="out"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0.936692 0 0 0 0 0.936692 0 0 0 0 0.936692 0 0 0 0.25 0"/>
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_338_1315"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_338_1315" result="shape"/>
-                                    </filter>
-                                </defs>
-                            </svg>
 
-                        </button>
-                        
-                    </div>
-                    
-                    <div class="width__all padding__top-xl texts-contents">
-                        <p >Lorem ipsum dolor sit amet consectetur. Elit massa massa a id eu nibh ultrices. Eu aliquam risus posuere vitae. Cursus a aliquet faucibus gravida id at faucibus sagittis. Tempus et mattis sapien dignissim.</p>
+                    <div class="row align-center margin__top-xl width__xs">
+                        <div class="making-section-header-white "><p>02 Reverse-engineering</p></div>
+                        <p>The reverse-engineering phase analyzes selected branded interaction from case study. <b>Rather than staying still within observation level</b> of case study, by recreating them in <b>p5.js</b> environment. <br><br> This expriment informed my understanding on branded interactions and the preset configurations for my later tool building process. <br>Diagram below is the iterative recreation process</p>
                     </div>
 
-                    <div class="padding__top-xl">
-                        <div class="align-center">
-                            <button class="orange-gradient-button">01 Button</button>
-                        </div>
-                        
-                        <div class="width__all padding__top-l texts-contents">
-                        <p >Lorem ipsum dolor sit amet consectetur. Elit massa massa a id eu nibh ultrices. Eu aliquam risus posuere vitae. </p>
-                        </div>
+                    <div class="width__s  align-center margin__y-l">
+                        <img class="orange-border zoom" src="/assets/images/Diagram_ Recreation process-2.jpg" alt="">
+                        <figcaption>Diagram Recreation Process</figcaption>
+                     </div>
 
-                        <div class=" row padding__top-l padding__x-xl ">
-                            <div class="column">
-                                <img class="img__vintage orange-border zoom" src="/assets/images/experiments/button-lab-wireframe.jpg" alt="">
-                                <figcaption>Button-Lab: Wireframe</figcaption>
-                            </div>
-                            <div class="column__triple">
-                                <video class="lazy img__cover-50 orange-border" 
+
+                    <div class="margin__top-xl width__l align-center">
+                        <video class="orange-border underbg" autoplay loop playsinline muted preload="none" src="/assets/videos/case-study-compilance.mp4"></video>
+                        <figcaption>Compilance of collected branded-interactions from case study</figcaption>
+
+                         <p class="width__xs margin__top-m">Above is some of the branded interaction that I collected from 60fps during my case study process. (Detailed information can be found in the <a href="/index.html">process journal</a>, <a href="https://docs.google.com/document/d/1Sqru6gvz9IOGzcmTYpwJId12XVFZMrZo5tUvQiqCAcE/edit?tab=t.0">dissertaion draft</a>, and <a href="https://www.figma.com/board/9K1AYhcnP490EPtOI6W2HE/Interaction-archive?node-id=0-1&t=zabiFa8CvNebm1tX-1">Figjam</a> file)</p>
+                    </div>
+
+
+                    <div class="row margin__top-xl width__l align-center row underbg">
+                        <div class="column">
+                            <video class="lazy orange-border" loop preload="none" autoplay muted playsinline src="/assets/videos/60fps/Duolingo-Set-new-streakgoal-interaction.mp4"></video>
+                            <figcaption>Duolingo-Set-new-streakgoal-interaction</figcaption>
+                        </div>
+                        <div class="column">
+                            <video class="lazy orange-border" loop preload="none" autoplay muted playsinline src="/assets/videos/60fps/Instagram-Reels-logpress-quickactions.mp4"></video>
+                            <figcaption>Instagram-Reels-hold-to-quick-actions</figcaption>
+                        </div>
+                        <div class="column">
+                            <video class="lazy orange-border" loop preload="none" autoplay muted playsinline src="/assets/videos/60fps/Apple-AppsWiggling.mp4"></video>
+                            <figcaption>Apple-Wiggling-Icons</figcaption>
+                        </div>
+                    </div>
+                   
+
+            
+
+
+                    <div class="works_gallery margin__top-l width__l align-center row">
+
+                        <div class="gallery_element column">
+                            <video class="orange-border lazy img__cover-50" 
                                 autoplay muted playsinline loop 
-                                preload="none"  src="/assets/videos/ScreenRecord-button-experiment2.mp4"></video>
-                                <figcaption>Button-Lab: Prototype version 02 | Click <a class="keywords-circle-orange" href="https://cherryrrin.github.io/InteractionExperiment/experiment1.html">Here</a> to try in web</figcaption>
-                            </div>
+                                preload="none" 
+                                src="/assets/videos/recreations/EaseInExpo.mp4"></video>
+                            <figcaption>Recreated Duolingo Button Interaction</figcaption>
                         </div>
 
-                        <div class="padding__top-l"></div>
-
-
-                        <video class="lazy img__cover-50 padding__top-l" 
+                        <div class="gallery_element column ">
+                             <video class="orange-border lazy img__cover-50" 
                                 autoplay muted playsinline loop 
-                                preload="none"  src="/assets/videos/Button-parameter-lab-prototype2.mp4">
-                        </video>
-                        <figcaption class="padding__x-l align-center">Parameter-lab prototype 2 | Click <a class="keywords-circle-orange" target="_blank" href="https://button-parameter-lab-prototype-v2.netlify.app/button-tools-1">Here</a> to try in web</figcaption>
-                        <div class="width__all padding__top-l texts-contents">
-                        <p >Lorem ipsum dolor sit amet consectetur. Elit massa massa a id eu nibh ultrices. Eu aliquam risus posuere vitae. Cursus a aliquet faucibus gravida id at faucibus sagittis. Tempus et mattis sapien dignissim.</p>
-                    </div>
-                            
-                    </div>
+                                preload="none" 
+                                src="/assets/videos/recreations/recreation-instagram-reels.mp4"></video>
+                            <figcaption>Recreated Instagram Fast-Action Button Interaction</figcaption>
+                        </div>
 
-                    
+                        <div class="gallery_element column">
+                            <video class="orange-border lazy"
+                                autoplay muted playsinline loop 
+                                preload="none" 
+                                src="/assets/videos/recreations/recreation-apple-wigglingicon.mp4.mp4"></video>
+                            <figcaption>Recreated Apple Wiggling Icon Animation</figcaption>
+                        </div>
+                   
+                     </div>
 
+                     <div class=" row padding__top-m margin__bottom-xl align-center width__xs">
+                        <h4 class="padding__top-l">Computational Recreations (p5.js)</h4>
+                        <p >Above are original interactions and the recordings of my recreated sketches. P5 sketches and detailed steps are interactive and can be found from my p5 collections <a class="keywords-circle-orange" target="_blank" href="https://editor.p5js.org/rinayerin/collections/2zZ7-6wbX">Here</a>. <br> <br> I could get a lot of insights from especially <b>Duolingo</b> recreation made me realize how important this phase is. The first key insight from this is the discovery of <b>compositional harmony</b> (Ease-Out Input / Ease-In Output) as a standard for professional, fluid motion. Secondly, how <b>visual effects</b> are important for feedback to  create atmospheric effects. This also motivated me to create a tool for visual editor for each button state (default, hover, pressed, release, disabled, etc.) </p>
 
+                        
+                     </div>
+
+                     
+                     
+
+                </div>
                     
 
 
@@ -231,19 +360,138 @@
             </section>
 
             <section id="experiment3" class="making-section">
-                <div class="width__all margin__auto padding__x-l padding__y-m">
-                    <div class="background-texts">Developing Tools</div>
-                    <h2>03 Sketch <br><span class="margin__left-l">Interaction</span></h2>
-                    <p>Content for experiment 3 goes here...</p>
+                <div class="width__all margin__auto padding__x-l">
+                    <div class="background-texts">IxD Tool <br> Building</div>
+                    
+                    <div class="align-center width__xs making-section-header margin__top-xl"><p>03 Prototyping</p></div>
+                    <p class="width__xs align-center padding__top-l">
+                        This phase documents the transition from previous experiments to actual tool building and its process, in order to provide more comprehensive tools for designers to actually <b>craft</b>, <b>test</b>, and <b>implement</b> interactions. <br><br>
+                        Below contents include the documentation of inspirations, architectural evolution, and recordings of the tool demonstration.
+                    </p>
 
-                    <video class="lazy img__cover-50 padding__top-l" 
-                                autoplay muted playsinline loop 
+                    <div class="padding__top-xl row">
+                        <div class=" column__double padding__top-l">
+                            <img class="underbg"  src="/assets/images/midimix-subject.png" alt=""><figcaption class="width__xs"><b>MIDIMIX</b> <br><br>MIDImix is a portable, compact controller <br>made by Akai Professional that provides <br>physical control over digital software. </figcaption>
+                            
+                        </div>
+                        <div class="column">
+                            <video class="underbg lazy orange-border" playsinline autoplay muted loop src="/assets/videos/midimix-experimentation.mp4"></video>
+                            <div>
+                                <h4>Inspiration: Experiment with Midi Mix</h4>
+                                <p>I experimented connecting MIDImix to p5.js and coded a sketch of controllable shape. This gave me motivation to provide a more tangibility, physical sensation of parameter control tool itself.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    <div class="padding__top-xl">
+                        <div class="align-center">
+                            
+                        </div>
+                        
+                        <div class="width__all padding__top-l texts-contents">
+                            <h4>Neumorphic interface - Button-parameter-lab Redesign</h4>
+                        <p>
+                            Building an atmospheric interactions requires embedded knowledge. Which means tools must guide the designer through complex <b>state management without overwhelming them</b>. In order to achieve this, the tool's design had to be minimal 
+                        </p>
+
+                        <p><b>Inspired by MIDmix</b>  experiment and my readings, the new design for the tool, button parameter lab, provides a tactility of interaction with a visual effect called <a href="https://neumorphism.io/#e0e0e0" class="underline" target="banak">neumorphism</a> using lights and shadow for a subtle contrast that Bohme also emphsizes in his theory of <a class="underline" target="_blank" href="https://www.google.com/search?sca_esv=f9901c6b52e850df&rlz=1C5CHFA_enKR1058KR1060&sxsrf=AE3TifM1QpGXsLHPlOCYw7f5afz8RBwE0w:1764436103777&q=atmospheric+architecture+book&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIegMOm3ItDJ-cT-Q5w0bTw0au2mChSvoUCYtVLAcGsFarL9KG8yley_BmNbuF44qUrrHAPt3uLwToz80O3UcNKxISwMbV8BBgyrKZsdTCQJ-S9tjLcnKri3W8bObjMlP3vv1tMVggx6_g0ohFy9txk_RlUNas2YLZ5spANqHKCAsYc9XPSA&sa=X&ved=2ahUKEwi39MbZ7JeRAxWA_7sIHQYQEfgQ0pQJegQIEBAB">"atmospheric aesthetics"</a> </p>
+                        </div>
+
+                        <video class="width__l align-center orange-border lazy img__cover-50 margin__top-l" 
+                                autoplay muted playsinline controls 
+                                preload="none"  src="/assets/videos/Button-parameter-lab-prototype2.mp4">
+                        </video>
+                        <figcaption class="padding__x-l align-center">Parameter-lab prototype 2 | Click <a class="keywords-circle-orange" target="_blank" href="https://button-parameter-lab-prototype-v2.netlify.app/button-tools-1">Here</a> to try in web</figcaption>
+
+                        
+
+                        <div class="width__xs align-center padding__top-l">
+                            
+                        </div>
+
+
+                        
+                        <div class="width__l padding__top-l align-left row">
+
+                            <div class="column__no-content"></div>
+
+                            <div class="column">
+
+                                <h4>Parameter-lab Prototype v2 <br><span class="underline">Core following function Refinement:</span></h4>
+
+                                <p >
+                            
+                                <span class="bulletpoints ">
+                                Brand identity <span class="keywords-circle-orange">presets</span> for users to easily implement my research findings of certain configurations that can create different personality (e.g. playful).
+                                </span>
+
+                                <br><br> <span class="bulletpoints ">
+                                <span class="keywords-circle-orange">Code Export function</span> enabling users to actually implement the designed button to html file with css code
+                                </span>
+
+                                <br><br> <span class="bulletpoints ">
+                                <span class="keywords-circle-orange">Different preview options</span> such as buttons for play, hover, and active for viewing certain button states, also including <span class="keywords-circle-orange">spacebar shortcut</span> for fast preview action
+                                </span>
+
+
+                        </p>
+
+                            </div>
+                        
+
+                    </div>
+                            
+                    </div>
+
+                    <div class="width__xs padding__top-xl align-center ">
+                        <h4>Comprehensive Tool Building - Sketch Interaction</h4>
+                        <p><b>Sketch Interaction</b> is a tool allowing designers to <b>design micro-interaction</b> with UI elements by crafting <b>feedback</b> and <b>animate transition</b> between states. Below is the diagram of the iterative process</p>
+                            
+                    </div>
+
+                    <div class="width__s padding__top-m align-center">
+                        <img class="zoom orange-border" src="/assets/images/Diagram_ Tool Building process-2.jpg" alt=""><figcaption>Diagram_Tool Building_Process</figcaption>
+                    </div>
+
+                    <div class="margin__y-l align-center width__xs">
+                        <p>As stated in the diagram, the tool's architecture and function (e.g. logic for interaction design flow, presets) embed my research findings from <b>case study on both branded interactions and currently existing prototyping tools</b>. Below is the table of the compiled analysis from case study on prototyping tools</p>
+                    </div>
+
+                    <div class="width__m align-center">
+                        <img class="zoom orange-border" src="/assets/images/Table_Tool-casestudy.jpg" alt="">
+                        <figcaption>Table of Prototyping Tool Analysis</figcaption>
+                    </div>
+
+                    <h4 class="align-center margin__top-xl">Sketch-Interaction Prototype v1</h4>
+
+                    <p class="margin__top-l align-center width__xs">
+
+                        Below is the demonstration of using a current prototype of the tool<b>This first version of the prototype focuses on the button interaction </b> as buttons can be almost <b>>most of the userinteractive UI elements </b>in web environments.
+
+                        </p>
+
+
+                    
+
+
+
+                    <video class="orange-border lazy img__cover-50 margin__top-l" 
+                                autoplay muted playsinline controls 
                                 preload="none"  src="/assets/videos/screenrecord-sketch-interaction-v2.mp4">
                         </video>
-                        <figcaption class="align-center width__all">Sketch-Interaction prototype 2 | Click <a class="keywords-circle-orange" target="_blank" href="https://sketch-interaction-tools.netlify.app/">Here</a> to try in web</figcaption>
-                        <div class="width__all padding__top-l texts-contents">
+                        <figcaption class="align-center width__all">Sketch-Interaction prototype 2 | Click <a class="keywords-circle-orange" target="_blank" href="https://sketch-ixd-prototype1.netlify.app/sketch-tool">Here</a> to try in web</figcaption>
+                        <div class="width__all padding__y-l texts-contents">
 
-                    <p >Lorem ipsum dolor sit amet consectetur. Elit massa massa a id eu nibh ultrices. Eu aliquam risus posuere vitae. Cursus a aliquet faucibus gravida id at faucibus sagittis. Tempus et mattis sapien dignissim.</p>
+                        <p>
+                         At its core, the prototype provides a <b>real-time preview</b> canvas and code export function, managing <b>button states</b> (e.g. default, hover, pressed, released, selected) with user input <b>trigger</b> (e.g. mouseOver, mouseDown, mouseUp) and <b>transitions</b> between them. 
+
+                         <br><br> As the tool was built in React environment, code export provides in <b>different frameworks</b> (CSS, HTML, javascript, React) increasing its compatibility and accessibility.
+                         </p>
+
+                           
                         
 
 

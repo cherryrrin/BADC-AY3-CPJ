@@ -494,10 +494,22 @@
   font-weight: 900;
 }
 
+.align-end {
+
+  align-content: end;
+  align-self: self-end;
+
+}
+
 
 .align-right {
   justify-content: right;
   text-align: right;
+}
+
+.align-left {
+  justify-content: left !important;
+  text-align: left !important;
 }
 
 .align-center {
