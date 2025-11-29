@@ -83,7 +83,7 @@
             <div class="width__all margin__auto margin__top-m">
                 <!-- navigation for different sections -->
                         <nav class="making-nav ">
-                            <div class="making-nav-item active" data-target="intro">00 Intro</div>
+                            <div class="making-nav-item active" data-target="dividing-section">00 Intro</div>
                             <div class="making-nav-item" data-target="experiment1">01 Experimental Making</div>
                             <div class="making-nav-item" data-target="experiment2">02 Reverse-engineering</div>
                             <div class="making-nav-item" data-target="experiment3">03 Prototyping</div>
@@ -142,7 +142,7 @@
 
                     <div class="margin__auto padding__top-l row width__l">
                         <div class="column">
-                            <img class="orange-border" src="/assets/images/experiments/button-lab-wireframe.jpg" alt="">
+                            <img class="zoom orange-border im__exclude" src="/assets/images/experiments/button-lab-wireframe.jpg" alt="">
                             <figcaption class="">button-lab-wireframe</figcaption>
                         </div>
 
@@ -162,7 +162,7 @@
 
                     <div class="margin__top-l row width__l">
                             <div class="column">
-                                <video class="lazy orange-border" autoplay loop playsinline preload="none" src="/assets/videos/easingvisualizer-p5.mov"></video>
+                                <video class=" lazy orange-border" autoplay loop playsinline preload="none" src="/assets/videos/easingvisualizer-p5.mov"></video>
                             </div>
                             <div class=" column align-left align-end">
                                 <h4>Experiment 03 Sketch with easing functions</h4>
@@ -173,16 +173,16 @@
 
   
 
-                        <div class="row margin__top-l  width__l">
+                        <div class="row margin__top-l  width__l im__exclude">
                             <div class="column">
-                                <video class="lazy orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easeelastic-test-p5.mp4"></video>
+                                <video class="lazy im__exclude orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easeelastic-test-p5.mp4"></video>
                                 <figcaption>ease-out-elastic-test</figcaption>
                             </div>
-                            <div class="column underbg">
-                                <video class="underbg lazy orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easeout-test.mp4"></video>
+                            <div class="column im__exclude">
+                                <video class="underbg lazy orange-border " autoplay loop playsinline muted preload="none" src="/assets/videos/easeout-test.mp4"></video>
                                 <figcaption>ease-out-test</figcaption>
                             </div>
-                            <div class="column underbg">
+                            <div class="column im__exclude">
                                 <video class="lazy orange-border" autoplay loop playsinline muted preload="none" src="/assets/videos/easin-test-p5.mp4"></video>
                                 <figcaption>ease-in-test</figcaption>
                             </div>
@@ -237,16 +237,19 @@
                             </div>
 
                             
+                            <div class="margin__top-xl align-center width__xs">
+                                <h4>loading-animation-lab prototype v2</h4>
+                                <p>Below video is the demonstration of <b>the second prototype of</b> the loading animation lab in p5.js with new design and features.</p>
+                            </div>
 
                             <div class="margin__top-l width__l">
-                                <video class="lazy orange-border" playsinline loop autoplay muted src="/assets/videos/loading-animation-parameter-v2.mp4"></video>
+                                <video class="lazy orange-border" playsinline autoplay loop controls muted preload="none" src="/assets/videos/loading-animation-parameter-v2.mp4"></video>
                             </div>
 
 
-                            <div class="margin__top-l width__s">
-                                <h4>Loading-Animation Parameter-Lab-prototype-v1</h4>
-                                <p>The above animation types are made to be triggered with key <span class="keywords-circle-orange">1</span>, <span class="keywords-circle-orange">2</span>, <span class="keywords-circle-orange">3</span>, <span class="keywords-circle-orange">4</span>. 
-                                    <br>The customization of the animation can be done in real-time with key <span class="keywords-circle-orange">Q/W</span> for speed, <br><span class="keywords-circle-orange">A/S</span> for smoothness, <span class="keywords-circle-orange">Z/X</span> for bounciness controls.</p>
+                            <div class="margin__top-l margin__bottom-xl width__s">
+                               
+                                <p>As I prefered the <b>slider controls</b> from the button lab and leared that colors & motion blurs are important factors, I included those functions this time. It was fun to build and play with, but this prototype is still in exploratory level as I still believe that this prototype has a lot to solve and can not be used for the actual implementation.</p>
 
                             </div>
 
@@ -262,12 +265,18 @@
 
                     
 
-                    
-                    
-                    
 
-                
 
+                    <div class="width__all margin__auto margin__top-xl margin__bottom-xl">
+                        <!-- navigation for different sections -->
+                                <nav class="making-nav ">
+                                    <div class="making-nav-item" data-target="dividing-section">00 Intro</div>
+                                    <div class="making-nav-item" data-target="experiment1">01 Experimental Making</div>
+                                    <div class="making-nav-item" data-target="experiment2">02 Reverse-engineering</div>
+                                    <div class="making-nav-item" data-target="experiment3">03 Prototyping</div>
+                                    <div class="making-nav-item" data-target="experiment4">04 Visualization & Documentation</div>
+                                </nav>
+                        </div>
 
         </div>
             </section>
@@ -277,7 +286,7 @@
                 <div class="width__all margin__auto padding__x-m ">
 
                     <div class="row align-center margin__top-xl width__xs">
-                        <div class="making-section-header-white "><p>02 Reverse-engineering</p></div>
+                        <div class="making-section-header-white "><p>04 Documentation</p></div>
                         <p>The reverse-engineering phase analyzes selected branded interaction from case study. <b>Rather than staying still within observation level</b> of case study, by recreating them in <b>p5.js</b> environment. <br><br> This expriment informed my understanding on branded interactions and the preset configurations for my later tool building process. <br>Diagram below is the iterative recreation process</p>
                     </div>
 
@@ -349,11 +358,21 @@
                         
                      </div>
 
-                     
-                     
+
+
+                    <div class="width__all margin__auto margin__top-xl margin__bottom-xl">
+                        <!-- navigation for different sections -->
+                                <nav class="making-nav ">
+                                    <div class="making-nav-item" data-target="dividing-section">00 Intro</div>
+                                    <div class="making-nav-item" data-target="experiment1">01 Experimental Making</div>
+                                    <div class="making-nav-item" data-target="experiment2">02 Reverse-engineering</div>
+                                    <div class="making-nav-item" data-target="experiment3">03 Prototyping</div>
+                                    <div class="making-nav-item" data-target="experiment4">04 Visualization & Documentation</div>
+                                </nav>
+                        </div>
 
                 </div>
-                    
+
 
 
                 </div>
@@ -469,7 +488,7 @@
 
                     <p class="margin__top-l align-center width__xs">
 
-                        Below is the demonstration of using a current prototype of the tool<b>This first version of the prototype focuses on the button interaction </b> as buttons can be almost <b>>most of the userinteractive UI elements </b>in web environments.
+                        Below is the demonstration of using a current prototype of the tool. <b>This first version of the prototype focuses on the button interaction </b> as buttons can be almost <b>>most of the userinteractive UI elements </b>in web environments.
 
                         </p>
 
@@ -491,22 +510,86 @@
                          <br><br> As the tool was built in React environment, code export provides in <b>different frameworks</b> (CSS, HTML, javascript, React) increasing its compatibility and accessibility.
                          </p>
 
-                           
-                        
+                         <div class="margin__bottom-xl"></div>
 
+
+                    <div class="width__all margin__auto margin__top-xl margin__bottom-xl">
+                        <!-- navigation for different sections -->
+                                <nav class="making-nav ">
+                                    <div class="making-nav-item" data-target="dividing-section">00 Intro</div>
+                                    <div class="making-nav-item" data-target="experiment1">01 Experimental Making</div>
+                                    <div class="making-nav-item" data-target="experiment2">02 Reverse-engineering</div>
+                                    <div class="making-nav-item" data-target="experiment3">03 Prototyping</div>
+                                    <div class="making-nav-item" data-target="experiment4">04 Visualization & Documentation</div>
+                                </nav>
+                        </div>
 
                 </div>
             </section>
 
             <section id="experiment4" class="making-section">
-                <div class="width__all margin__auto padding__x-l padding__y-m row">
-                    <h2 class="align-center">04 Visualization & <br>  <span class="margin__left-xl">Documentation</span></h2>
-                    <div><img class="file-img-style" src="/assets/images/document-file-pink.png" alt=""></div>
-                    <p>Content for experiment 4 goes here...</p>
+
+                <div class="background-texts"><span>Document &</span> <span>Visualize</span></div>
+                <div class="width__all margin__auto padding__x-m ">
+
+                    <div class="row align-center margin__top-xl width__xs">
+                        <div class="making-section-header-white "><p>04 Visualization & Documentation</p></div>
+                        <p>This phase is a compilance of the project's documentation and implementation to provide a <b>better visualization and tactility</b> to my research, due to the abstract, digital-first nature of my project  </p>
+                    </div>
 
                     
+                <div class="width__all margin__auto padding__x-l margin__y-xl row">
 
+                    <div class="column padding__top-l"><img class="orange-border zoom underbg" src="/assets/images/physical-mindmap.jpeg" alt=""> <figcaption class="align-center">Physical mindmap on my desk</figcaption></div>
+                    
+                 
+                    <div class="column__double"><img class=" file-img-style" src="/assets/images/document-file-pink.png" alt=""><figcaption class="align-right">File of printed <br> outcomes & inpirations <br>& research directions</figcaption></div>
                 </div>
+
+
+                    <div class="margin__top-xl">
+                        <div class="row margin__y-l">
+                            <div class="column underbg">
+                                <img class="" src="/assets/images/tracing-1.jpg" alt="">
+                            </div>
+                            <div class="column__double align-left align-end">
+                                <div class="width__xs"><h4>Storyboard for interaction</h4>
+                                <p>A storyboard is a graphic organizer that consists of simple illustrations or images displayed in sequence for the purpose of pre-visualizing a motion picture. In order to visualize the digital interactions into a printed format, I used this technique by printing the screenshots the same frames from the collected interaction of different AI products. <br><br><br><br></p></div>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column margin__left-l align-end padding__bottom-xl">
+                                <h4>Motion and Duration works together</h4>
+                                <p>Right image is the comparative storyboards of Gemini and ChatGPT loading animation, printed on tracing paper. Again, this gave the <b>tactility to the theory that motion and duration works together</b>. Moreover, this phase demonstrated how different motion techniques are used to create totally different feeling even for the same function.</p>
+                            </div>
+                            <div class="column__double">
+                                <img class="underbg im__exclude" src="/assets/images/tracing-2.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="width__l margin__y-xl align-center">
+
+                            <h4>Interactive Canvas</h4>
+
+                            <img class="underbg orange-border" src="/assets/images/oldwebsitedesignbg.jpg" alt="">
+
+                        </div>
+                    </div>
+
+
+                    <div class="width__all margin__auto margin__top-xl margin__bottom-xl">
+                        <!-- navigation for different sections -->
+                                <nav class="making-nav ">
+                                    <div class="making-nav-item" data-target="dividing-section">00 Intro</div>
+                                    <div class="making-nav-item" data-target="experiment1">01 Experimental Making</div>
+                                    <div class="making-nav-item" data-target="experiment2">02 Reverse-engineering</div>
+                                    <div class="making-nav-item" data-target="experiment3">03 Prototyping</div>
+                                    <div class="making-nav-item" data-target="experiment4">04 Visualization & Documentation</div>
+                                </nav>
+                        </div>
+
+
             </section>
 
         </section>

@@ -505,6 +505,10 @@ figcaption p b {
 
 }
 
+.im__exclude {
+  mix-blend-mode: exclusion;  
+}
+
 /* 3. footer */
 
 footer {

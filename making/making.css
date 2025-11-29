@@ -2,6 +2,9 @@
 
 /* ============ 01 section layouts & nav bars ==================*/
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     overflow-x: hidden;
@@ -18,8 +21,8 @@ h4 {
 }
 
 #catalogue-home {
-     background-color: #151515;
-     height: 90vh;
+     background-color: #121212;
+     height: 80vh;
      position: relative;
      overflow: hidden;
 }
@@ -54,6 +57,7 @@ header {
 }
 
 #dividing-section {
+    height: 75vh;
     background: linear-gradient(180deg, #FF2E00 0%, rgba(255, 255, 255, 0.00) 20%);
 
     padding-top: var(--spacing-l);
@@ -226,6 +230,7 @@ header {
     line-height: 0px;
 }
 
+#experiment4 .background-texts,
 #experiment2 .background-texts {
     
     color: rgba(217, 217, 217, 0.40);
@@ -429,3 +434,22 @@ h2 {
     width: 105px;
     height: 105px;
 }
+
+
+/* ===================== 07 Background image styling ======================= */
+/* 
+#tracing-img1 {
+    height: 400px;
+    background-image: url(/assets/images/tracing-paper-1.png);
+    mix-blend-mode: exclusion;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#tracing-img2 {
+    height: 400px;
+    background-image: url(/assets/images/tracing-paper-2.png);
+    mix-blend-mode: exclusion;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */

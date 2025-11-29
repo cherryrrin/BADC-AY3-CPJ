@@ -288,3 +288,8 @@ header {
 
   
 }
+
+/* background styling */
+#cpjhomepagemain {
+  background: linear-gradient(180deg, #FF2E00 0%, rgba(255, 255, 255, 0.00) 5%);
+}
