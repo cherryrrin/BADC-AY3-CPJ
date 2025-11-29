@@ -78,6 +78,7 @@ html {
 body {
     background-color: var(--color-bg);
     color: var(--color-fg);
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><defs><radialGradient id="grad" cx="35%"><stop offset="0%25" style="stop-color:%23FFB347;stop-opacity:1" /><stop offset="100%25" style="stop-color:%23FF8C00;stop-opacity:0.8" /></radialGradient><filter id="blur"><feGaussianBlur in="SourceGraphic" stdDeviation="12" /></filter></defs><circle cx="80" cy="80" r="28" fill="url(%23grad)" filter="url(%23blur)" opacity="1"/></svg>') 80 80, auto;
 }
 
 

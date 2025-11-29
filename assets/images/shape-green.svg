@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_338_1270)" filter="url(#filter0_n_338_1270)">
+<path d="M3.9608 199.961C1.75167 199.961 -0.0433812 198.17 0.000798407 195.961C0.4989 171.059 5.64447 146.457 15.1849 123.424C25.2358 99.159 39.9677 77.1111 58.5395 58.5394C77.1112 39.9678 99.159 25.2358 123.424 15.1848C146.457 5.64446 171.059 0.498895 195.961 0.00079839C198.17 -0.0433806 199.961 1.75166 199.961 3.9608V95.9607C199.961 98.1699 198.169 99.9524 195.962 100.041C184.195 100.512 172.592 103.058 161.692 107.573C149.56 112.598 138.536 119.964 129.25 129.25C119.964 138.536 112.598 149.56 107.573 161.693C103.058 172.592 100.512 184.195 100.041 195.962C99.9525 198.169 98.1699 199.961 95.9608 199.961H3.9608Z" fill="url(#paint0_linear_338_1270)"/>
+</g>
+<defs>
+<filter id="filter0_n_338_1270" x="0" y="0" width="200" height="200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="1 1" stitchTiles="stitch" numOctaves="3" result="noise" seed="9297" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="#327142" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_338_1270">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<linearGradient id="paint0_linear_338_1270" x1="99.9805" y1="0" x2="99.9805" y2="199.961" gradientUnits="userSpaceOnUse">
+<stop stop-color="#34C759"/>
+<stop offset="1" stop-color="#E1ED50"/>
+</linearGradient>
+<clipPath id="clip0_338_1270">
+<rect width="200" height="200" fill="white"/>
+</clipPath>
+</defs>
+</svg>
