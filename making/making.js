@@ -35,18 +35,28 @@ makingNavItems.forEach(item => {
 
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    scrollToTopBtn.classList.add('visible');
-  } else {
-    scrollToTopBtn.classList.remove('visible');
+if (scrollToTopBtn) {
+  function updateScrollTopButton() {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
   }
-  updateActiveMakingSection();
-});
 
-scrollToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  // Check on page load
+  updateScrollTopButton();
+
+  // Check on scroll
+  window.addEventListener('scroll', () => {
+    updateScrollTopButton();
+    updateActiveMakingSection();
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ==== interactive background buttons rotation =====
 
