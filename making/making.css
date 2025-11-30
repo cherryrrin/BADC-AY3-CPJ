@@ -369,12 +369,29 @@ h2 {
 
 /* =============== 06 background buttons positioning ===============  */
 
+@keyframes pulse-scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.85);
+    }
+}
+
 .background-buttons button {
     position: absolute;
     border: none;
     background: none;
     cursor: pointer;
     padding: 0;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: auto;
+    animation: pulse-scale 2s ease-in-out infinite;
+}
+
+.background-buttons button:hover {
+    animation: none;
+    transform: scale(0.85);
 }
 
 .background-buttons button img {
@@ -435,7 +452,226 @@ h2 {
 }
 
 
-/* ===================== 07 Background image styling ======================= */
+/* ===================== 07 Interactive Canvas ======================= */
+
+.interactive-canvas-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.overlay-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.overlay-buttons button {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: auto;
+}
+
+.overlay-buttons button:hover {
+    transform: scale(0.85);
+}
+
+.overlay-buttons button img {
+    width: 90%;
+    height: 100%;
+    display: block;
+}
+
+#canvas-shape-blue {
+    top: 25%;
+    left: 8%;
+    width: 220px;
+    height: 200px;
+}
+
+#canvas-shape-flower {
+    top: 48%;
+    left: 22%;
+    width: 80px;
+    height: 80px;
+}
+
+#canvas-shape-pink {
+    top: 53%;
+    right: 8%;
+    width: 90px;
+    height: 90px;
+}
+
+#canvas-shape-dynamic {
+    top: 60%;
+    left: 28%;
+    width: 200px;
+    height: 200px;
+}
+
+#canvas-shape-green {
+    top: 30%;
+    right: 10%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+}
+
+#canvas-shape-ellipse {
+    z-index: 1000;
+    bottom: 10%;
+    right: 20%;
+    width: 130px;
+    height: 130px;
+}
+
+#canvas-shape-button {
+    bottom: 20%;
+    right: 0%;
+    width: 0px;
+    height: 0px;
+}
+
+/* Elastic button styles */
+@keyframes elastic-pressed {
+  0% {
+    transform: translate(0.0px, 0.0px);
+  }
+  8% {
+    transform: translate(0.0px, 6.6px);
+  }
+  17% {
+    transform: translate(0.0px, 7.8px);
+  }
+  25% {
+    transform: translate(0.0px, 5.5px);
+  }
+  33% {
+    transform: translate(0.0px, 5.5px);
+  }
+  42% {
+    transform: translate(0.0px, 6.3px);
+  }
+  50% {
+    transform: translate(0.0px, 6.1px);
+  }
+  58% {
+    transform: translate(0.0px, 5.9px);
+  }
+  67% {
+    transform: translate(0.0px, 6.0px);
+  }
+  75% {
+    transform: translate(0.0px, 6.0px);
+  }
+  83% {
+    transform: translate(0.0px, 6.0px);
+  }
+  92% {
+    transform: translate(0.0px, 6.0px);
+  }
+  100% {
+    transform: translate(0.0px, 6.0px);
+  }
+}
+
+@keyframes elastic-released {
+  0% {
+    transform: translate(0.0px, 6.0px);
+  }
+  8% {
+    transform: translate(0.0px, -0.6px);
+  }
+  17% {
+    transform: translate(0.0px, -1.8px);
+  }
+  25% {
+    transform: translate(0.0px, 0.5px);
+  }
+  33% {
+    transform: translate(0.0px, 0.5px);
+  }
+  42% {
+    transform: translate(0.0px, -0.3px);
+  }
+  50% {
+    transform: translate(0.0px, -0.1px);
+  }
+  58% {
+    transform: translate(0.0px, 0.1px);
+  }
+  67% {
+    transform: translate(0.0px, 0.0px);
+  }
+  75% {
+    transform: translate(0.0px, -0.0px);
+  }
+  83% {
+    transform: translate(0.0px, 0.0px);
+  }
+  92% {
+    transform: translate(0.0px, 0.0px);
+  }
+  100% {
+    transform: translate(0.0px, 0.0px);
+  }
+}
+
+.button-1[data-state="released"] {
+  animation: elastic-released 100ms forwards;
+}
+
+.button-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: rgba(200, 200, 200, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: 0px 6px 0px 0px rgba(255, 255, 255, 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.button-1[data-state="pressed"] {
+  transform: translate(-50%, calc(-50% + 6px));
+  width: 300px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: rgba(200, 200, 200, 1);
+  border: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: none;
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
+}
+
+.button-1[data-state="released"] {
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: rgba(231, 126, 69, 1);
+  border: 2px solid rgba(180, 80, 30, 1);
+  box-shadow: 0px 6px 0px 0px rgba(180, 80, 30, 1);
+  transition: all 100ms ease-out 0ms;
+}
+
+/* ===================== 08 Background image styling ======================= */
 /* 
 #tracing-img1 {
     height: 400px;
