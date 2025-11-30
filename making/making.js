@@ -58,7 +58,6 @@ if (scrollToTopBtn) {
   });
 }
 
-// Note: Background button rotation is handled by main.js
 
 // ==== elastic button interaction =====
 

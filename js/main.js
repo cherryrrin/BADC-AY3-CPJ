@@ -190,18 +190,10 @@ let buttonArray = Array.from(backgroundButtons);
 
 backgroundButtons.forEach(button => {
   let rotation = 0;
-  // Capture initial CSS transforms
-  const initialTransform = window.getComputedStyle(button).transform;
-  const hasInitialTransform = initialTransform && initialTransform !== 'none';
 
   button.addEventListener('click', () => {
     rotation += 45;
-    if (hasInitialTransform) {
-      // For buttons with CSS transforms, we need to set inline style with both
-      button.style.transform = initialTransform + ` rotate(${rotation}deg)`;
-    } else {
-      button.style.transform = `rotate(${rotation}deg)`;
-    }
+    button.style.transform = `rotate(${rotation}deg)`;
 
     // Swap position with a random other button
     let randomIndex = Math.floor(Math.random() * buttonArray.length);
