@@ -75,19 +75,19 @@ if (document.readyState === 'loading') {
 }
 
 function setupBackgroundButtons() {
-  const backgroundButtonsContainer = document.querySelector('.background-buttons:not(.overlay-buttons)');
-  if (!backgroundButtonsContainer) {
+  const bgButtonsContainer = document.querySelector('.background-buttons:not(.overlay-buttons)');
+  if (!bgButtonsContainer) {
     console.log('background-buttons container not found');
     return;
   }
 
-  const backgroundButtons = backgroundButtonsContainer.querySelectorAll('button');
-  const buttonArray = Array.from(backgroundButtons);
+  const bgButtons = bgButtonsContainer.querySelectorAll('button');
+  const bgButtonArray = Array.from(bgButtons);
 
-  console.log('Found ' + backgroundButtons.length + ' background buttons');
-  if (backgroundButtons.length === 0) return;
+  console.log('Found ' + bgButtons.length + ' background buttons');
+  if (bgButtons.length === 0) return;
 
-  backgroundButtons.forEach(button => {
+  bgButtons.forEach(button => {
     let rotation = 0;
 
     button.addEventListener('click', (e) => {
@@ -96,13 +96,13 @@ function setupBackgroundButtons() {
       button.style.transform = `rotate(${rotation}deg)`;
 
       // Swap position with a random other button
-      let randomIndex = Math.floor(Math.random() * buttonArray.length);
-      let randomButton = buttonArray[randomIndex];
+      let randomIndex = Math.floor(Math.random() * bgButtonArray.length);
+      let randomButton = bgButtonArray[randomIndex];
 
       // Make sure we don't swap with itself
       while (randomButton === button) {
-        randomIndex = Math.floor(Math.random() * buttonArray.length);
-        randomButton = buttonArray[randomIndex];
+        randomIndex = Math.floor(Math.random() * bgButtonArray.length);
+        randomButton = bgButtonArray[randomIndex];
       }
 
       // Get current positions
