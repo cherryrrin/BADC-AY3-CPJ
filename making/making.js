@@ -39,10 +39,8 @@ if (scrollToTopBtn) {
   function updateScrollTopButton() {
     if (window.scrollY > 300) {
       scrollToTopBtn.classList.add('visible');
-      console.log('scroll button visible');
     } else {
       scrollToTopBtn.classList.remove('visible');
-      console.log('scroll button hidden');
     }
   }
 
@@ -56,87 +54,12 @@ if (scrollToTopBtn) {
   });
 
   scrollToTopBtn.addEventListener('click', () => {
-    console.log('scroll button clicked');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-} else {
-  console.log('scroll button not found');
 }
 
-// ==== interactive background buttons rotation =====
-// Note: We need to set up the buttons on the making page separately from main.js
-// because the main.js code runs globally but we need page-specific handling
-
-// Use a small delay to ensure DOM is fully loaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', setupBackgroundButtons);
-} else {
-  setupBackgroundButtons();
-}
-
-function setupBackgroundButtons() {
-  const bgButtonsContainer = document.querySelector('.background-buttons:not(.overlay-buttons)');
-  if (!bgButtonsContainer) {
-    console.log('background-buttons container not found');
-    return;
-  }
-
-  const bgButtons = bgButtonsContainer.querySelectorAll('button');
-  const bgButtonArray = Array.from(bgButtons);
-
-  console.log('Found ' + bgButtons.length + ' background buttons');
-  if (bgButtons.length === 0) return;
-
-  bgButtons.forEach(button => {
-    let rotation = 0;
-
-    button.addEventListener('click', (e) => {
-      console.log('background button clicked', e.target);
-      rotation += 45;
-      button.style.transform = `rotate(${rotation}deg)`;
-
-      // Swap position with a random other button
-      let randomIndex = Math.floor(Math.random() * bgButtonArray.length);
-      let randomButton = bgButtonArray[randomIndex];
-
-      // Make sure we don't swap with itself
-      while (randomButton === button) {
-        randomIndex = Math.floor(Math.random() * bgButtonArray.length);
-        randomButton = bgButtonArray[randomIndex];
-      }
-
-      // Get current positions
-      const currentTop = button.style.top;
-      const currentLeft = button.style.left;
-      const currentRight = button.style.right;
-      const currentBottom = button.style.bottom;
-      const currentWidth = button.style.width;
-      const currentHeight = button.style.height;
-
-      const randomTop = randomButton.style.top;
-      const randomLeft = randomButton.style.left;
-      const randomRight = randomButton.style.right;
-      const randomBottom = randomButton.style.bottom;
-      const randomWidth = randomButton.style.width;
-      const randomHeight = randomButton.style.height;
-
-      // Swap positions
-      button.style.top = randomTop;
-      button.style.left = randomLeft;
-      button.style.right = randomRight;
-      button.style.bottom = randomBottom;
-      button.style.width = randomWidth;
-      button.style.height = randomHeight;
-
-      randomButton.style.top = currentTop;
-      randomButton.style.left = currentLeft;
-      randomButton.style.right = currentRight;
-      randomButton.style.bottom = currentBottom;
-      randomButton.style.width = currentWidth;
-      randomButton.style.height = currentHeight;
-    });
-  });
-}
+// Note: Background button interactivity is handled globally by main.js
+// No additional setup needed here
 
 // ==== elastic button interaction =====
 
