@@ -343,7 +343,7 @@ h2 {
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 1000;
+    z-index: 9999;
     font-family: 'DM Sans', sans-serif;
     color: #E04A29;
     font-size: 20px;
