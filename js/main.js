@@ -108,7 +108,7 @@ function generateRepoItemsFrom(theData) {
     let result = `<h2>${headline}</h2>`;
     in0.forEach((el) => {
       const push = `<ul class="repo__list"><li class="repo__item"><ul>`;
-      const thumbnail = `<li><img src="/assets/images/repo/${el.thumbnail}" /></li>`;
+      const thumbnail = `<li><img class="orange-border" src="/assets/images/repo/${el.thumbnail}" /></li>`;
       const l0 = `<br><a href="${el.link}" target="_blank">link</a>`;
       const link = el.link?.length > 0 ? l0 : "";
       const r0 = `${el.title}`;

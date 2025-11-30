@@ -1,46 +1,55 @@
 {
   "books": [
     {
-      "title":"Some Title",
-      "author":"Some Author",
-      "reference":"Smith, John A. The Art of Fiction Writing. PublisherX, 2023.",
-      "thumbnail":"book.jpg",
-      "description":"In this fictional example, Smith is the author's last name, John A. is the author's first name and middle initial, 'The Art of Fiction Writing' is the title of the book, 'PublisherX' is the name of the publisher, and '2023' is the publication year.",
-      "link":"https://lasallesodc.show"
+      "title":"Atmospheric Architectures (The Aesthetics of Felt Spaces)",
+      "author":"Böhme, Gernot, et al.",
+      "reference":"Böhme, Gernot. Atmospheric Architectures: The Aesthetics of Felt Spaces. Edited by A-C Engels-Schwarzpaul, Bloomsbury Academic, 2017",
+      "thumbnail":"book1.jpg",
+      "description":"This book is an edited compliance of Böhme’s original seminal works on how designed spatial environments create atmospheric experiences that are felt rather than observed. His notion mainly draws from Hermann Schimitz's concept of atmospheres as “moving emotional powers or spatial carriers of moods”."
     },
     {
-      "title":"Some Title 2",
-      "author":"Some Author 2",
-      "reference":"Reference, MLA 2",
-      "thumbnail":"book.jpg",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat odio earum nobis. Perspiciatis, fugit accusamus! Suscipit, at? Mollitia suscipit minima commodi sit autem beatae nobis officiis, saepe ut! Inventore!"
+      "title":"Emotional design : why we love (or hate) everyday things",
+      "author":"Donald A. Norman",
+      "reference":"Norman, Don. Emotional Design: Why We Love (or Hate) Everyday Things. Basic Books, 2004.",
+      "thumbnail":"book2.jpg",
+      "description":"This book, written by Don Norman, who is also known as the father of UI/UX, points out three levels of emotional processing: Visceral(immediate sensory perception), Behavioral (pleasure and effectiveness of use), and Reflective (self-image, personal satisfaction, memories) (5, 22, 39)."
+    }
+    ,{
+      "title":"Materiality of Interaction",
+      "author":"Mikael Wiberg",
+      "reference":"Wiberg, Mikael. The Materiality of Interaction: Notes on the Materials of Interaction Design. MIT Press",
+      "thumbnail":"book3.jpg",
+      "description":"This book introduces the material turn in Human-Computer Interaction (HCI), suggesting that digital interactions can be crafted like physical materials, with their own designable properties: Changes of state (dynamics), Speed of change (pace), Requests for input, Responsiveness to input."
     }
   ],
   "articles": [
     {
-      "title":"Some article title",
-      "author":"Some Author 2",
-      "reference":"Reference, MLA 2",
-      "thumbnail":"article.jpg",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat odio earum nobis. Perspiciatis, fugit accusamus! Suscipit, at? Mollitia suscipit minima commodi sit autem beatae nobis officiis, saepe ut! Inventore!"
+      "title":"Interaction Design - Brief Intro",
+      "author":"Jonas Löwgren",
+      "reference":"Löwgren, Jonas. Interaction Design - Brief Intro The Encyclopedia of Human-Computer Interaction, 2nd ed., Interaction Design Foundation, 2013.",
+      "thumbnail":"article1.jpg",
+      "description":"Jonas Löwgren’s “Interaction Design” chapter in “The Encyclopedia of Human-Computer Interaction” mentions that interaction design’s temporal nature requires designers to “sketch in software and hardware rather than staying with lo-fi sketching media”(Löwgren).",
+      "link": "https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/interaction-design-brief-intro?srsltid=AfmBOoqvogiPbg2idxQKbcXirnU5hiUhxYwwtdNdomXZr5nAKltmgOgL"
     }
   ],
   "casestudies": [
     {
-      "title":"Some case study title",
-      "author":"Some Author ",
-      "reference":"Reference, MLA 2",
-      "thumbnail":"case-study.jpg",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat odio earum nobis. Perspiciatis, fugit accusamus! Suscipit, at? Mollitia suscipit minima commodi sit autem beatae nobis officiis, saepe ut! Inventore!"
+      "title":"The Magic of UI Physics",
+      "author":"Microsoft",
+      "reference":"McDirmid, Sean. The Magic of UI Physics. Microsoft Research, 2009.",
+      "thumbnail":"casestudy.jpg",
+      "description":"This paper demonstrates how UI physics should and can be enhanced with magic that violates physically consistent reasoning to allow for control over the user experience. The case study demonstrates the compatibility of magic and high-fidelity physics by applying such a physics engine to a UI case study.",
+      "link": "www.microsoft.com/en-us/research/wp-content/uploads/2016/02/uiphysics09.pdf"
     }
   ],
   "experiments":[
     {
-      "title":"Some Experiment title",
-      "author":"Some Author",
-      "reference":"Reference, MLA 2",
+      "title":"Programming Posters",
+      "author":"Tim Rodenbröker",
+      "reference":"Tim. “Programming posters.” Tim Rodenbröker Creative Coding, 3 Dec. 2024.",
       "thumbnail":"experiment.jpg",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat odio earum nobis. Perspiciatis, fugit accusamus! Suscipit, at? Mollitia suscipit minima commodi sit autem beatae nobis officiis, saepe ut! Inventore!"
+      "description":" Tim Rodenbröker is a designer & programmer teaching applying Creative Coding. The project programming poster is a series of  animated, audible, data driven and intermedial posters utilizing Processing and TouchOSC.",
+      "link":"timrodenbroeker.de/programming-posters."
     }
   ]
 }

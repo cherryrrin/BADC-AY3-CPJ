@@ -394,7 +394,7 @@ h2 {
     pointer-events: auto;
 }
 
-.background-buttons:not(.overlay-buttons) button {
+.background-buttons:not(.overlay-buttons) button:not(#shape-blue):not(#shape-button) {
     animation: pulse-scale 2s ease-in-out infinite;
 }
 
@@ -428,7 +428,7 @@ h2 {
 }
 
 #shape-pink {
-    top: 13%;
+    top: 45%;
     right: 8%;
     width: 70px;
     height: 70px;
@@ -441,9 +441,14 @@ h2 {
     height: 180px;
 }
 
+#catalogue-home #shape-dynamic {
+    left: auto;
+    left: 40%;
+}
+
 #shape-green {
-    top: -20px;
-    right: 10%;
+    top: 20%;
+    right: 15%;
     transform: translateX(-50%);
     width: 150px;
     height: 150px;
