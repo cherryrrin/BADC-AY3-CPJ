@@ -342,16 +342,20 @@ h2 {
     color: white;
     font-size: 24px;
     cursor: pointer;
-    display: none;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     z-index: 9999;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .scroll-to-top-making.visible {
-    display: flex;
+    display: flex !important;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .scroll-to-top-making:hover {
