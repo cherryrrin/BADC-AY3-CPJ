@@ -352,6 +352,13 @@ h2 {
     transition: opacity 0.6s cubic-bezier(0.85, 0, 0.15, 1), transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
+/* Safari-specific: use ease-in-out since Safari ignores cubic-bezier */
+@supports (-webkit-appearance: none) {
+    .scroll-to-top-making {
+        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+}
+
 .scroll-to-top-making svg {
     width: 24px;
     height: 24px;
