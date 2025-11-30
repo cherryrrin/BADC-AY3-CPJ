@@ -39,8 +39,10 @@ if (scrollToTopBtn) {
   function updateScrollTopButton() {
     if (window.scrollY > 300) {
       scrollToTopBtn.classList.add('visible');
+      console.log('scroll button visible');
     } else {
       scrollToTopBtn.classList.remove('visible');
+      console.log('scroll button hidden');
     }
   }
 
@@ -54,16 +56,19 @@ if (scrollToTopBtn) {
   });
 
   scrollToTopBtn.addEventListener('click', () => {
+    console.log('scroll button clicked');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+} else {
+  console.log('scroll button not found');
 }
 
 // ==== interactive background buttons rotation =====
 
-let backgroundButtons = document.querySelectorAll('.background-buttons button');
-let buttonArray = Array.from(backgroundButtons);
+const makingBackgroundButtons = document.querySelectorAll('.background-buttons button');
+const makingButtonArray = Array.from(makingBackgroundButtons);
 
-backgroundButtons.forEach(button => {
+makingBackgroundButtons.forEach(button => {
   let rotation = 0;
 
   button.addEventListener('click', () => {
@@ -71,13 +76,13 @@ backgroundButtons.forEach(button => {
     button.style.transform = `rotate(${rotation}deg)`;
 
     // Swap position with a random other button
-    const randomIndex = Math.floor(Math.random() * buttonArray.length);
-    let randomButton = buttonArray[randomIndex];
+    const randomIndex = Math.floor(Math.random() * makingButtonArray.length);
+    let randomButton = makingButtonArray[randomIndex];
 
     // Make sure we don't swap with itself
     while (randomButton === button) {
-      randomIndex = Math.floor(Math.random() * buttonArray.length);
-      randomButton = buttonArray[randomIndex];
+      randomIndex = Math.floor(Math.random() * makingButtonArray.length);
+      randomButton = makingButtonArray[randomIndex];
     }
 
     // Get current positions
@@ -143,8 +148,8 @@ if (btn) {
 
 // ==== overlay buttons interaction (canvas only) =====
 
-let canvasButtons = document.querySelectorAll('.overlay-buttons button');
-let canvasButtonArray = Array.from(canvasButtons);
+const canvasButtons = document.querySelectorAll('.overlay-buttons button');
+const canvasButtonArray = Array.from(canvasButtons);
 
 canvasButtons.forEach(button => {
   let rotation = 0;
