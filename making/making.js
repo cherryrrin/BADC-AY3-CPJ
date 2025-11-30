@@ -37,6 +37,8 @@ const scrollTopBtn = document.querySelector('.scroll-top-making');
 const dividingSection = document.getElementById('dividing-section');
 
 function toggleScrollTopButton() {
+  if (!scrollTopBtn || !dividingSection) return;
+
   const dividingSectionBottom = dividingSection.offsetTop + dividingSection.offsetHeight;
 
   // Show button after passing both home and dividing sections
@@ -47,21 +49,24 @@ function toggleScrollTopButton() {
   }
 }
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 window.addEventListener('scroll', () => {
   toggleScrollTopButton();
   updateActiveMakingSection();
 });
 
+toggleScrollTopButton();
 updateActiveMakingSection();
 
 // ==== interactive background buttons rotation =====
 
-const backgroundButtons = document.querySelectorAll('.background-buttons button');
-const buttonArray = Array.from(backgroundButtons);
+let backgroundButtons = document.querySelectorAll('.background-buttons button');
+let buttonArray = Array.from(backgroundButtons);
 
 backgroundButtons.forEach(button => {
   let rotation = 0;
@@ -114,36 +119,45 @@ backgroundButtons.forEach(button => {
 
 // ==== elastic button interaction =====
 
-const btn = document.querySelector('.button-1');
-const stayInReleasedState = true;
+function initElasticButton() {
+  const btn = document.querySelector('.button-1');
+  if (!btn) return;
 
-btn.addEventListener('mousedown', () => {
-  // If in released state and should stay, clicking clears the released state
-  if (stayInReleasedState && btn.getAttribute('data-state') === 'released') {
-    btn.style.animation = 'none';
-    btn.removeAttribute('data-state');
-    return;
-  }
-  btn.style.animation = 'elastic-pressed 100ms forwards';
-  btn.setAttribute('data-state', 'pressed');
-});
+  const stayInReleasedState = true;
 
-btn.addEventListener('mouseup', () => {
-  btn.style.animation = 'elastic-released 100ms forwards';
-  btn.setAttribute('data-state', 'released');
-  // Stay in released state
-});
+  btn.addEventListener('mousedown', () => {
+    // If in released state and should stay, clicking clears the released state
+    if (stayInReleasedState && btn.getAttribute('data-state') === 'released') {
+      btn.style.animation = 'none';
+      btn.removeAttribute('data-state');
+      return;
+    }
+    btn.style.animation = 'elastic-pressed 100ms forwards';
+    btn.setAttribute('data-state', 'pressed');
+  });
 
-btn.addEventListener('mouseleave', () => {
-  if (!stayInReleasedState) {
-    btn.removeAttribute('data-state');
-  }
-});
+  btn.addEventListener('mouseup', () => {
+    btn.style.animation = 'elastic-released 100ms forwards';
+    btn.setAttribute('data-state', 'released');
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    if (!stayInReleasedState) {
+      btn.removeAttribute('data-state');
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initElasticButton);
+} else {
+  initElasticButton();
+}
 
 // ==== overlay buttons interaction (canvas only) =====
 
-const canvasButtons = document.querySelectorAll('.overlay-buttons button');
-const canvasButtonArray = Array.from(canvasButtons);
+let canvasButtons = document.querySelectorAll('.overlay-buttons button');
+let canvasButtonArray = Array.from(canvasButtons);
 
 canvasButtons.forEach(button => {
   let rotation = 0;
