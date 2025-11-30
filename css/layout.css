@@ -780,10 +780,7 @@ p {
 }
 
 
-p a {
-  /* text-decoration:underline; */
-  /* text-underline-offset: 3px; */
-}
+
 
 a {
   color: var(--color-link);

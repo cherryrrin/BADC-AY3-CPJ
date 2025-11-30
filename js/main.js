@@ -131,16 +131,18 @@ function logErrorMessage(theError) {
 document.addEventListener("keydown", function(e) {
   if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)
       return;
-  const o = document.getElementById("go-prev").href
-    , s = document.getElementById("go-next").href;
-  if (e.key == "ArrowLeft")
-      window.location.assign(o);
-  else if (e.key == "ArrowRight")
-      window.location.assign(s);
+  const prevBtn = document.getElementById("go-prev");
+  const nextBtn = document.getElementById("go-next");
+  if (e.key == "ArrowLeft" && prevBtn)
+      window.location.assign(prevBtn.href);
+  else if (e.key == "ArrowRight" && nextBtn)
+      window.location.assign(nextBtn.href);
   else if (e.key == "Escape") {
       const t = document.getElementById("bio-details");
-      t.classList.toggle("expanded"),
-      t.classList.toggle("collapsed")
+      if (t) {
+        t.classList.toggle("expanded"),
+        t.classList.toggle("collapsed")
+      }
   }
 });
 
@@ -183,8 +185,8 @@ updateActiveSection();
 
 // ==== interactive background buttons rotation =====
 
-const backgroundButtons = document.querySelectorAll('.background-buttons button');
-const buttonArray = Array.from(backgroundButtons);
+let backgroundButtons = document.querySelectorAll('.background-buttons button');
+let buttonArray = Array.from(backgroundButtons);
 
 backgroundButtons.forEach(button => {
   let rotation = 0;
