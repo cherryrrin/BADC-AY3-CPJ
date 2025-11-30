@@ -63,8 +63,80 @@ if (scrollToTopBtn) {
   console.log('scroll button not found');
 }
 
-// Note: background buttons interactive behavior is handled by main.js
-// No need to re-attach event listeners here
+// ==== interactive background buttons rotation =====
+// Note: We need to set up the buttons on the making page separately from main.js
+// because the main.js code runs globally but we need page-specific handling
+
+// Use a small delay to ensure DOM is fully loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupBackgroundButtons);
+} else {
+  setupBackgroundButtons();
+}
+
+function setupBackgroundButtons() {
+  const backgroundButtonsContainer = document.querySelector('.background-buttons:not(.overlay-buttons)');
+  if (!backgroundButtonsContainer) {
+    console.log('background-buttons container not found');
+    return;
+  }
+
+  const backgroundButtons = backgroundButtonsContainer.querySelectorAll('button');
+  const buttonArray = Array.from(backgroundButtons);
+
+  console.log('Found ' + backgroundButtons.length + ' background buttons');
+  if (backgroundButtons.length === 0) return;
+
+  backgroundButtons.forEach(button => {
+    let rotation = 0;
+
+    button.addEventListener('click', (e) => {
+      console.log('background button clicked', e.target);
+      rotation += 45;
+      button.style.transform = `rotate(${rotation}deg)`;
+
+      // Swap position with a random other button
+      let randomIndex = Math.floor(Math.random() * buttonArray.length);
+      let randomButton = buttonArray[randomIndex];
+
+      // Make sure we don't swap with itself
+      while (randomButton === button) {
+        randomIndex = Math.floor(Math.random() * buttonArray.length);
+        randomButton = buttonArray[randomIndex];
+      }
+
+      // Get current positions
+      const currentTop = button.style.top;
+      const currentLeft = button.style.left;
+      const currentRight = button.style.right;
+      const currentBottom = button.style.bottom;
+      const currentWidth = button.style.width;
+      const currentHeight = button.style.height;
+
+      const randomTop = randomButton.style.top;
+      const randomLeft = randomButton.style.left;
+      const randomRight = randomButton.style.right;
+      const randomBottom = randomButton.style.bottom;
+      const randomWidth = randomButton.style.width;
+      const randomHeight = randomButton.style.height;
+
+      // Swap positions
+      button.style.top = randomTop;
+      button.style.left = randomLeft;
+      button.style.right = randomRight;
+      button.style.bottom = randomBottom;
+      button.style.width = randomWidth;
+      button.style.height = randomHeight;
+
+      randomButton.style.top = currentTop;
+      randomButton.style.left = currentLeft;
+      randomButton.style.right = currentRight;
+      randomButton.style.bottom = currentBottom;
+      randomButton.style.width = currentWidth;
+      randomButton.style.height = currentHeight;
+    });
+  });
+}
 
 // ==== elastic button interaction =====
 
