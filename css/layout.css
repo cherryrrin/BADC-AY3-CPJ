@@ -978,6 +978,18 @@ li {
 
 
 #intro {
+  height: 75vh;
+  background: linear-gradient(180deg, #FF2E00 0%, rgba(255, 255, 255, 0.00) 20%);
+  padding-top: var(--spacing-l);
+}
 
-  background: linear-gradient(180deg, #FF2E00 0%, rgba(255, 255, 255, 0.00) 15%);
+#intro p {
+  color: black;
+  font-size: var(--font-size-s);
+  text-align: center;
+}
+
+#intro .pixel-text {
+  font-size: var(--font-size-m);
+  line-height: 1px;
 }
