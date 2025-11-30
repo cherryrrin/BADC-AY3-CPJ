@@ -63,10 +63,20 @@ header {
 #experiment1,
 #experiment3 {
     background-color: #d9d9d9;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding-left: calc(50vw - 50%);
-    padding-right: calc(50vw - 50%);
+    position: relative;
+}
+
+#experiment1::after,
+#experiment3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    background-color: #d9d9d9;
+    z-index: -2;
+    pointer-events: none;
 }
 
 .background-texts {
