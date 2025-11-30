@@ -330,32 +330,34 @@ h2 {
 
 /* ============ 04 scroll-to-top button ============== */
 
-.scroll-top-making {
+.scroll-to-top-making {
     position: fixed;
-    bottom: var(--spacing-m);
-    right: var(--spacing-m);
+    bottom: 30px;
+    right: 30px;
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.500);
+    background-color: #E04A29;
+    border: none;
     border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
     display: none;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 9999;
-    font-family: 'DM Sans', sans-serif;
-    color: #E04A29;
-    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.scroll-top-making.show {
+.scroll-to-top-making.visible {
     display: flex;
 }
 
-.scroll-top-making:hover {
-    background-color: rgba(21, 21, 21, 1);
+.scroll-to-top-making:hover {
+    background-color: #D93F1F;
     transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 

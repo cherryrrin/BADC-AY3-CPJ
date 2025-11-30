@@ -33,35 +33,20 @@ makingNavItems.forEach(item => {
 
 // ==== scroll to top button =====
 
-const scrollTopBtn = document.querySelector('.scroll-top-making');
-const dividingSection = document.getElementById('dividing-section');
-
-function toggleScrollTopButton() {
-  if (!scrollTopBtn || !dividingSection) return;
-
-  const dividingSectionBottom = dividingSection.offsetTop + dividingSection.offsetHeight;
-
-  // Show button after passing both home and dividing sections
-  if (window.scrollY > dividingSectionBottom) {
-    scrollTopBtn.classList.add('show');
-  } else {
-    scrollTopBtn.classList.remove('show');
-  }
-}
-
-if (scrollTopBtn) {
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 window.addEventListener('scroll', () => {
-  toggleScrollTopButton();
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
   updateActiveMakingSection();
 });
 
-toggleScrollTopButton();
-updateActiveMakingSection();
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // ==== interactive background buttons rotation =====
 
