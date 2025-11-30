@@ -58,61 +58,7 @@ if (scrollToTopBtn) {
   });
 }
 
-// ==== interactive background buttons rotation (making page specific) =====
-const bgButtonsContainer = document.querySelector('#catalogue-home .background-buttons');
-if (bgButtonsContainer) {
-  const bgButtons = bgButtonsContainer.querySelectorAll('button');
-  const bgArray = Array.from(bgButtons);
-
-  bgButtons.forEach(button => {
-    let rotation = 0;
-
-    button.addEventListener('click', () => {
-      rotation += 45;
-      button.style.transform = `rotate(${rotation}deg)`;
-
-      // Swap position with a random other button
-      let randomIndex = Math.floor(Math.random() * bgArray.length);
-      let randomButton = bgArray[randomIndex];
-
-      // Make sure we don't swap with itself
-      while (randomButton === button) {
-        randomIndex = Math.floor(Math.random() * bgArray.length);
-        randomButton = bgArray[randomIndex];
-      }
-
-      // Get current positions
-      const currentTop = button.style.top;
-      const currentLeft = button.style.left;
-      const currentRight = button.style.right;
-      const currentBottom = button.style.bottom;
-      const currentWidth = button.style.width;
-      const currentHeight = button.style.height;
-
-      const randomTop = randomButton.style.top;
-      const randomLeft = randomButton.style.left;
-      const randomRight = randomButton.style.right;
-      const randomBottom = randomButton.style.bottom;
-      const randomWidth = randomButton.style.width;
-      const randomHeight = randomButton.style.height;
-
-      // Swap positions
-      button.style.top = randomTop;
-      button.style.left = randomLeft;
-      button.style.right = randomRight;
-      button.style.bottom = randomBottom;
-      button.style.width = randomWidth;
-      button.style.height = randomHeight;
-
-      randomButton.style.top = currentTop;
-      randomButton.style.left = currentLeft;
-      randomButton.style.right = currentRight;
-      randomButton.style.bottom = currentBottom;
-      randomButton.style.width = currentWidth;
-      randomButton.style.height = currentHeight;
-    });
-  });
-}
+// Note: Background button rotation is handled by main.js
 
 // ==== elastic button interaction =====
 
