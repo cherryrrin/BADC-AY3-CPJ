@@ -114,10 +114,8 @@ backgroundButtons.forEach(button => {
 
 // ==== elastic button interaction =====
 
-function initElasticButton() {
-  const btn = document.querySelector('.button-1');
-  if (!btn) return;
-
+const btn = document.querySelector('.button-1');
+if (btn) {
   const stayInReleasedState = true;
 
   btn.addEventListener('mousedown', () => {
@@ -132,7 +130,7 @@ function initElasticButton() {
   });
 
   btn.addEventListener('mouseup', () => {
-    btn.style.animation = 'elastic-released 100ms forwards';
+    btn.style.transition = 'all 100ms ease-out 0ms';
     btn.setAttribute('data-state', 'released');
   });
 
@@ -141,12 +139,6 @@ function initElasticButton() {
       btn.removeAttribute('data-state');
     }
   });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initElasticButton);
-} else {
-  initElasticButton();
 }
 
 // ==== overlay buttons interaction (canvas only) =====
