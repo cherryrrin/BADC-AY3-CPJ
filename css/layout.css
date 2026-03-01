@@ -391,6 +391,19 @@ figcaption p b {
   color: var(--color-11);
 } 
 
+.orange__text-container figcaption {
+  font-size: var(--font-size-xs);
+  font-family: 'DM Mono', 'Kanit', monospace;
+  color: var(--color-5);
+  font-style: normal;
+  width:100%;
+}
+
+.orange__text-container figcaption b {
+  font-weight: 600;
+  font-size: inherit;
+}
+
 
 .white__text-container {
   font-family: 'DM Mono', 'Kanit', monospace;
@@ -946,6 +959,10 @@ b {
   border-radius: 16px;
   border: 1px solid #FF2E00;
 
+}
+
+.add-border-radius {
+  border-radius: 16px;
 }
 
 /* ********************************************************** */

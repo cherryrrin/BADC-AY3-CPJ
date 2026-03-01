@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creative Process Journal, 24-25.</title>
+
+    <!-- Meta information, for machines to read, SEO -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="Author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <!-- Load StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- header and footer section, the menu. -->
+    <header>
+      <nav class="main__nav-bar">
+        <ul class="main__nav-title">
+          <li><a href="/">IxD-ID</a></li>
+          <li class="mobile__hide padding__top-xs"><a href="/about"><img height="12rem" src="/assets/images/CHOIYERIN_black.png" alt=""></a></li>
+        </ul>
+        <ul class="main__nav-list">
+          <li class="main__nav-item"><a href="/">process-journal</a></li>
+           <li class="main__nav-item"><a href="/making/index.html">catalogue-of-making</a></li>
+          <li class="main__nav-item"><a href="/repository">repository</a></li>
+          <li class="main__nav-about">
+            <p>
+              A design communication graduation project.
+            </p>
+          </li>
+        </ul>
+        <div class="main__nav-ham">
+          <span class="main__nav-ham-bar"></span>
+          <span class="main__nav-ham-bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main section, all your content goes here. -->
+    <main>
+      
+      <article>
+
+        <!-- ======= title section start ========= -->
+
+        <section id="title-section">
+          <div class="row width__l margin__auto padding__top-xl">
+
+            <div class="column__half type__content padding__top-m ">
+              <h1>04 From Micro <br>To Macro</h1>
+              <p class="padding__top-l">If the previous weeks of experiments were about understanding individual notes the timings, the easings, and the button states, this week was finally about composing the song. I began further developing the Atmost website from the first prototype, moving from isolated UI elements to a full, cohesive experience. Transition from micro interactions to considering macro interactions, it required a much deeper level of planning: I had to consider <b>page transitions, scroll rhythms, and the spatial relationship between elements</b> to create a <b>digital "topos"</b> that felt like a lived space rather than just a flat interface.</p>
+            </div>
+            
+            <div class="column__no-content"></div>
+
+            <div class="column no-content-above padding__y-m">
+              <div class="box__keywords-container">
+                <ul class="box__keywords-list">
+                  <li class="box__keywords-item"><h5>Week-four</h5> 02~ 08, Feb, 2026 </li>
+                  <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
+                  <li class="box__keywords-item"><h5>Keywords</h5>
+                    <ul class="keywords-grid">
+                      <li class="keywords-circle">Time & Weight</li>
+                      <li class="keywords-circle-b">Digital-Topos</li>
+                      <li class="keywords-circle-b">Text-Animations</li>
+                      <li class="keywords-circle-b">Spline-3D</li>
+                      <li class="keywords-circle">Ix-Choreography</li>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+        </section>
+
+        <!-- ========= end of title section ========-->
+
+
+        <!-- ======= content section start ========= -->
+
+        <section id="contents-section" class="row width__l margin__auto padding__y-xl">
+
+        <!-- ============== side indicator/nav bar start ============= -->
+
+          <aside class="sidebar">
+            <div class="sidebar-item active" data-target="section1">Spatial-depth</div>
+            <div class="sidebar-item" data-target="section2">Text-animations</div>
+            <div class="sidebar-item" data-target="section3">3D-navigation- &Realization</div>
+            <div class="sidebar-item" data-target="section4">Next-Steps</div>
+          </aside>
+
+        <!-- =========== side indicater/nav bar end =============== -->
+
+          <div class="content-wrapper">
+
+            <div id="section1" class="row width__s margin__auto">
+              <h2>Composing the Digital Topos</h2>
+              <p class="divider-top">Moving beyond a traditional layout, my goal for Atmost was to suggest spatial depth, mimicking the atmosphere of a secure data terminal or a secret lab. This synthesis of research uses <b>a bold, futuristic aesthetic</b> to make the exploration of data feel like a visceral event.</p>
+
+              <h4 class="padding__top-l">01 Logic of Friction</h4>
+              <p>From the initial prototype, I design background elements to follow the cursor directly. However, I realized this felt overly playful and immediate, lacking the desired depth.</p>
+              
+              <div class="row">
+                <div class="column"><video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/atmost-parallax-1.mp4"></video>
+                <figcaption class="padding__top-s"><p>> Original Direction</p></figcaption></div>
+                <div class="column">
+                  <video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/atmost-parallax-2.mp4"></video>
+                  <figcaption class="padding__top-s"><p>> Reversed Direction with friction</p></figcaption>
+                </div>
+              </div>
+
+                  <div class="bg__text-container">
+                    <p>
+                      To achieve a more sophisticated, cutting-edge sensation, I reversed the logic, so that the elements move in the opposite direction of the cursor with added friction
+                      (<span class="code-block-orange">duration: 1.2, ease: 'power3.out'</span>). <br> This helped me create a sense of weight and depth, as if slowly looking through floating layers of data.
+                    </p>
+                  </div>
+
+                  <div class="bg__text-container">
+                    <p>
+                      Considering the choreography of interactions, I kept the snapping scroll with fade out transitions using <span class="code-block-orange">1 - self.progress</span>. This time, I added a bit more friction with longer duration to it, for it to feel more like a deliberate, immersive transition rather than just a quick scroll. Lastly, I added the scale shifts on the elements as if they come closer when fading out, reinforcing the bodily sensation of "entering inside" the data.
+                    </p>
+                  </div>
+
+
+            </div>
+            <!-- end of section1 -->
+
+
+            <div id="section2" class="row width__s margin__auto padding__top-xl">
+              <h2>Text Animations</h2>
+              <p class="divider-top">To reinforce the sci-fi, futuristic identity, I implemented a custom FlickerText component in React. While the typewriter animation is a classic trope, it can be distracting for long-form content. So I placed them into different elements to create a more dynamic experience, not harming its legibility and usability.</p>
+
+
+              <div>
+                <video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/atmost-textanimation-1.mp4"></video>
+                <figcaption class="padding__top-s"><p>> Atmost with text animations</p></figcaption>
+              </div>
+              
+
+              <h4 class="margin__top-m">01 Typewriter effects</h4>
+
+
+              <div class="bg__text-container">
+              <p>Unlike a standard GIF or a static animation, using the GSAP TextPlugin allowed the animation duration to be proportionate to the text length. By calculating <span class="code-block-orange">duration: text.length * speed</span>, I kept the animation remain consistent regardless of the length of texts. <br><br>Also, I deliberately used <span class="code-block-orange">ease: 'none'</span> to maintain a steady, mechanical pace of typewriter animation.</p>
+            </div>
+
+
+              <h4 class="padding__top-m">02 Flicker effects</h4>
+              
+
+              <div class="bg__text-container">
+                  
+                <p class="bulletpoints"> By creating a simple hook component for rapid flicker, I made the entire text block toggles opacity using <span class="code-block-orange">steps(1)</span> to mimic the blink.
+                </p>
+                <p class="bulletpoints">Since I did not want every elements to have repetitive animations with entire flicker, for several texts, I made individual characters reveal themselves with a slight delay of <span class="code-block-orange">0.02s</span>, creating a rhythmic feel. </p>
+                <p class="bulletpoints">Lastly, I added subtle opacity shift to <span class="code-block-orange">1.0</span> using a <span class="code-block-orange">power2.out</span>, so that the animation can feel more natural and connected, rather than abrupt.</p>
+              </div>
+ 
+
+            </div>
+            <!-- end of section2 -->
+
+
+
+
+            <div id="section3" class="row width__s margin__auto padding__top-xl">
+
+
+              <h2>Experimenting with Navigations</h2>
+              <h3 class="divider-top">3D Exploration with Spline</h3>
+              
+              <div class="row">
+                <div class="column">
+                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/experiment-spline-2.mp4"></video>
+                  <figcaption class="padding__top-s"><p>3D Button Exploration with Spline</p></figcaption>
+                </div>
+                <div class="column">
+                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/experiment-spline-1.mp4"></video>
+                  <figcaption class="padding__top-s"><p>3D Object Exploration with Spline</p></figcaption>
+                </div>
+                
+              </div>
+              <p>Other than text animations, I also have been experimenting with Spline to create more dynamic and interactive experiences with 3D objects.
+              </p>
+
+              <h3 >3D Navigation with Spline</h3>
+
+              <p>Before, I realized that even one brand needs different interactions for different pages, like how Apple's Airpods 3 or 4 pages are designed in a more dynamic way with scroll triggered animations other than its usual minimal and premium interactions. For the experiments page, I wanted something more "experimental", interactive and engaging. And since I have been exploring Spline, it was the perfect opportunity to integrate it into the website.</p>
+
+              <h4 class="padding__top-m">Familiarization</h4>
+
+              <p>By adding keyboard interactions early on, <b>I wanted to familiarize users with the input method they’ll use for the p5.js sketches later in the experiment page</b>. So I designed a 3D interface that respond to users input while giving users a bodily sensation of interacting with a real keys. Users can either type or click keys to see previews and enter respective experiments. This was also an attempt to create a more immersive and exploratory 3D navigation experience, moving away from traditional menus.</p>
+              
+              <div>
+                <video class="orange-border" autoplay preload="none" playsinline loop src="/assets/videos/SEM2/atmost-experiment-page-1.mp4"></video>
+                <figcaption class="padding__top-s"><p>Atmost Prototype 2 - Experiment Page</p></figcaption>
+              </div>
+
+              
+
+              
+
+              <h4 class="padding__top-l">Spring Framework</h4>
+
+              <p> I used a <b>spring framework</b> in Spline to give it a smooth, physical feel. The keys respond to how long the user presses them, which keeps the experience natural, rather than feeling too snappy or "toy-like". It was also an interesting exploration of <b>how physical interactions can be translated into digital experiences</b>.</p>
+
+
+              <h4 class="padding__top-m">Process & Realizations</h4>
+
+              <div class="row">
+                <div class="column">
+                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/spline-keyboard-1.mp4"></video>
+                  <figcaption class="padding__top-s"><p>Design Version 01</p></figcaption>
+                </div>
+                <div class="column">
+                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/spline-keyboard-2.mp4"></video>
+                  <figcaption class="padding__top-s"><p>Design Version 02</p></figcaption>
+                </div>
+              </div>
+              <p>During the process of both design and implementation, I was quite amazed by how Spline allows detailed control over 3D objects and animations, as well as complex state management. Also, the ability to easily manipulate object properties within <b>codes by calling the object's name in design file</b> also opened up new possibilities for interaction design. <br><br>I could again realize that my project's objective should <b>not be about inventing a better medium but about communicating the message effectively to audience as a designer</b>
+
+                <br><br>In the end, I believe that the key to a successful design is to focus on the user's experience and how they interact with the product. By leveraging the capabilities of tools like Spline, I can create more engaging and intuitive experiences that resonate with users on a deeper level.</p>
+
+            </div>
+            <!-- end of section3 -->
+
+            <div id="section4" class="row width__s margin__auto padding__top-xl ">
+              <div class="column__no-content"></div>
+              <div class="column">
+                <h2>Next Steps</h2>
+                <p class="divider-top margin__top-s">
+                I’m quite happy with how the Atmost foundations are looking, so I want to keep refining these interactive moments. The next step is to <b>add more contents and interaction details</b> to enhance the overall experience, considering its identity and the purpose of making it into a practical resource. Additionally next week, I'm finally planning to <b>conduct the user testing</b> that I have actually been thinking about since the beginning of this project.
+                </p>
+              </div>
+
+              
+            </div> <!-- end of section4 -->
+
+            
+
+
+
+          </div> <!-- end of content wrapper -->
+
+          
+
+
+
+        </section>
+        
+      </article>
+    </main>
+
+    <!-- footer, page ends here.-->
+    <footer>
+
+      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
+      <div class="prev__next">
+        <ul>
+          <li class="prev"><a href="./week-3.html" id="go-prev">prev</a></li>
+          <li><a href="../../index.html">overview</a></li>
+          <li class="next"><a href="./week-5.html" id="go-next">next</a></li>
+        </ul>
+      </div>
+      
+      
+    </footer>
+
+    <div id="lightbox"></div>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
