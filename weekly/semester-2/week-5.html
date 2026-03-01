@@ -88,9 +88,9 @@
         <!-- ============== side indicator/nav bar start ============= -->
 
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1">Spatial-depth</div>
-            <div class="sidebar-item" data-target="section2">Text-animations</div>
-            <div class="sidebar-item" data-target="section3">3D-navigation- &Realization</div>
+            <div class="sidebar-item active" data-target="section1">Curating-resources</div>
+            <div class="sidebar-item" data-target="section2">Sound-effects</div>
+            <div class="sidebar-item" data-target="section3">User-testing</div>
             <div class="sidebar-item" data-target="section4">Next-Steps</div>
           </aside>
 
@@ -110,6 +110,10 @@
                 <video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/atmost-resources-page-1.mp4"></video>
                 <figcaption class="padding__top-s"><p>> Resources Page Overview</p></figcaption>
               </div>
+
+              <p>I also added subtle <b>grid line animations</b> for the hover states on arrows and Enter. It was inspired by the Organo website, which has a very sci-fi and immersive feel. Since I used line designs in other parts of the site, this helped everything feel cohesive keeping the visual and behavioral harmony.</p>
+
+              <h4>References</h4>
               
               <div class="row">
                 <div class="column"><video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/screenrecord-garden.mp4"></video>
@@ -119,19 +123,26 @@
                   <figcaption class="padding__top-s"><p><a class="underline" href="https://www.orano.group/en">> Orano Website</a></p></figcaption>
                 </div>
               </div>
+              
 
-                  <div class="bg__text-container">
-                    <p>
-                      To achieve a more sophisticated, cutting-edge sensation, I reversed the logic, so that the elements move in the opposite direction of the cursor with added friction
-                      (<span class="code-block-orange">duration: 1.2, ease: 'power3.out'</span>). <br> This helped me create a sense of weight and depth, as if slowly looking through floating layers of data.
-                    </p>
-                  </div>
 
-                  <div class="bg__text-container">
-                    <p>
-                      Considering the choreography of interactions, I kept the snapping scroll with fade out transitions using <span class="code-block-orange">1 - self.progress</span>. This time, I added a bit more friction with longer duration to it, for it to feel more like a deliberate, immersive transition rather than just a quick scroll. Lastly, I added the scale shifts on the elements as if they come closer when fading out, reinforcing the bodily sensation of "entering inside" the data.
-                    </p>
-                  </div>
+              <h3 class="padding__top-m">Curating Tools & Libraries</h3>
+              <p>I first worked on the <b>tools & guidelines page</b>, since I really liked the idea of curating existing resources. I wanted to provide a "shortcut library" <b>for designers who want to build interactive experiences but don't know where to start, like me before starting this research</b>. I built a filter system for the the page to make it more practical for designers. I organized it into two main categories or Make and Find.</p>
+
+              <div>
+                <video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/atmost-curated-tools.mp4"></video>
+                <figcaption class="padding__top-s"><p>> Tools & Guidelines Page</a></p></figcaption>
+              </div>
+              <div class="orange__text-container">
+                <p>
+
+                  <b class="bulletpoints">Make</b>: Introduce tools like GSAP, Spline, and Framer for designers to "make" cohesive interactive experiences. <br>(It Includes sub-filters: <b>No-code, Low-code, and Code-Libraries</b>.)<br><br>
+                  <b class="bulletpoints">Find</b>: Introduce tools like Mobbin, 60FPS.design, HIG by Apple, and Codepen, for designers to "find" inspirations, guidelines, and references for their work. <br>(It includes sub-filters: <b>Inspirations, Tutorials, and Code Examples</b>.)
+
+                </p>
+
+              </div>
+
 
 
             </div>
@@ -139,35 +150,67 @@
 
 
             <div id="section2" class="row width__s margin__auto padding__top-xl">
-              <h2>Text Animations</h2>
-              <p class="divider-top">To reinforce the sci-fi, futuristic identity, I implemented a custom FlickerText component in React. While the typewriter animation is a classic trope, it can be distracting for long-form content. So I placed them into different elements to create a more dynamic experience, not harming its legibility and usability.</p>
-
+              <h2>Sensory Layering (Sound)</h2>
+              <p class="divider-top">I started Integrating sounds to create a more immersive atmosphere. I experimented with sound effects from Epidemic Sound for hovering, clicking, and loading states. I’m planning to add more for the keyboard interactions later. Using these sci-fi and technical sounds really reinforced the brand identity. It made the digital actions feel more kinetic and engaging, while working as a signifier for each action.</p>
 
               <div>
-                <video class="orange-border" playsinline preload="none" loop autoplay src="/assets/videos/SEM2/atmost-textanimation-1.mp4"></video>
-                <figcaption class="padding__top-s"><p>> Atmost with text animations</p></figcaption>
+                <img class="orange-border" src="/assets/images/SEM2/epidemic-sound-screenshot.jpg" alt="epidemic-sound-screenshot">
+                <figcaption class="padding__top-s"><p>> Epidemic Sound Screenshot</p></figcaption>
               </div>
-              
+              <p><a class="underline" target="_blank" href="https://www.epidemicsound.com/">Epidemic Sound</a>  provides a vast library of high-quality sound effects and music tracks that can enhance the user experience. Although I had to do simple edits to extract the sound or to fit my contents, it was a really useful platform for me to explore and find the right audio elements for my project. By incorporating these audio elements, I could create a more immersive and engaging environment for users.</p>
 
-              <h4 class="margin__top-m">01 Typewriter effects</h4>
+              <div class="margin__left-l">
+                <h3>Integrating Sound into Code</h3>
+                <p>At first, I actually did not know how to use sounds for it but Claude helped me understand how to implement audio elements effectively. and I could effectively implement sound without having to code for respective sounds every time.</p>
+
+                <h4 class="margin__top-m">01 Sound Providers</h4>
 
 
-              <div class="bg__text-container">
-              <p>Unlike a standard GIF or a static animation, using the GSAP TextPlugin allowed the animation duration to be proportionate to the text length. By calculating <span class="code-block-orange">duration: text.length * speed</span>, I kept the animation remain consistent regardless of the length of texts. <br><br>Also, I deliberately used <span class="code-block-orange">ease: 'none'</span> to maintain a steady, mechanical pace of typewriter animation.</p>
-            </div>
+                <div class="bg__text-container">
+                  <p>Instead of loading audio files in every component, I created a <span class="code-block-orange">SoundProvider</span>. This acts as a central hub where I can manage global states, like whether the sound is enabled, and pre-initialize all the audio instances from Epidemic Sound.</p>
+                </div>
+
+                 <h4 class="margin__top-m">02 The Logic</h4>
+
+                 <div class="bg__text-container">
+                    <p>I used <span class="code-block-orange">useRef</span> to store the audio instances so they persist without causing unnecessary re-renders, and <span class="code-block-orange">useEffect</span> to handle the initial setup and volume control.</p>
+                 </div>
+
+                 <h4 class="margin__top-m">03 On / Off</h4>
+
+                 <div class="bg__text-container">
+                    <p>On the nav bar, I also added another function to toggle the sound on and off, allowing users to control their audio experience more easily. This will allow users to have a more personalized experience if they want to focus or reduce distractions.</p>
+                 </div>
+
+                <div class="margin__top-m">
+                  <div class="column__full">
+                <div style="background-color: #f5f5f5; padding: 20px; border-left: 4px solid #ff9800; font-family: monospace; font-size: 0.85rem; color: #333; overflow-x: auto;">
+<strong>// From SoundProvider.jsx: Managing Kinetic Audio Cues</strong> 
 
 
-              <h4 class="padding__top-m">02 Flicker effects</h4>
-              
 
-              <div class="bg__text-container">
-                  
-                <p class="bulletpoints"> By creating a simple hook component for rapid flicker, I made the entire text block toggles opacity using <span class="code-block-orange">steps(1)</span> to mimic the blink.
-                </p>
-                <p class="bulletpoints">Since I did not want every elements to have repetitive animations with entire flicker, for several texts, I made individual characters reveal themselves with a slight delay of <span class="code-block-orange">0.02s</span>, creating a rhythmic feel. </p>
-                <p class="bulletpoints">Lastly, I added subtle opacity shift to <span class="code-block-orange">1.0</span> using a <span class="code-block-orange">power2.out</span>, so that the animation can feel more natural and connected, rather than abrupt.</p>
+  &nbsp;&nbsp;<span style="color: #0077aa">const</span> <span style="color: #dd4a68">playSound</span> = (soundType) => { <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0077aa">if</span> (!isSoundEnabled) <span style="color: #0077aa">return</span>; <br><br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0077aa">const</span> audio = audioInstances.current[soundType]; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0077aa">if</span> (audio) { <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #999">// Reset to start for instant feedback on rapid interactions</span><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio.currentTime = <span style="color: #9a050f">0</span>; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio.play().<span style="color: #dd4a68">catch</span>(err => console.<span style="color: #dd4a68">log</span>(err)); <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+  &nbsp;&nbsp;}; 
+</div> 
+<figcaption class="padding__top-s">
+  <p>Code Snippet: The <code>playSound</code> logic within the React Context, designed to trigger instant, low-latency audio feedback.</p>
+</figcaption> 
+</div>
+</div>
+
+                
+
               </div>
- 
+
+
 
             </div>
             <!-- end of section2 -->
@@ -178,60 +221,39 @@
             <div id="section3" class="row width__s margin__auto padding__top-xl">
 
 
-              <h2>Experimenting with Navigations</h2>
-              <h3 class="divider-top">3D Exploration with Spline</h3>
+              <h2>User Evaluation</h2>
+              <p class="divider-top">This week I also focused on planning and starting my user testing. I finished and submitted the ethics forms and consent documents so I could officially begin.
+                <br><br>
+              Before preparing for the test, I have clarified the objectives and goals I want to achieve through user testing in order to make the right and effective questions throughout the sessions.</p>
+
+              <h4 class="padding__top-s">Testing Objectives</h4>
               
-              <div class="row">
-                <div class="column">
-                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/experiment-spline-2.mp4"></video>
-                  <figcaption class="padding__top-s"><p>3D Button Exploration with Spline</p></figcaption>
-                </div>
-                <div class="column">
-                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/experiment-spline-1.mp4"></video>
-                  <figcaption class="padding__top-s"><p>3D Object Exploration with Spline</p></figcaption>
-                </div>
-                
-              </div>
-              <p>Other than text animations, I also have been experimenting with Spline to create more dynamic and interactive experiences with 3D objects.
-              </p>
-
-              <h3 >3D Navigation with Spline</h3>
-
-              <p>Before, I realized that even one brand needs different interactions for different pages, like how Apple's Airpods 3 or 4 pages are designed in a more dynamic way with scroll triggered animations other than its usual minimal and premium interactions. For the experiments page, I wanted something more "experimental", interactive and engaging. And since I have been exploring Spline, it was the perfect opportunity to integrate it into the website.</p>
-
-              <h4 class="padding__top-m">Familiarization</h4>
-
-              <p>By adding keyboard interactions early on, <b>I wanted to familiarize users with the input method they’ll use for the p5.js sketches later in the experiment page</b>. So I designed a 3D interface that respond to users input while giving users a bodily sensation of interacting with a real keys. Users can either type or click keys to see previews and enter respective experiments. This was also an attempt to create a more immersive and exploratory 3D navigation experience, moving away from traditional menus.</p>
-              
-              <div>
-                <video class="orange-border" autoplay preload="none" playsinline loop src="/assets/videos/SEM2/atmost-experiment-page-1.mp4"></video>
-                <figcaption class="padding__top-s"><p>Atmost Prototype 2 - Experiment Page</p></figcaption>
+              <div class="orange__text-container">
+                <p class="bulletpoints"><b>Educational Value</b>: I would like to see if users actually understand how specific parameters affect the "felt" atmosphere.</p>
+                <p class="bulletpoints"><b>Practicality</b>: I would like to know if designers find the Atmost platform and the tools I've curated actually useful for their work.</p>
+                <p class="bulletpoints"><b>Usability</b>: I need to check if users can manipulate the parameters and navigate the site intuitively.</p>
+                <p class="bulletpoints"><b>Participants</b>: I would be testing with a focus group of 6-8 design students who have designed and developed websites, having basic UI/UX and coding knowledge.</p>
               </div>
 
-              
 
-              
+              <img class="orange-border" src="/assets/images/SEM2/user-test-jan.jpeg" alt="user-evaluation-session">
+              <figcaption><p>User Evaluation Session</p></figcaption>
 
-              <h4 class="padding__top-l">Spring Framework</h4>
+              <p><b>I’ve already completed three sessions</b> with friends who are also designers. Though I would have to look through the answers and analyze the feedback next week, since I still have more sessions to go, it was much more insightful than I expected.</p>
 
-              <p> I used a <b>spring framework</b> in Spline to give it a smooth, physical feel. The keys respond to how long the user presses them, which keeps the experience natural, rather than feeling too snappy or "toy-like". It was also an interesting exploration of <b>how physical interactions can be translated into digital experiences</b>.</p>
+              <h3 >Reflections</h3>
 
 
-              <h4 class="padding__top-m">Process & Realizations</h4>
-
-              <div class="row">
-                <div class="column">
-                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/spline-keyboard-1.mp4"></video>
-                  <figcaption class="padding__top-s"><p>Design Version 01</p></figcaption>
-                </div>
-                <div class="column">
-                  <video class="orange-border" playsinline loop preload="none" autoplay src="/assets/videos/SEM2/spline-keyboard-2.mp4"></video>
-                  <figcaption class="padding__top-s"><p>Design Version 02</p></figcaption>
-                </div>
+              <div class="black__text-container">
+                <p>It was really rewarding to see other designers actually using the tools and the Atmost site. The comments were more positive than I anticipated, and it <b>gave me a lot of motivation</b> to keep going. It’s one thing to think an idea is good, but it’s another thing to see it actually coming to life through someone else’s eyes. I feel grateful for the feedback because it showed me exactly what I need to refine for the final version.</p>
               </div>
-              <p>During the process of both design and implementation, I was quite amazed by how Spline allows detailed control over 3D objects and animations, as well as complex state management. Also, the ability to easily manipulate object properties within <b>codes by calling the object's name in design file</b> also opened up new possibilities for interaction design. <br><br>I could again realize that my project's objective should <b>not be about inventing a better medium but about communicating the message effectively to audience as a designer</b>
+              
+              
+              
 
-                <br><br>In the end, I believe that the key to a successful design is to focus on the user's experience and how they interact with the product. By leveraging the capabilities of tools like Spline, I can create more engaging and intuitive experiences that resonate with users on a deeper level.</p>
+              
+
+              
 
             </div>
             <!-- end of section3 -->
@@ -239,9 +261,11 @@
             <div id="section4" class="row width__s margin__auto padding__top-xl ">
               <div class="column__no-content"></div>
               <div class="column">
-                <h2>Next Steps</h2>
+                <h2 class="padding__top-m">Next Steps</h2>
                 <p class="divider-top margin__top-s">
-                I’m quite happy with how the Atmost foundations are looking, so I want to keep refining these interactive moments. The next step is to <b>add more contents and interaction details</b> to enhance the overall experience, considering its identity and the purpose of making it into a practical resource. Additionally next week, I'm finally planning to <b>conduct the user testing</b> that I have actually been thinking about since the beginning of this project.
+                Since the dissertation is due in a few weeks, I want to focus on 
+                writing, documenting the process and outcomes I have made so far, and reflecting to plan for the further research. Since I still have to finish more user evaluations and write about them, the next step is to conduct more sessions, analyze the feedback and discussions from the user testing sessions, and write them into dissertation. Also hopefully I will incorporate the feedbacks into the final refinements of the Atmost. 
+            
                 </p>
               </div>
 
@@ -269,9 +293,9 @@
       <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
       <div class="prev__next">
         <ul>
-          <li class="prev"><a href="./week-3.html" id="go-prev">prev</a></li>
+          <li class="prev"><a href="./week-4.html" id="go-prev">prev</a></li>
           <li><a href="../../index.html">overview</a></li>
-          <li class="next"><a href="./week-5.html" id="go-next">next</a></li>
+          <li class="next"><a href="./week-6.html" id="go-next">next</a></li>
         </ul>
       </div>
       
