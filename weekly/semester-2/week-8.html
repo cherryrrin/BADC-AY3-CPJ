@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creative Process Journal, 24-25.</title>
+
+    <!-- Meta information, for machines to read, SEO -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="Author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <!-- Load StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  </head>
+
+  <body>
+
+    <!-- header and footer section, the menu. -->
+    <header>
+      <nav class="main__nav-bar">
+        <ul class="main__nav-title">
+          <li><a href="/">IxD-ID</a></li>
+          <li class="mobile__hide padding__top-xs"><a href="/about"><img height="12rem" src="/assets/images/CHOIYERIN_black.png" alt=""></a></li>
+        </ul>
+        <ul class="main__nav-list">
+          <li class="main__nav-item"><a href="/">process-journal</a></li>
+           <li class="main__nav-item"><a href="/making/index.html">catalogue-of-making</a></li>
+          <li class="main__nav-item"><a href="/repository">repository</a></li>
+          <li class="main__nav-about">
+            <p>
+              A design communication graduation project.
+            </p>
+          </li>
+        </ul>
+        <div class="main__nav-ham">
+          <span class="main__nav-ham-bar"></span>
+          <span class="main__nav-ham-bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main section, all your content goes here. -->
+    <main>
+      
+      <article>
+
+        <!-- ======= title section start ========= -->
+
+        <section id="title-section">
+          <div class="row width__l margin__auto padding__top-xl">
+
+            <div class="column__half type__content padding__top-m ">
+              <h1>08 Filling<br>the Gaps</h1>
+              <p class="padding__top-l">Even though there was no consultation this week, it was a busy one. I spent time at the career fair talking to different agencies and companies. It was a good reality check, reminding me that I need to start thinking about my future career while I finish this project. On the development side, I focused on filling the placeholders in the Atmost website and finally turning the architecture I planned into real content.</p>
+              
+            </div>
+            
+            <div class="column__no-content"></div>
+
+            <div class="column no-content-above padding__y-m">
+              <div class="box__keywords-container">
+                <ul class="box__keywords-list">
+                  <li class="box__keywords-item"><h5>Week-eight</h5> 02 ~ 08.Mar, 2026 </li>
+                  <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
+                  <li class="box__keywords-item"><h5>Keywords</h5>
+                    <ul class="keywords-grid">
+                      
+                      <li class="keywords-circle">Career-Fair</li>
+                      <li class="keywords-circle">Content-Mapping</li>
+                      <li class="keywords-circle-b">ASCII-Videos</li>
+                      <li class="keywords-circle-b">Atmost</li>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+        </section>
+
+        <!-- ========= end of title section ========-->
+
+
+        <!-- ======= content section start ========= -->
+
+        <section id="contents-section" class="row width__l margin__auto padding__y-xl">
+
+        <!-- ============== side indicator/nav bar start ============= -->
+
+          <aside class="sidebar">
+            <div class="sidebar-item active" data-target="section1"> Career-Fair</div>
+            <div class="sidebar-item" data-target="section2">Experiment-page</div>
+            <div class="sidebar-item" data-target="section3">Casestudy-page</div>
+            <div class="sidebar-item" data-target="section4">About-page</div>
+          </aside>
+
+        <!-- =========== side indicater/nav bar end =============== -->
+
+          <div class="content-wrapper">
+
+            <div id="section1" class="row width__s margin__auto">
+              <h2>Career Fair Reflections</h2>
+              <p class="divider-top">I took a small break from coding to attend the career fair. It was interesting to talk to agencies like TBWA and Publicis about thier work environmets, as well as my previous work experiences. It made me realize how passionate I am about my work and the project. This gave me a boost of confidence and motivation to keep pushing forward, knowing that there are opportunities out there that align with my interests and skills.</p>
+              <img class="orange-border zoom" src="/assets/images/SEM2/career-fair.jpeg" alt="table-setup">
+                <figcaption ><p>Career Fair</p></figcaption>
+
+              
+            </div>
+            <!-- end of section1 -->
+
+
+            <div id="section2" class="row width__s margin__auto padding__top-xl">
+              <h2>Experiments Page</h2>
+
+
+              <p class="divider-top">I realized that the vibrant colors in my experiment previews were starting to distract from the site’s technical identity. To fix this, I built a component that renders video frames as <b>ASCII art</b> on a canvas in real-time, keeping the movement of the experiments but in to a raw, data-driven texture.</p>
+
+               <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-experimentspage.mp4"></video>
+                <figcaption><p>> Experiments Page</p></figcaption>
+
+              <div class="bg__text-container">
+                <h4>The ASCII Logic</h4>
+                <br>
+                <p> The core of the effect is calculating the "Luma" (brightness) of every pixel. The code looks at the Red, Green, and Blue values and converts them into a single brightness value.</p>
+              </div>
+              <div class="bg__text-container">
+                <h4>Performance: Canvas vs. DOM</h4>
+                <br>
+                <p>Instead of using HTML tags for every character (which would lag), I draw everything directly to a 2D canvas. I also used <span class="code-block-orange">requestAnimationFrame</span> to ensure the ASCII "video" plays smoothly at a specific frame rate, maintaining that steady, mechanical rhythm I want for the archive.</p>
+              </div>
+
+              <div class="column__full">
+                  <div style="background-color: #f5f5f5; padding: 20px; border-left: 4px solid #ff9800; font-family: monospace; font-size: 0.85rem; color: #333; overflow-x: auto;">
+                    <strong>// From AsciiVideo.jsx: Mapping Brightness to Characters</strong>
+
+
+
+                      &nbsp;&nbsp;<span style="color: #999">// Calculate brightness (Luma)</span><br>
+                      &nbsp;&nbsp;<span style="color: #0077aa">const</span> luma = <span style="color: #9a050f">0.299</span> * R + <span style="color: #9a050f">0.587</span> * G + <span style="color: #9a050f">0.114</span> * B; <br><br>
+
+                      &nbsp;&nbsp;<span style="color: #999">// Map luma to character ramp: " .:-=+*#%@"</span><br>
+                      &nbsp;&nbsp;<span style="color: #0077aa">const</span> char = RAMP[Math.<span style="color: #dd4a68">floor</span>((luma / <span style="color: #9a050f">255</span>) * (RAMP.length - <span style="color: #9a050f">1</span>))]; <br><br>
+
+                      &nbsp;&nbsp;<span style="color: #999">// Draw to canvas directly</span><br>
+                        &nbsp;&nbsp;ctx.<span style="color: #dd4a68">fillText</span>(char, x * charW, y * charH); 
+                  </div> 
+                  <figcaption class="padding__top-s">
+                    <p>The luma-to-character mapping logic</p>
+                  </figcaption> 
+             </div>
+
+             <h3 class="padding__top-xl">Sub Pages</h3>
+
+             <p >I finally built out the <b>sub-pages</b> for the Experiments section. I wanted to show the progression of my work, so I divided it into three phases. To make the p5.js sketches easier to use, I also added a "[click to interact]" overlay to the canvases. It's a small usability fix, but it helps users understand how to engage with the sketch immediately.</p>
+             
+
+             <div class="white__text-container">
+                  <p>
+                    <span class="bulletpoints"><b>Phase 1:</b> Exploratory Sketches: The fundamental "learning through making" sketches, like the buttons and loading animations from early last semester.</span>
+                  <br><br>
+
+                  <span class="bulletpoints"><b>Phase 2:</b> Reverse-Engineering: Where I deconstructed existing brands like Duolingo’s streak button, Instagram’s hold-to-action, and Apple’s wiggling icons.</span>
+                  <br><br>
+
+                  <span class="bulletpoints"><b>Phase 3:</b> Prototyping Tools: The final tools I built, including the Button Parameter Lab V2 and the Interaction Sketch Studio.</span>
+
+                  
+                </p>
+              </div>
+               <p><a class="underline" href="https://ixd-atmost.netlify.app/experiments" target="_blank">Find More from Here</a></p>
+
+                  <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-screenrecord-ex1.mp4"></video>
+                <figcaption><p>> Experiments Page / Phase 01</p></figcaption>
+
+
+                  <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-screenrecord-ex2.mp4"></video>
+                <figcaption><p>> Experiments Page / Phase 02</p></figcaption>
+               
+                
+
+                
+
+
+              
+
+                 
+
+
+            </div>
+            <!-- end of section2 -->
+
+
+
+
+            <div id="section3" class="row width__s margin__auto padding__top-xl">
+
+
+              <h2>Case Studies Page</h2>
+
+              <div class="divider-top">
+                <p>I added three main stories to the Case Studies page: Apple, Duolingo, and Tools. These are the core pillars of my research that show how interaction is the primary material for brand expression today.
+                  I used a similar layout for the case studies and the long-form experiment explanations. Maintaining this consistency in information structure helps users navigate the "lived space" of the website without getting lost in different layouts. Also, I kept the interactions and sound feedback minimal in this page in order to create a more focused reading experience.
+                </p>
+              </div>
+
+
+                <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-casestudypage.mp4"></video>
+                <figcaption><p>> Case Studies Page</p></figcaption>
+                
+                
+
+                
+
+
+              
+
+             
+            
+
+              
+              
+              
+              
+
+            </div>
+            <!-- end of section3 -->
+
+            <div id="section4" class="row width__s margin__auto padding__top-xl ">
+
+              <h2>About Page</h2>
+              <p class="divider-top">
+                For the <b>About page</b>, I tried something different. To bring a sense of physical interaction to the digital space, I designed the information into multiple draggable "digital tabs." Users can open, close, and move these tabs around to find out "who," "why," and "what" Atmost is. It makes the static information much more engaging and feels like interacting with a real desktop terminal.
+              </p>
+
+              <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-aboutpage.mp4"></video>
+                <figcaption><p>> About Page</p></figcaption>
+
+                <p>I also experimented with a new p5.js sketch for the "Atmost" title text. I wanted it to look like a fluid, liquid material, but I kept it as a buffered line-text style to match the ASCII art.
+                  I’ve also integrated it into the experiment loading animations to reinforce that "futuristic" identity.
+                </p>
+
+                <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-loading-animation.mp4"></video>
+                <figcaption><p>> Loading Animation for Experiments Page</p></figcaption>
+
+
+              <div class="bg__text-container">
+
+                <video class="orange-border" playsinline preload="none" loop autoplay muted src="/assets/videos/SEM2/atmost-textplay.mp4"></video>
+
+                  <p class="padding__top-m">This liquid effect creates a more organic tech feel. It’s another way to show how code can be a expressive material for branding, turning simple text into something that feels alive and responsive.</p>
+                  <a href="https://editor.p5js.org/rinayerin/sketches/KIEUmTblg" target="_blank">Open P5 Sketch ></a>
+              </div>
+              
+
+
+
+              <div class="column__no-content"></div>
+              <div class="column">
+                <h2 class="padding__top-xl">Next Steps</h2>
+                <p class="divider-top margin__top-s">
+                  Following the roadmap, my next step is to finalize the Atmost website and start working on the next experiments. Working more on the contents this week, there were quite a lot of restrictions on interaction design for usability decisions. So, in the next experiments, I am planning to explore where interaction can be the main medium.
+                </p>
+              </div>
+
+              
+            </div> <!-- end of section4 -->
+
+            
+
+
+
+          </div> <!-- end of content wrapper -->
+
+          
+
+
+
+        </section>
+        
+      </article>
+    </main>
+
+    <!-- footer, page ends here.-->
+    <footer>
+
+      <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
+      <div class="prev__next">
+        <ul>
+          <li class="prev"><a href="./week-7.html" id="go-prev">prev</a></li>
+          <li><a href="../../index.html">overview</a></li>
+          <li class="next"><a href="./week-9.html" id="go-next">next</a></li>
+        </ul>
+      </div>
+      
+      
+    </footer>
+
+    <div id="lightbox"></div>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
