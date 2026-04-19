@@ -525,3 +525,10 @@
 .pixel-text {
   font-family: "snoot.org pixel10";
 }
+
+
+@media (orientation: portrait) {
+  .width__s{
+    
+  }
+}
