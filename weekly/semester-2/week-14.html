@@ -77,8 +77,8 @@
           <div class="row width__l margin__auto padding__top-xl">
 
             <div class="column__half type__content padding__top-m ">
-              <h1>13 Translation <br>& Application</h1>
-              <p class="padding__top-l">After the Open Studios, I spent this week focusing on professional development and my portfolio. It was a week of translation, taking the long words and complex prototypes of Interaction as Identity and distilling them into a format that speaks to the industry. I spent my time refining how I communicate my research to agencies while applying the technical insights I gained from the research to my own portfolio landing page and design.</p>
+              <h1>14 Documentaion <br>& Refinement</h1>
+              <p class="padding__top-l">This week was all about preparation and professional framing. As the Grad Show approaches, I focused on high-quality documentation of my work and expanding atmost-forest to be mobile-accessible. I also spent time reflecting on a significant job posting from Toss that felt like a direct validation of my research journey the shift from being a tool developer to a visual coder and experience designer.</p>
               
             </div>
             
@@ -87,15 +87,15 @@
             <div class="column no-content-above padding__y-m">
               <div class="box__keywords-container">
                 <ul class="box__keywords-list">
-                  <li class="box__keywords-item"><h5>Week-thirteen</h5> 6 ~ 12. April, 2026 </li>
+                  <li class="box__keywords-item"><h5>Week-fourteen</h5> 13 ~ 19. April, 2026 </li>
                   <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
                   <li class="box__keywords-item"><h5>Keywords</h5>
                     <ul class="keywords-grid">
-                      <li class="keywords-circle-b">Portfolio-Refinement</li>
+                      <li class="keywords-circle-b">Gradshow-prep</li>
                       
-                      <li class="keywords-circle">Spline</li>
-                      <li class="keywords-circle">Job-Application</li>
-                      <li class="keywords-circle">Communication</li>
+                      <li class="keywords-circle-b">Documentation</li>
+                      <li class="keywords-circle-b">Mobile-optimization</li>
+                      <li class="keywords-circle">Perspective</li>
                       
                     </div>
                   </li>
@@ -115,9 +115,9 @@
         <!-- ============== side indicator/nav bar start ============= -->
 
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1"> Translations</div>
-            <div class="sidebar-item" data-target="section2">Spline</div>
-            <div class="sidebar-item" data-target="section3">Reflections</div>
+            <div class="sidebar-item active" data-target="section1"> Documentation</div>
+            <div class="sidebar-item" data-target="section2">Atmost-Forest</div>
+            <div class="sidebar-item" data-target="section3">Inspirations</div>
             <div class="sidebar-item" data-target="section4">Next-Steps</div>
           </aside>
 
@@ -126,19 +126,20 @@
           <div class="content-wrapper">
 
             <div id="section1" class="row width__s margin__auto">
-              <h2>Translations</h2>
-              <p class="divider-top">Adding my research to my portfolio was a challenge in communication. I had to ensure that the core message that interaction is a strategic medium wasn't lost in the technical details of the prototype.
+              <h2>Documentation</h2>
+              <p class="divider-top">After Open Studios, I realized that my casual photos didn't do the work justice. The backgrounds were messy, and the lighting didn't capture the felt quality of the screens.
               </p>
 
              
 
 
-              <img class="orange-border" src="/assets/images/SEM2/portfolio-layout.jpg" alt="">
-              <figcaption><p>> Screenshot of Portfolio (Atmost)</p></figcaption>
+              <img class="orange-border zoom" src="/assets/images/SEM2/atmost-forest-documentation.jpg" alt="atmost-forest-documentation">
+              <img class="orange-border zoom" src="/assets/images/SEM2/atmost-forest-documentation2.jpg" alt="atmost-forest-documentation">
+             
 
-              <p> I realized that the tools and experiments I built aren't just academic artifacts, but they are evidence of a specific design methodology. I restructured the project case study and tools to capture its essense, while showing the screen recorded videos in strategic layout. It helped me move from explaining the project to demonstrating its value for real-world products.</p>
+              <p> I set up professional lighting and backgrounds in the studio to take clean, high-quality photos of my prototypes on the laptop. It also took time for me to adjust lighting, to reduce the reflection on screen blocking the view. I then used Photoshop to clean up any distractions.</p>
 
-               <a class="video-sound-btn" target="_blank" href="https://choiyerin.com/works/interaction-as-identity">Open Page</a>
+              
 
               
               
@@ -156,29 +157,47 @@
 
 
             <div id="section2" class="row width__s margin__auto padding__top-xl">
-              <h2>Landing Page</h2>
+              <h2>Mobile Optimization</h2>
 
-              <div class="divider-top"></div>
+              <p class="divider-top">
+                One of the key feedbacks from Open Studios was that visitors wanted to explore the sites on their own devices. Also through the brief, I realized that I could put my qr code for the site under the design statement.
+              </p>
 
-              <video class="orange-border" autoplay loop muted preload="none" src="/assets/videos/SEM2/portfolio-landing.mp4"></video>
-              <figcaption><p>> Portfolio Landing Page using Spline</p></figcaption>
-
-              <p>To make my portfolio feel as interactive as my research, I created a new interactive 3D bubble element for the landing page using Spline. I wanted something that felt organic, engaging, and responsive, in line with my own creative identity.</p>
-
-              <h4>Interaction Refinement</h4>
-
-              <div class="orange__text-container">
-                <p>I applied the damping and physics logic I learned during the development of Atmost-Forest. By fine-tuning the <b>damping parameters</b>, and the parameters of animation within bubble's texture, I made the bubble react to the cursor with a soft, liquid-like delay. It doesn't just snap to the mouse, but it floats and settles with a sense of weight. It’s a small detail, but it applies the my research directly to my personal brand identity.</p>
+              <div class="row">
+                <div class="column">
+                  <video class="orange-border margin__top-s" autoplay loop muted preload="none" src="/assets/videos/SEM2/atmost-forest-mobile.mp4"></video>
+              <figcaption class="padding__top-s"><p>> Mobile version</p></figcaption>
+                </div>
+                <div class="column__double">
+                  <div class="bg__text-container">
+                <h4>Challenges</h4>
+              <p class="padding__top-s">Building the mobile version of atmost-forest was much harder than I expected. The page wouldn't scroll on mobile devices. I discovered that Spline's canvas has its own internal touch event handlers that call <span class="code-block-orange">preventDefault()</span> on every <span class="code-block-orange">touchmove</span>. Essentially, the canvas was telling the browser, "I'm handling this touch, don't scroll." Therefore, <b>GSAP ScrollTrigger</b> never saw any changes.</p>
               </div>
-
-              <a class="video-sound-btn" target="_blank" href="https://choiyerin.com/">Open Page</a>
-
-             
 
               
 
-             
 
+
+              <div class="bg__text-container">
+
+                <h4>The Solution</h4>
+
+                <p class="padding__top-s">Default bubbling listeners were too late, since the canvas had already blocked the event by the time it reached them. The solution was using <span class="code-block-orange">capture: true</span>. This allowed the handler to trigger <b>before</b> the event even reaches the Spline canvas. I also switched from <span class="code-block-orange">scrollBy()</span> to <span class="code-block-orange">scrollTo()</span> to avoid race conditions with the momentum loop.</p>
+
+
+              </div>
+                </div>
+              </div>
+
+              
+
+              <p>I’ve been building the mobile version of <b>atmost-forest</b> this week. My goal is to have a QR code ready for the Grad Show so people can bring the experience into their own hands as well.</p>
+
+              
+
+              
+
+              
             </div>
             <!-- end of section2 -->
 
@@ -188,19 +207,24 @@
             <div id="section3" class="row width__s margin__auto padding__top-xl">
 
 
-              <h2>Observation & Reflections</h2>
+              <h2>Inspiration & Reflections</h2>
 
              
               
 
-               <p class="divider-top">This week was also about looking forward. I began reaching out to and reconnecting with agencies and companies where I had conversations before. Presenting my work during these process was a great test for my communication skills. I found that designers at these agencies were not only interested in its own visual outcome but also the process and continued iteration that formed this research. 
+               <p class="divider-top">I came across a job opening for a Visual Designer at Toss (Korean banking app) that perfectly articulated the era I feel we are entering. Toss explained that they are moving away from technical-based roles (like Brand vs. Product designer) because tools like AI and code-prototyping have leveled the playing field. 
+                <br><br>This inspired me deeply. It aligns with my research and thinking.  It’s not just about knowing <i>how</i> to code or <i>how</i> to use Spline, but having the eyes, intuition, and <b>Atmospheric Competence</b> to judge if the design actually feels "right" for the brand.</p>
 
-                <br><br>
-                I also got a chance to attend a presentation from another korean agency online, and heard about the difference between korean and singapore job markets. It was a great chance for me to learn more about the future career paths, not just as a student anymore, but as an independant designer.
-                
-                <br><br>
-                I also had talks with Rodolfo from the straits times. He provided a positive feedback towards the research and also provided me with an invitation to their (Society for news design) SND workshop event at SPH Auditorium, which is also a great opportunity for me to hear from global teams with sessions on design and visual storytelling. It also confirmed that there is a real desire in the industry to move beyond standard functional utility and explore more expressive, branded experiences.</p>
+               <div class="black__text-container">
+                <p>
+<span class="oblique">"What has become important is the ‘sense to judge what is a good visual’ and the ‘persistent attitude’ to raise quality by any means necessary."</span></p>
+               </div>
 
+               <p>Even though I focus on UI/UX and digital experiences, I’ve always been visual-driven. This posting confirmed that my path of becoming a designer who uses code and AI as "methods" to achieve a high-quality visual and experience result, is where the industry is heading too.</p>
+
+               <h3>Reflections</h3>
+
+               <p>Preparing for the submission, viva voice, and the final grad show helped me a lot to look back and iterate again, and also look in a more applied ways. I’m feeling proud of how far I’ve come from having "just ideas" in Semester 1 to having a documented, tested, and professional suite of work. I'm ready to present myself not just as a tool-user, but as a Visual Designer who crafts felt experiences.</p>
               
             </div>
 
@@ -214,7 +238,7 @@
               <div class="column">
                 <h2 class="padding__top-xl">Next Steps</h2>
                 <p class="divider-top margin__top-s">
-                  Looking forward, I have just a few weeks until the final submission and viva voice. I am going to focus on documenting my work better with photos and videos, and optimizing atmost for mobile versions.
+                  Since the graduation project submission is next week, and viva voice is coming, I will be working mostly on presentation and further documentation including catalogue of making and videos. Outside of that, I will be keep refining the prototypes' experiences within the spare time.
                 </p>
               </div>
 
@@ -242,9 +266,9 @@
       <div class="scroll__top"><a href="javascript:scrollToTop();">↑</a></div>
       <div class="prev__next">
         <ul>
-          <li class="prev"><a href="./week-12.html" id="go-prev">prev</a></li>
+          <li class="prev"><a href="./week-13.html" id="go-prev">prev</a></li>
           <li><a href="../../index.html">overview</a></li>
-          <li class="next"><a href="./week-14.html" id="go-next">next</a></li>
+          <li class="next"><a href="./week-15.html" id="go-next">next</a></li>
         </ul>
       </div>
       
