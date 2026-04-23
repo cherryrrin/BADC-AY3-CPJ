@@ -76,8 +76,8 @@
           <div class="row width__l margin__auto padding__top-xl">
 
             <div class="column__half type__content padding__top-m ">
-              <h1>14 Documentaion <br>& Refinement</h1>
-              <p class="padding__top-l">This week was all about preparation and professional framing. As the Grad Show approaches, I focused on high-quality documentation of my work and expanding atmost-forest to be mobile-accessible. I also spent time reflecting on a significant job posting from Toss that felt like a direct validation of my research journey the shift from being a tool developer to a visual coder and experience designer.</p>
+              <h1>15 Final Year <br>Overview</h1>
+              <p class="padding__top-l">The focus of this week was the finalization of submission deliverables and the preparation for the Viva Voce presentation. Efforts were centered on refining the exhibition layout, completing the production of the physical Catalogue of Making, and updating the Atmost digital archive based on observations from Open Studios. The goal was to transition from a studio workspace into a purposeful presentation environment where the research artifacts are the primary focus.</p>
               
             </div>
             
@@ -86,15 +86,15 @@
             <div class="column no-content-above padding__y-m">
               <div class="box__keywords-container">
                 <ul class="box__keywords-list">
-                  <li class="box__keywords-item"><h5>Week-fourteen</h5> 13 ~ 19. April, 2026 </li>
+                  <li class="box__keywords-item"><h5>Week-fifteen</h5> 20 ~ 26. April, 2026 </li>
                   <li class="box__keywords-item"><h5>Journal-by</h5>Choi Yerin</li>
                   <li class="box__keywords-item"><h5>Keywords</h5>
                     <ul class="keywords-grid">
-                      <li class="keywords-circle-b">Gradshow-prep</li>
-                      
-                      <li class="keywords-circle-b">Documentation</li>
-                      <li class="keywords-circle-b">Mobile-optimization</li>
-                      <li class="keywords-circle">Perspective</li>
+                      <li class="keywords-circle-b">Viva-voice-setup</li>
+                       <li class="keywords-circle-b">Documentation</li>
+                      <li class="keywords-circle">Spatial-Hierarchy</li>
+                      <li class="keywords-circle">Reflection</li>
+                     
                       
                     </div>
                   </li>
@@ -114,10 +114,10 @@
         <!-- ============== side indicator/nav bar start ============= -->
 
           <aside class="sidebar">
-            <div class="sidebar-item active" data-target="section1"> Documentation</div>
-            <div class="sidebar-item" data-target="section2">Atmost-Forest</div>
-            <div class="sidebar-item" data-target="section3">Inspirations</div>
-            <div class="sidebar-item" data-target="section4">Next-Steps</div>
+            <div class="sidebar-item active" data-target="section1">Table-setup</div>
+            <div class="sidebar-item" data-target="section2">Usability-refinement</div>
+            <div class="sidebar-item" data-target="section3">Documentation</div>
+            <div class="sidebar-item" data-target="section4">Overview</div>
           </aside>
 
         <!-- =========== side indicater/nav bar end =============== -->
@@ -125,27 +125,35 @@
           <div class="content-wrapper">
 
             <div id="section1" class="row width__s margin__auto">
-              <h2>Documentation</h2>
-              <p class="divider-top">After Open Studios, I realized that my casual photos didn't do the work justice. The backgrounds were messy, and the lighting didn't capture the felt quality of the screens.
+              <h2>Table Setup</h2>
+              <p class="divider-top">I reorganized the table setup for the Viva Voce presentation to prioritize the final artifacts over the development tools. While the iPad was used to demonstrate the button parameter lab earlier in Open Studios, I repurposed it for Atmost Forest utilizing the newly developed touch scroll functionality.
               </p>
 
+               <img class="orange-border zoom" src="/assets/images/SEM2/table-setup1.jpg" alt="table-setup">
+              <img class="orange-border zoom" src="/assets/images/SEM2/table-setup3.jpg" alt="table-setup">
+
+              <h4 class="padding__top-m">Setup Logic:</h4>
+
+              <div class="orange__text-container">
+                
+                <p>
+
+<b class="bulletpoints">iMac</b>: Looping video for overall web artefacts.
+<br><br>
+<b class="bulletpoints">Laptop</b>: Primary archive for Atmost research and case studies.
+<br><br>
+
+<b class="bulletpoints">iPad</b>: Immersive, hands-on experience of Atmost Forest.
+<br><br>
+<b class="bulletpoints">Wall Partition</b>: Initially, I included a variety of process visuals on the wall, but this was distracting. Since I wanted the focus to be on the table with screens more, I simplified the setup for the wall to only include specific diagrams and visuals for the methodology (computational experiments and tool building). This allows the wall to function as a visual aid during the presentation rather than a decorative background.</p>
+
+              </div>
+
              
 
 
-              <img class="orange-border zoom" src="/assets/images/SEM2/atmost-forest-documentation.jpg" alt="atmost-forest-documentation">
-              <img class="orange-border zoom" src="/assets/images/SEM2/atmost-forest-documentation2.jpg" alt="atmost-forest-documentation">
              
-
-              <p> I set up professional lighting and backgrounds in the studio to take clean, high-quality photos of my prototypes on the laptop. It also took time for me to adjust lighting, to reduce the reflection on screen blocking the view. I then used Photoshop to clean up any distractions.</p>
-
-              
-
-              
-              
-
-              
-              
-
+             
               
 
               
@@ -156,41 +164,20 @@
 
 
             <div id="section2" class="row width__s margin__auto padding__top-xl">
-              <h2>Mobile Optimization</h2>
+              <h2>Usability Refinements</h2>
 
               <p class="divider-top">
-                One of the key feedbacks from Open Studios was that visitors wanted to explore the sites on their own devices. Also through the brief, I realized that I could put my qr code for the site under the design statement.
+               Observations from Open Studios revealed specific user behaviors on the experiments landing page. Visitors consistently interacted with the most vibrant orange button on the keyboard visual, regardless of its function.
               </p>
 
-              <div class="row">
-                <div class="column">
-                  <video class="orange-border margin__top-s" autoplay loop muted preload="none" src="/assets/videos/SEM2/atmost-forest-mobile.mp4"></video>
-              <figcaption class="padding__top-s"><p>> Mobile version</p></figcaption>
-                </div>
-                <div class="column__double">
-                  <div class="bg__text-container">
-                <h4>Challenges</h4>
-              <p class="padding__top-s">Building the mobile version of atmost-forest was much harder than I expected. The page wouldn't scroll on mobile devices. I discovered that Spline's canvas has its own internal touch event handlers that call <span class="code-block-orange">preventDefault()</span> on every <span class="code-block-orange">touchmove</span>. Essentially, the canvas was telling the browser, "I'm handling this touch, don't scroll." Therefore, <b>GSAP ScrollTrigger</b> never saw any changes.</p>
-              </div>
+              <video class="orange-border" autoplay preload="none" muted loop src="/assets/videos/SEM2/atmost-usability.mp4"></video>
+              <figcaption><p>> Changed flow of Experiements page</p></figcaption>
+              <p><p>To increase a usability aligning with this behavioral pattern, I changed the orange button's function to open the latest and most significant experiments: the Playful Palette and Atmost Forest. 
+                
+              This adjustment utilizes visual hierarchy to guide users toward the most recent work, making the resource archive more intuitive.</p></p>
 
               
-
-
-
-              <div class="bg__text-container">
-
-                <h4>The Solution</h4>
-
-                <p class="padding__top-s">Default bubbling listeners were too late, since the canvas had already blocked the event by the time it reached them. The solution was using <span class="code-block-orange">capture: true</span>. This allowed the handler to trigger <b>before</b> the event even reaches the Spline canvas. I also switched from <span class="code-block-orange">scrollBy()</span> to <span class="code-block-orange">scrollTo()</span> to avoid race conditions with the momentum loop.</p>
-
-
-              </div>
-                </div>
-              </div>
-
               
-
-              <p>I’ve been building the mobile version of <b>atmost-forest</b> this week. My goal is to have a QR code ready for the Grad Show so people can bring the experience into their own hands as well.</p>
 
               
 
@@ -206,24 +193,41 @@
             <div id="section3" class="row width__s margin__auto padding__top-xl">
 
 
-              <h2>Inspiration & Reflections</h2>
+              <h2>Documentation & Presentation</h2>
+
+              <div class="divider-top"></div>
+
+              <img class="orange-border zoom" src="/assets/images/SEM2/catalogue-of- making-week15.jpg" alt="catalogue of making">
+              <figcaption><p>Opened Catalogue of Making with other prints (brochure, user test results)</p></figcaption>
+
+
 
              
               
+              <h3>Catalogue of Making</h3>
+               <p >I redesigned the physical catalogue and reprinted to improve its presence on the table. The initial print on white matte paper resulted in colors that felt too bright and unnatural due to the shift from RGB screenshots (the visual nature of my prototypes) to CMYK printing.</p>
 
-               <p class="divider-top">I came across a job opening for a Visual Designer at Toss (Korean banking app) that perfectly articulated the era I feel we are entering. Toss explained that they are moving away from technical-based roles (like Brand vs. Product designer) because tools like AI and code-prototyping have leveled the playing field. 
-                <br><br>This inspired me deeply. It aligns with my research and thinking.  It’s not just about knowing <i>how</i> to code or <i>how</i> to use Spline, but having the eyes, intuition, and <b>Atmospheric Competence</b> to judge if the design actually feels "right" for the brand.</p>
+               <img class="orange-border zoom" src="/assets/images/SEM2/catalogue-of-making-week15-2.jpg" alt="catalogue-of-making">
 
-               <div class="black__text-container">
+               <figcaption><p>Catalogue of Making</p></figcaption>
+              
+<h4 class="padding__top-l" style="width: 100%;">Material Choices:</h4>
+               <div class="orange__text-container">
+                
                 <p>
-<span class="oblique">"What has become important is the ‘sense to judge what is a good visual’ and the ‘persistent attitude’ to raise quality by any means necessary."</span></p>
+<b class="bulletpoints">Paper Selection: </b>A thinner, maple white (slightly yellow) paper was chosen for the interior. The warm undertone of the paper helps the CMYK colors appear more natural and closer to the original digital visuals.
+<br><br><b class="bulletpoints">Ergonomics: </b>The use of thinner paper allows the book to lay flat when opened on the table. This facilitates a better scanning experience for viewers who may not wish to pick up the book.
+<br><br><b class="bulletpoints">Cover Texture: </b>A thicker, textured paper was used for the cover. This provides a tactile contrast to the interior pages and ensures the book remains protected while feeling premium to the touch.
+<br><br><b class="bulletpoints">Contests: </b>Updated documentation for Atmost Forest and a QR code for direct mobile access were integrated into the final layout.</p>
+
+
+
                </div>
 
-               <p>Even though I focus on UI/UX and digital experiences, I’ve always been visual-driven. This posting confirmed that my path of becoming a designer who uses code and AI as "methods" to achieve a high-quality visual and experience result, is where the industry is heading too.</p>
+               <h3>Presentation Deck</h3>
 
-               <h3>Reflections</h3>
+              <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/deck/XgVEVwNEsz8qYAwTsyZ9oK/overview-presentation-BADC6E-choi-yerin?node-id=6-42&viewport=-764%2C-494%2C0.38&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
 
-               <p>Preparing for the submission, viva voice, and the final grad show helped me a lot to look back and iterate again, and also look in a more applied ways. I’m feeling proud of how far I’ve come from having "just ideas" in Semester 1 to having a documented, tested, and professional suite of work. I'm ready to present myself not just as a tool-user, but as a Visual Designer who crafts felt experiences.</p>
               
             </div>
 
@@ -231,13 +235,27 @@
 
             <div id="section4" class="row width__s margin__auto padding__top-xl">
 
+              <h2>Overview Reflection</h2>
+              <h4 class="divider-top">Personal Growth and Technical Friction</h4>
+              <p>Looking back at this two-semester journey, I am honestly surprised by how far I have come from that first abstract idea. When I started, I felt a lot of excitement, but I also felt paralyzed because I didn't know how to bridge the gap between my theories on atmosphere and actual technical execution. I remember the frustration of having a vision that I couldn't yet build.
+<br><br>
+Throughout this year, I realized that my fluency in Figma was not enough. Figma is excellent for visual layouts, but it doesn't allow me to truly feel an interaction or test the rhythm of a scroll. I had to push myself into the friction of front-end development, motion, and 3D tools, which was often stressful and full of mistakes. However, I learned that progress only happens when I stop overthinking and start making. Every week, even when I felt I was failing, I forced myself to produce something tangible, and that persistent making is what finally made the concept straightforward.
+              </p>
+              <h4>Vibe Coding</h4>
+              <p>I also have to acknowledge how much my process has changed with AI. Using Claude for vibe coding felt less like using a tool and more like working with a coworker. It allowed me to challenge technical problems that I previously would have thought were impossible for me to solve. It has fundamentally changed my perspective on the industry. I now see that as technical barriers fall, my value as a designer lies in my visual judgment and my ability to craft a specific quality of experience.</p>
+              <h4>Future Passion</h4>
+              <p>Through the research and making process, I’ve found my passion in experimental and the interactive interface design. I want to continue exploring how to put my own style and Böhme’s theories into product design, even if it goes against the grain.</p>
+              <h4>Acknowledgments</h4>
+              <p> Last but not least, I am deeply thankful for the feedback from my supervisor, Andreas. His critiques were often harsh and forced me to defend my choices, but they were exactly what I needed. He pushed me to stop staying still and kept me evolving. Looking back at the table setup and the final catalogue, the work feels rewarding because I didn't just settle for what I had but kept challenging myself.</p>
+
+
               
               
               <div class="column__no-content"></div>
               <div class="column">
                 <h2 class="padding__top-xl">Next Steps</h2>
                 <p class="divider-top margin__top-s">
-                  Since the graduation project submission is next week, and viva voice is coming, I will be working mostly on presentation and further documentation including catalogue of making and videos. Outside of that, I will be keep refining the prototypes' experiences within the spare time.
+                  The remaining tasks include finalizing the presentation script for the Viva Voce and practicing the delivery. Additionally, the exhibition setup will be further refined for the Lasalle Show to ensure the experience is fully self-explanatory for audiences who will view the work without a live presenter.
                 </p>
               </div>
 
